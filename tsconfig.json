@@ -37,6 +37,6 @@
     "pages/components/Social.js",
     "pages/_document.js",
     "pages/SingleVehicle.jsx"
-, "pages/components/Top.js", "pages/index.jsx", "pages/components/Sidemenu.js",  ],
+, "pages/components/Top.js", "pages/index.jsx", "pages/components/Sidemenu.js", "pages/components/TouchPoint.js",  ],
   "exclude": ["node_modules"]
 }

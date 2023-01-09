@@ -17,6 +17,29 @@ a {
 .h247{
   height: 247px !important;
 }
+.scrollableDiv {
+  margin-top: 30px;
+  height: 300px;
+  overflow-x: hidden;
+}
+.scrollableDiv::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+  border-radius: 10px;
+}
+.scrollableDiv::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+  border-radius: 10px;
+}
+.scrollableDiv::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
+  border-radius: 10px;
+}
 .content {
   display: none;
 }
