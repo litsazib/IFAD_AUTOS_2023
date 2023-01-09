@@ -10,6 +10,7 @@ import bg from "../public/backgrounds/news-bg.webp";
 const Contact = withRouter((props) => {
   const { inquery } = props.router.query;
   const [InqueryData, setInqueryData] = useState([]);
+  const [ContactAddress, setContactAddress] = useState([]);
    // Fetching vehicles data
    let urlPath ='http://autosapi.ifadgroup.com:8001/products/'+inquery;
    useEffect(() => {
@@ -25,8 +26,29 @@ const Contact = withRouter((props) => {
         setError(error);
       });
   }, [inquery]);
+  
+  useEffect(() => {
+  fetch('http://implapi.ifadgroup.com:8001/contacts')
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.length) setContactAddress(data);
+    })
+    .catch((error) => {
+      setError(error);
+    });
+}, []);
 
-  console.log(InqueryData[0]?.product_name)
+const addredd = ContactAddress[0]?.contact_list.map((ctx,idx)=>{
+  return (
+    <div className="col">
+    {ctx.name}<br></br>
+    {ctx.contact_address}<br></br>
+    <i className="bi bi-telephone-outbound"></i> {ctx.contact_phone}
+  </div>
+  )
+})
+
+
 
 
 
@@ -105,11 +127,7 @@ const Contact = withRouter((props) => {
             </div>
           </form>
           <div className="row mt-5">
-            <div className="col">
-              ABCD<br></br>
-              House 00, Flat 00, Road 00/A Dhaka 1234<br></br>
-              <i className="bi bi-telephone-outbound"></i> +88 0123456789
-            </div>
+          {addredd?addredd:"Address not found"}
           </div>
         </div>
       </div>

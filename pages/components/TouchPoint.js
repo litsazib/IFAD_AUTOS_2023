@@ -14,6 +14,7 @@ export default function TouchPoint() {
   const [Division, setDivision] = useState([]);
   const [District, setDistrict] = useState([]);
   const [Address, setAddress] = useState([]);
+  const [SearchKeyword, setSearchKeyword] = useState('Sales');
 
   const [error, setError] = useState('');
 
@@ -25,6 +26,16 @@ export default function TouchPoint() {
         setError(error);
       });
   }, [addrtype]);
+
+  // Filter by Search
+  useEffect(() => {
+    fetch(`http://implapi.ifadgroup.com:8001/location-search/${SearchKeyword}`)
+      .then((res) => res.json())
+      .then((data) => setLocation(data))
+      .catch((error) => {
+        setError(error);
+      });
+  }, [SearchKeyword]);
 
   // Filter Location by division district 
   useEffect(() => {
@@ -49,6 +60,10 @@ export default function TouchPoint() {
   function handleDistrictChange(e) {
     setDistrict(e.target.value);
   }
+  function handleSearch(e) {
+    setSearchKeyword(e.target.value)
+  }
+ 
 
   if (!Location) {
     return null;
@@ -163,10 +178,13 @@ export default function TouchPoint() {
               </span>
               <input
                 type="text"
+                id="Search"
+                name="Search"
                 className="form-control"
                 placeholder="What are you looking for?"
                 aria-label="search"
                 aria-describedby="basic-addon1"
+                onChange={handleSearch}
               />
             </div>
           </div>
