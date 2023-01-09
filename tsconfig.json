@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/news/Recentnews.jss",
+    "pages/Investor.jsx",
+    "pages/Mission.jsx",
+    "pages/Whoweare.jsx",
+    "pages/Values.jsx",
+    "pages/History.jsx",
+    "pages/Partners.jsx",
+    "pages/Statistics.jsx",
+    "pages/Allvehicle.jsx",
+    "pages/Desclaimer.jsx",
+    "pages/components/Strength.jsx",
+    "pages/components/Homeslider.jsx",
+    "pages/components/Client.jsx",
+    "pages/components/Award.jsx",
+    "pages/components/NewsEvent.jsx",
+    "pages/components/Social.js",
+    "pages/_document.js",
+    "pages/SingleVehicle.jsx"
+, "pages/components/Top.js", "pages/index.jsx", "pages/components/Sidemenu.js",  ],
+  "exclude": ["node_modules"]
+}

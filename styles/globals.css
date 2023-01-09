@@ -1,0 +1,358 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* Roktim  */
+.loadMore {    
+  display: block;
+  text-align: center;
+  margin: 50px 0;
+}
+.h247{
+  height: 247px !important;
+}
+.content {
+  display: none;
+}
+.pageBanner {
+  width: calc(100vw - 20px);
+  margin-left: calc(-50vw + 50% + 10px);
+  height:247px !important;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+.bannerText {
+  text-transform: uppercase;
+}
+.prdStyle {
+  height: 290px !important;
+  object-fit: contain;
+  object-position: top;
+  max-height: 170px;
+}
+.cardBorder {
+  box-shadow: 0px 3px 6px 2px #33333314;
+}
+.scrollTop {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+}
+.scrollTop:hover {
+  opacity:1;
+  transition: 0.3s;
+}
+.bannerWrap {
+  position: relative;
+}
+.bannerText {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+  text-align: center;
+  font-size: 4rem;
+  color: #fff;
+}
+
+
+
+button {
+  border: 1px solid #f6821f;
+  border-radius: 10px;
+  color: #f6821f;
+}
+.btn-outline-warning {
+  border: 1px solid #f6821f !important;
+  color: #f6821f !important;
+}
+.btn-outline-warning:hover {
+  background: #f6821f !important;
+  color: white !important;
+}
+.btn-warning {
+  background: #f6821f !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+.brandColor {
+  color: #f6821f;
+}
+.newslink {
+  color: #000 !important;
+  text-decoration: none;
+}
+.nav-link-ifad {
+  color: #ccc !important;
+  padding: 5px;
+  text-decoration: none;
+}
+.nav-link-ifad:after {
+  content: "|";
+  padding-left: 10px;
+}
+.nav-link-top {
+  color: #000 !important;
+  cursor: pointer;
+  -webkit-transition: ease all 0.5s !important;
+  transition: ease all 0.5s !important;
+  text-shadow: 1px 1px 1px #ccc;
+}
+.nav-link-top:hover {
+  color: #f6821f !important;
+  font-weight: bold;
+  text-shadow: 0px 0px 1px #000;
+}
+.nav {
+  color: #000 !important;
+}
+.swiper-button-next {
+  color: white !important;
+  background: #f6821f;
+  border-radius: 10rem 0 0 10rem;
+  padding: 40px 20px 40px 40px;
+  right: 0 !important;
+}
+.swiper-button-prev {
+  color: white !important;
+  background: #f6821f;
+  border-radius: 0 10rem 10rem 0;
+  padding: 40px 40px 40px 20px;
+  left: 0 !important;
+}
+.partnerLogo {
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  cursor: pointer;
+}
+.partnerLogo:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+.nav-link.active {
+  background: none !important;
+  color: #f6821f !important;
+}
+.nav-link {
+  color: #000 !important;
+}
+/* input icons */
+.inner-addon {
+  position: relative;
+}
+.inner-addon .bi {
+  position: absolute;
+  padding: 5px;
+  pointer-events: none;
+}
+.left-addon .bi {
+  left: 0px;
+}
+.right-addon .bi {
+  right: 0px;
+}
+
+.left-addon input {
+  padding-left: 50px;
+}
+.right-addon input {
+  padding-right: 30px;
+}
+.customInput {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #f6821f;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: rgba(255, 255, 255, 0);
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea,
+input:focus {
+  outline: none;
+}
+.navbar-toggler {
+  border: none !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+.call {
+  position: absolute;
+  width: 100px;
+  top: -29px;
+  right: 0;
+}
+.searchBoxc {
+  position: absolute;
+  top: -26px;
+  right: -100px;
+  transform: translate(-200px, 0%);
+  background: #f68422;
+  border-radius: 40px;
+  padding: 5px;
+}
+
+.searchBoxc:hover > .searchInputc {
+  width: 200px;
+  padding: 0 6px;
+}
+
+.searchBoxc:hover > .searchButtonc {
+  background: white;
+  color: #2f3640;
+}
+
+.searchButtonc {
+  color: #f68422 !important;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.searchInputc {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 30px;
+  width: 0px;
+}
+.valueBox {
+  width: 100%;
+  border-radius: 20px;
+  background: #f68422;
+  min-height: 300px;
+}
+.valueNumberBox {
+  width: 60px;
+  height: 60px;
+  background: #666;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+.newsImage {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.newsButtonDiv {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.newsDiv:hover .newsImage {
+  opacity: 0.3;
+}
+
+.newsDiv:hover .newsButtonDiv {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+@media screen and (max-width: 600px) {
+  .searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+  }
+  .searchBoxc {
+    position: absolute;
+    top: -30px;
+    right: 200px;
+    transform: translate(200px, 0%);
+    background: #f68422;
+    border-radius: 40px;
+    padding: 10px;
+  }
+  .searchBoxc:hover > .searchInputc {
+    width: 100px;
+    padding: 0 6px;
+  }
+
+  .searchBoxc:hover > .searchButtonc {
+    background: white;
+    color: #2f3640;
+  }
+
+  .searchButtonc {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+  }
+  .searchInputc {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+  }
+  .call {
+    position: absolute;
+    top: -50px;
+    right: 0;
+  }
+}

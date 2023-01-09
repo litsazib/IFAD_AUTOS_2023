@@ -1,0 +1,17 @@
+[
+  "News": {
+  "id": 1,
+    "title": "News title 1",
+    "details" : "hello this is details for title 1"
+  },
+{
+  "id": 2,
+    "title": "News title 2",
+    "details" : "hello this is details for title 2"
+  },
+{
+  "id": 3,
+    "title": "News title 3",
+    "details" : "hello this is details for title 3"
+  },
+]
