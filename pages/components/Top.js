@@ -38,8 +38,7 @@ const Top = () => {
   const CatagoryList = PrdCatagory[0]?.product_category_list.map((ctx,idx)=>{
     return (
       <li className="nav-item" key={idx}>
-        <Link className="nav-link nav-link-top" href="#">{ctx.name}</Link>
-        {/* <Link className="nav-link nav-link-top" href={`/vehicles?category=${slugify(ctx.name)}`}>{ctx.name}</Link> */}
+        <Link className="nav-link nav-link-top" href={`/vehicles?category=${slugify(ctx.name)}`}>{ctx.name}</Link>
       </li>
     )
   })

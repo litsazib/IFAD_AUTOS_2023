@@ -13,6 +13,8 @@ export default function TouchPoint() {
   const [Location, setLocation] = useState([]);
   const [Division, setDivision] = useState([]);
   const [District, setDistrict] = useState([]);
+  const [Address, setAddress] = useState([]);
+
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -23,6 +25,20 @@ export default function TouchPoint() {
         setError(error);
       });
   }, [addrtype]);
+
+  // Filter Location by division district 
+  useEffect(() => {
+    const FilterLocation = Location.filter((loca) => {
+      if (Division,District) {
+        return loca?.division === Division || loca?.district === District ;
+      }
+      return Location;
+    });
+    setAddress(FilterLocation);
+    setAddress(Location);
+  }, [Division,District,Location]);
+
+  console.log(Address)
 
   function handleAddrTypeChange(e) {
     setAddrType(e.target.value);
@@ -37,7 +53,7 @@ export default function TouchPoint() {
   if (!Location) {
     return null;
   }
-  const addressList = Location.map((ctx,idx)=>{
+  const addressList = Address.map((ctx,idx)=>{
     return (
       <div className="row align-items-center border-bottom py-5" key={idx}>
         <div className="col-1">
@@ -134,6 +150,7 @@ export default function TouchPoint() {
               {districtList?districtList:"Loading..."}
             </select>
           </div>
+          <p className="resultCount">{addressList.length} Address Found</p>
           <div className="scrollableDiv">
             {addressList}
           </div>
