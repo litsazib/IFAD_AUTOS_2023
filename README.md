@@ -18,7 +18,7 @@ Thank you to everyone who contributed to this project over the last 3 years!
 
 ---
 
-# Next.js Starter Project
+# Next.js IFAD AUTOS
 
 This is a starter project for React that uses Next.js.
 
