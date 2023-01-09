@@ -5,6 +5,7 @@ import leypartsIcon from "../../public/icons/leyparts.png";
 import Image from "next/image";
 import bg from "../../public/backgrounds/location.jpg";
 import map from "../../public/map/map.png";
+import BeatLoader from "react-spinners/BeatLoader";
 
 
 export default function TouchPoint() {
@@ -14,7 +15,7 @@ export default function TouchPoint() {
   const [Division, setDivision] = useState([]);
   const [District, setDistrict] = useState([]);
   const [Address, setAddress] = useState([]);
-  const [SearchKeyword, setSearchKeyword] = useState('Sales');
+  const [SearchKeyword, setSearchKeyword] = useState('');
 
   const [error, setError] = useState('');
 
@@ -26,30 +27,50 @@ export default function TouchPoint() {
         setError(error);
       });
   }, [addrtype]);
-
   // Filter by Search
-  // useEffect(() => {
-  //   fetch(`http://implapi.ifadgroup.com:8001/location-search/${SearchKeyword}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setLocation(data))
-  //     .catch((error) => {
-  //       setError(error);
-  //     });
-  // }, [SearchKeyword]);
+  useEffect(() => {
+    fetch(`http://implapi.ifadgroup.com:8001/location-search/${SearchKeyword}`)
+      .then((res) => res.json())
+      .then((data) => setLocation(data))
+      .catch((error) => {
+        setError(error);
+      });
+  }, [SearchKeyword]);
 
   // Filter Location by division district 
   useEffect(() => {
     const FilterLocation = Location.filter((loca) => {
-      if (Division) {
+      if(Division.length > 0 ) {
         return loca?.division === Division;
       }
       return Location;
     });
-    setAddress(FilterLocation);
-    setAddress(Location);
-  }, [Division,District,Location]);
+   setAddress(FilterLocation);
+  }, [Division,addrtype,Location]);
 
-  console.log(Address)
+  useEffect(()=>{
+    const FilterDistrict = Address.filter((dist) => {
+      if(District.length > 0 ) {
+        return dist?.district === District;
+      }
+      return Address
+    });
+   setAddress(FilterDistrict);
+  },[District])
+
+  const filterdivision = [...new Set(Location.map(item => item.division))];
+  const divisionList = filterdivision.map((division,idx)=>{
+    return (
+      <option key={idx} value={division}>{division}</option>
+    )
+  })
+
+  const filterdistrict = [...new Set(Location.map(item => item.district))];
+  const districtList = filterdistrict.map((dist,idx)=>{
+    return (
+      <option key={idx} value={dist}>{dist}</option>
+    )
+  })
 
   function handleAddrTypeChange(e) {
     setAddrType(e.target.value);
@@ -76,28 +97,14 @@ export default function TouchPoint() {
         </div>
         <div className="col">
           {ctx.name}<br></br>
+          Division:{ctx.division} 
+         &nbsp; | District:{ctx.district} <br></br>
           {ctx.address}<br></br>
           <i className="bi bi-telephone-outbound"></i> {ctx.phone}
         </div>
       </div>
     )
   })
-
-  const filterdivision = [...new Set(Location.map(item => item.division))];
-  const divisionList = filterdivision.map((division,idx)=>{
-    return (
-      <option key={idx} value={division}>{division}</option>
-    )
-  })
-
-  const filterdistrict = [...new Set(Location.map(item => item.district))];
-  const districtList = filterdistrict.map((dist,idx)=>{
-    return (
-      <option key={idx} value={dist}>{dist}</option>
-    )
-  })
- 
-
 
   const background = {
     backgroundImage: `url(${bg.src})`,
@@ -167,7 +174,7 @@ export default function TouchPoint() {
           </div>
           <p className="resultCount">{addressList.length} Address Found</p>
           <div className="scrollableDiv">
-            {addressList}
+          {addressList ? addressList :<BeatLoader color="#FA3" />}
           </div>
         </div>
         <div className="col-sm-4">
