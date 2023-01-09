@@ -28,20 +28,20 @@ export default function TouchPoint() {
   }, [addrtype]);
 
   // Filter by Search
-  useEffect(() => {
-    fetch(`http://implapi.ifadgroup.com:8001/location-search/${SearchKeyword}`)
-      .then((res) => res.json())
-      .then((data) => setLocation(data))
-      .catch((error) => {
-        setError(error);
-      });
-  }, [SearchKeyword]);
+  // useEffect(() => {
+  //   fetch(`http://implapi.ifadgroup.com:8001/location-search/${SearchKeyword}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setLocation(data))
+  //     .catch((error) => {
+  //       setError(error);
+  //     });
+  // }, [SearchKeyword]);
 
   // Filter Location by division district 
   useEffect(() => {
     const FilterLocation = Location.filter((loca) => {
-      if (Division,District) {
-        return loca?.division === Division || loca?.district === District ;
+      if (Division) {
+        return loca?.division === Division;
       }
       return Location;
     });
