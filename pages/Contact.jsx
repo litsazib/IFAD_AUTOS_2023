@@ -85,6 +85,7 @@ const Contact = withRouter((props) => {
                   <input
                     type="text"
                     className="customInput"
+                    readOnly={true}
                     value={InqueryData[0]?.product_name}
                     placeholder="Subject"
                   />
