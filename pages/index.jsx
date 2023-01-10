@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Top from "./components/Top";
 import React from "react";
 import TouchPoint from "./components/TouchPoint";
-import ScrollToTop from "react-scroll-to-top";
+
 
 const index = () => {
   return (
@@ -25,7 +25,6 @@ const index = () => {
         <Award />
         <TouchPoint />
         <Social />
-        <ScrollToTop smooth />
       </div>
       <Footer />
     </>
