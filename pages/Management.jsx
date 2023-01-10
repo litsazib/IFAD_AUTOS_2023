@@ -45,6 +45,21 @@ const Management = () => {
     height: "100px",
     zIndex: "333",
   };
+  const ReadMore = ({ children }) => {
+    const text = children;
+    const [isReadMore, setIsReadMore] = useState(true);
+    const toggleReadMore = () => {
+      setIsReadMore(!isReadMore);
+    };
+    return (
+      <p className="text">
+        {isReadMore ? text.slice(0, 150) : text}
+        <span onClick={toggleReadMore} className="read-or-hide">
+          {isReadMore ? "...read more" : " show less"}
+        </span>
+      </p>
+    );
+  };
   return (
     <>
       <div className="container-fluid">
@@ -68,26 +83,31 @@ const Management = () => {
                         <div className="col-md-12">
                           <div className="row">
                             <div className="col-sm-3 col-4">
-                          <div className="position-relative" style={avatar}>
-                            <Image
-                              src={item.item_image}
-                              alt="photo"
-                              objectFit="cover"
-                              layout="fill"
-                            />
-                          </div>
-                          </div>
-                          <div className="col-sm-9 col-8">
-                          <h3 className="card-title">{item.item_name}</h3>
-                            <p className="card-text">
-                              <small className="text-muted">
-                                {item.item_short_desc}
-                              </small>
-                            </p>
+                              <div className="position-relative" style={avatar}>
+                                <Image
+                                  src={item.item_image}
+                                  alt="photo"
+                                  objectFit="cover"
+                                  layout="fill"
+                                />
+                              </div>
                             </div>
-                        </div>
-                          <div className="card-body px-0"> 
-                            <p className="card-text" style={{textAlign:"justify"}}>{item.item_long_desc}</p>
+                            <div className="col-sm-9 col-8">
+                              <h3 className="card-title">{item.item_name}</h3>
+                              <p className="card-text">
+                                <small className="text-muted">
+                                  {item.item_short_desc}
+                                </small>
+                              </p>
+                            </div>
+                          </div>
+                          <div className="card-body px-0">
+                            <p
+                              className="card-text"
+                              style={{ textAlign: "justify" }}
+                            >
+                              <ReadMore>{item.item_long_desc}</ReadMore>
+                            </p>
                           </div>
                         </div>
                       </div>

@@ -15,11 +15,11 @@ const Top = () => {
         name: "Who we are",
         slug: "/Whoweare",
       },
-      {
-        id: "6",
-        name: "Partners",
-        slug: "/Partners",
-      },
+      // {
+      //   id: "6",
+      //   name: "Partners",
+      //   slug: "/Partners",
+      // },
       {
         id: "7",
         name: "Management",
@@ -74,6 +74,9 @@ const Top = () => {
               <div className="row">
                 <div className="col-sm-12">
                   <ul className="navbar-nav d-flex justify-content-center">
+                  <li className="nav-item">
+                    <Link className="nav-link nav-link-top" href="/">Home</Link>
+                  </li>
                     <li className="nav-item dropdown">
                       <a
                         className="nav-link dropdown-toggle"

@@ -55,22 +55,12 @@ const Whoweare = () => {
     );
   });
 
-  const partnerBanner = partners.map((item) => {
+  const partnerName = partners.map((item) => {
     return (
-      <div className="row" key={item.id}>
-        <div
-          style={{
-            backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${item.module_image})`,
-            width: "100%",
-            height: "400px",
-            backgroundSize: "cover",
-          }}
-          className="coverPhoto d-flex justify-content-center align-items-center position-relative"
-        >
-          <h1 className="fw-bold position-relative text-white">
+      <div className="row my-5" key={item.id}>       
+          <h1 className="fw-bold text-center brandColor">
             {item.module_name}
           </h1>
-        </div>
       </div>
     );
   });
@@ -142,10 +132,12 @@ const Whoweare = () => {
       <History />
       <Statistics />
       {/* Partners */}
-      {partnerBanner}
+      
+      <div className="col-sm-6 offset-sm-3" id="Partners">
+        {partnerName}
       {partners.map((doc) => {
         return (
-          <div className="swiper d-flex justify-content-center" key={doc.id}>
+          <div className="swiper" key={doc.id}>
             <Swiper
               modules={[Navigation]}
               spaceBetween={100}
@@ -166,11 +158,11 @@ const Whoweare = () => {
                   spaceBetween: 0,
                 },
                 1024: {
-                  slidesPerView: 6,
+                  slidesPerView: 3,
                   spaceBetween: 50,
                 },
                 1920: {
-                  slidesPerView: 6,
+                  slidesPerView: 3,
                   spaceBetween: 50,
                 },
               }}
@@ -184,8 +176,8 @@ const Whoweare = () => {
                           className="img-fluid mb-3 partnerLogo"
                           src={ron.item_image}
                           alt="car"
-                          width={1920}
-                          height={0}
+                          width={300}
+                          height={150}
                         />
                       </div>
                     </div>
@@ -196,6 +188,7 @@ const Whoweare = () => {
           </div>
         );
       })}
+      </div>
       <Footer />
     </>
   );
