@@ -9,6 +9,17 @@ a {
   text-decoration: none;
 }
 /* Roktim  */
+
+
+/* footer */
+.font-14{
+  font-size: 16px;
+}
+.font-calibri{
+  font-family: "Calibri";
+}
+
+/* ./footer part */
 .loadMore {    
   display: block;
   text-align: center;

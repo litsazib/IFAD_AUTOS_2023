@@ -13,19 +13,19 @@ const Footer = () => {
 
   const footerNav = [
     { id: 1, name: "HOME", link: "/" },
-    { id: 2, name: "ABOUT US", link: "/Whoweare" },
-    { id: 3, name: "PRODUCT", link: "/vehicles" },
-    { id: 4, name: "TOUCHPOINT", link: "/#Touchpoint" },
+    { id: 2, name: "WHO WE ARE", link: "/Whoweare" },
+    { id: 3, name: "PRODUCTS", link: "/vehicles" },
+    // { id: 4, name: "TOUCHPOINT", link: "/#Touchpoint" },
     { id: 6, name: "INVESTOR INFORMATION", link: "/Investor" },
-    { id: 7, name: "NEWS & EVENTS", link: "/news/1" },
-    { id: 8, name: "CAREERS", link: "https://ifadgroup.com/career" },
+    { id: 7, name: "NEWS & EVENTS", link: "/news" },
+    { id: 8, name: "CAREERS", link: "https://ifadgroup.com/career",target:"_blank" },
     { id: 9, name: "CONTACT", link: "/Contact" },
   ];
   const menu = [
     { id: 10, name: "TERM OF USE", link: "/Terms" },
     { id: 11, name: "DESCLAIMER", link: "Desclaimer" },
     { id: 12, name: "PRIVACY POLICY", link: "/Privacypolicy" },
-    { id: 13, name: "SITEMAP", link: "/Sitemap" },
+    // { id: 13, name: "SITEMAP", link: "/Sitemap" },
   ];
   const Scrollspy = {
     bottom: "20px",
@@ -36,21 +36,25 @@ const Footer = () => {
       id: "1",
       icon: "facebook",
       link: "https://facebook.com",
+      target:"_blank"
     },
     {
       id: "1",
       icon: "instagram",
       link: "https://instagram.com",
+      target:"_blank"
     },
     {
       id: "1",
       icon: "linkedin",
       link: "https://linkedin.com",
+      target:"_blank"
     },
     {
       id: "1",
       icon: "youtube",
       link: "https://youtube.com",
+      target:"_blank"
     },
   ];
 
@@ -84,13 +88,14 @@ const Footer = () => {
                           {footerNav.map((nav) => {
                             return (
                               <li key={nav.id} className="nav-item">
-                                <Link
+                                <a
                                   className="nav-link-ifad"
                                   aria-current="page"
+                                  target={nav.target}
                                   href={nav.link}
                                 >
                                   {nav.name}
-                                </Link>
+                                </a>
                               </li>
                             );
                           })}
@@ -130,15 +135,16 @@ const Footer = () => {
                         <div key={ron.id}>
                           {ron.content_item.map((item) => {
                             return (
-                              <Link
+                              <a
                                 key={item.id}
                                 style={{ color: "#F68422" }}
                                 href={item.item_link}
+                                target="_blank"
                               >
                                 <i
                                   className={`ms-2 bi bi-${item.item_name}`}
                                 ></i>
-                              </Link>
+                              </a>
                             );
                           })}
                         </div>
@@ -151,16 +157,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid" style={{ backgroundColor: "#151515" }}>
-        <div className="container">
-          <div className="row py-3 text-center text-white">
-            <div className="col-sm-12">
-              <i className="bi bi-c-circle"></i> 2022 IFAD AUTOS. All Rights
-              Reserved | Developed by API
-            </div>
-          </div>
-        </div>
-      </div>
+      <h3 className="font-noto m-0 bg-dark py-4 font-14 text-center text-light font-calibri">
+				© 2022 IFAD Multi-product. All Rights Reserved | Developed by{' '}
+					<a target="_blank" href="http://api.net.bd">
+						<img src="API-logo.png" style={{ width: '35px' }} alt=""  className='img-fluid'/>
+					</a>
+			</h3>
     </>
   );
 };
