@@ -10,7 +10,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 
 export default function TouchPoint() {
 
-  const [addrtype, setAddrType] = useState('Sales')
+  const [addrtype, setAddrType] = useState()
   const [Location, setLocation] = useState([]);
   const [Division, setDivision] = useState([]);
   const [District, setDistrict] = useState([]);
@@ -92,7 +92,7 @@ export default function TouchPoint() {
   if (!Location) {
     return null;
   }
-  const addressList = Address.map((ctx,idx)=>{
+  const addressList = Location.map((ctx,idx)=>{
     return (
       <div className="row align-items-center border-bottom py-5" key={idx}>
         <div className="col-1">

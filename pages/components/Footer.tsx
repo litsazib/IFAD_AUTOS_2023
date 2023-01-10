@@ -8,7 +8,7 @@ const Footer = () => {
   const footerNav = [
     { id: 1, name: "HOME", link: "/" },
     { id: 2, name: "ABOUT US", link: "/Mission" },
-    { id: 3, name: "PRODUCT", link: "/Allvehicle" },
+    { id: 3, name: "PRODUCT", link: "/vehicles" },
     { id: 4, name: "TOUCHPOINT", link: "/Touchpoint" },
     // { id: 5, name: "TESTIMONIAL", link: "/Testimonials" },
     { id: 6, name: "INVESTOR INFORMATION", link: "/Investor" },
