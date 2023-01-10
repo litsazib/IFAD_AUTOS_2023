@@ -51,15 +51,15 @@ export default function TouchPoint() {
 
 
 
-  // useEffect(()=>{
-  //   const FilterDistrict = Address.filter((dist) => {
-  //     if(District.length > 0 ) {
-  //       return dist?.district === District;
-  //     }
-  //     return Address
-  //   });
-  //  setAddress(FilterDistrict);
-  // },[District])
+  useEffect(()=>{
+    const FilterDistrict = Address.filter((dist) => {
+      if(District.length > 0 ) {
+        return dist?.district === District;
+      }
+      return Address
+    });
+   setAddress(FilterDistrict);
+  },[District])
 
   const filterdivision = [...new Set(Location.map(item => item.division))];
   const divisionList = filterdivision.map((division,idx)=>{
