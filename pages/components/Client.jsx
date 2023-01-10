@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
-import Link from "next/link";
+import ReactPlayer from "react-player";
 export default function Client() {
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -57,22 +57,18 @@ export default function Client() {
                 return (
                   <SwiperSlide key={ron.id}>
                     <div className="col mt-5">
-                      <div className="d-flex justify-content-center align-items-center position-relative">
-                        <Image
-                          className="img-fluid mb-3"
-                          src={ron.item_image}
-                          alt="car"
-                          width={1920}
-                          height={0}
-                        />
-                        <div className="display-1 text-white position-absolute">
-                          <Link
-                            href={ron.item_video_link}
-                            style={{ color: "white" }}
-                          >
-                            <i className="bi bi-play-circle"></i>
-                          </Link>
-                        </div>
+                      <div className="d-flex justify-content-center align-items-center position-relative mb-5">
+                        {ron.item_video_link == null ? (
+                          <Image
+                            className="img-fluid mb-3"
+                            src={ron.item_image}
+                            alt="car"
+                            width={1920}
+                            height={0}
+                          />
+                        ) : (
+                          <ReactPlayer url={ron.item_video_link} />
+                        )}
                       </div>
                     </div>
                   </SwiperSlide>
@@ -84,8 +80,6 @@ export default function Client() {
       </div>
     );
   });
-
-  const playButton = {};
 
   return <>{moduleName}</>;
 }
