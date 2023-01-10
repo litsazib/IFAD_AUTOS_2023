@@ -5,7 +5,6 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
-import ReactPlayer from "react-player";
 export default function Client() {
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -56,7 +55,7 @@ export default function Client() {
                   <SwiperSlide key={ron.id}>
                     <div className="col mt-5">
                       <div className="d-flex justify-content-center align-items-center position-relative">
-                        {/* <Image
+                        <Image
                           className="img-fluid mb-3"
                           src={ron.item_image}
                           alt="car"
@@ -67,8 +66,7 @@ export default function Client() {
                           <Link href={ron.item_video_link} style={{ color: "white" }}>
                             <i className="bi bi-play-circle"></i>
                           </Link>
-                        </div> */}
-                        <ReactPlayer url={ron.item_video_link} />
+                        </div>
                       </div>
                     </div>
                   </SwiperSlide>
