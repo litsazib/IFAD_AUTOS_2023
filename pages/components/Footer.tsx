@@ -94,9 +94,6 @@ const Footer = () => {
                     </div>
                   </nav>
                   <div className="position-absolute" style={Scrollspy}>
-                    <Link href={"#Top"} scroll={false}>
-                      <i className="bi bi-arrow-up-square-fill fs-1 text-warning"></i>
-                    </Link>
                   </div>
                 </div>
               </div>
