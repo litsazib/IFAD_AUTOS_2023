@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
+import ReactPlayer from "react-player";
 export default function Client() {
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -15,14 +16,11 @@ export default function Client() {
 
   const moduleName = document.map((item) => {
     return (
+
       <div className="mt-5" key={item.id}>
-        <div
-          className="row"
-          style={{ backgroundImage: `url(${item.module_image})` }}
-        >
-          <h1 className="text-white text-center mt-5 fw-bold">
-            {item.module_name}
-          </h1>
+     
+      <div className="row" style={{backgroundImage: `url(${item.module_image})`,}}>
+         <h1 className="text-white text-center mt-5 fw-bold">{item.module_name}</h1>
           <div className="swiper">
             <Swiper
               modules={[Navigation]}
@@ -58,7 +56,7 @@ export default function Client() {
                   <SwiperSlide key={ron.id}>
                     <div className="col mt-5">
                       <div className="d-flex justify-content-center align-items-center position-relative">
-                        <Image
+                        {/* <Image
                           className="img-fluid mb-3"
                           src={ron.item_image}
                           alt="car"
@@ -66,13 +64,11 @@ export default function Client() {
                           height={0}
                         />
                         <div className="display-1 text-white position-absolute">
-                          <Link
-                            href={ron.item_video_link}
-                            style={{ color: "white" }}
-                          >
+                          <Link href={ron.item_video_link} style={{ color: "white" }}>
                             <i className="bi bi-play-circle"></i>
                           </Link>
-                        </div>
+                        </div> */}
+                        <ReactPlayer url={ron.item_video_link} />
                       </div>
                     </div>
                   </SwiperSlide>
@@ -80,12 +76,16 @@ export default function Client() {
               })}
             </Swiper>
           </div>
-        </div>
       </div>
+    </div>
     );
   });
 
   const playButton = {};
-
-  return <>{moduleName}</>;
+  
+  return (
+    <>
+    {moduleName}
+    </>
+  );
 }

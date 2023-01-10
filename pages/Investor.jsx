@@ -15,18 +15,19 @@ const [docs, setDocs] = useState([]);
 const documentButton = docs.map((item,index)=>{
   return(
     <>
-      <button className="nav-link text-start" id={item.id} data-bs-toggle="pill" data-bs-target={`#tags-basic_${item.id}`}type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" key={index}>{item.category_name} <i className="bi bi-arrow-right-short"></i></button>      
+      <button className={`nav-link text-start ${index==0 ? 'active' : '' }`} id={item.id} data-bs-toggle="pill" data-bs-target={`#tags-basic_${item.id}`}type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" key={index}>{item.category_name} <i className="bi bi-arrow-right-short"></i></button>      
     </>
   )
 })
 
-const document = docs.map((doc)=>{
+const document = docs.map((doc,index)=>{
   
   return(
     <>
-    <div className="tab-pane fade" id={`tags-basic_${doc.id}`} role="tabpanel" aria-labelledby={doc.category_name} tabindex="0">
+    <div className={`tab-pane fade ${index==0 ? 'show active' : '' }`} id={`tags-basic_${doc.id}`} role="tabpanel" aria-labelledby={doc.category_name} tabindex="0">
       <h4>{doc.category_name}</h4>
-      <table class="table table-striped">
+      <div class="table-responsive">
+      <table class="table table-striped table-responsive" style={{width:"100%"}}>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -50,6 +51,7 @@ const document = docs.map((doc)=>{
     })}
       </tbody>
 </table>
+</div>
     </div>
     </>
   )
@@ -60,7 +62,7 @@ const document = docs.map((doc)=>{
     <>
       <div className="container-fluid">
         <Head>
-          <title>Investor Information</title>
+          <title>Values</title>
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -74,7 +76,7 @@ const document = docs.map((doc)=>{
   <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
     {documentButton}
   </div>
-  <div className="tab-content" id="v-pills-tabContent">
+  <div className="tab-content w-100" id="v-pills-tabContent">
     {document }
   </div>
 </div>
