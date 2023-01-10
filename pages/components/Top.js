@@ -15,11 +15,11 @@ const Top = () => {
         name: "Who we are",
         slug: "/Whoweare",
       },
-      {
-        id: "6",
-        name: "Partners",
-        slug: "/Partners",
-      },
+      // {
+      //   id: "6",
+      //   name: "Partners",
+      //   slug: "/Partners",
+      // },
       {
         id: "7",
         name: "Management",
