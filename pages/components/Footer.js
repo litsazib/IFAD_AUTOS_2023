@@ -1,18 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import footerLogo from "../../public/logo/footerLogo.png";
-import call from "../../public/social/call.png";
 
 const Footer = () => {
+  const [social, setSocial] = useState([]);
+  useEffect(() => {
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/16")
+      .then((res) => res.json())
+      .then((data) => setSocial(data));
+  }, []);
+
   const footerNav = [
     { id: 1, name: "HOME", link: "/" },
-    { id: 2, name: "ABOUT US", link: "/Mission" },
+    { id: 2, name: "ABOUT US", link: "/Whoweare" },
     { id: 3, name: "PRODUCT", link: "/vehicles" },
-    { id: 4, name: "TOUCHPOINT", link: "/Touchpoint" },
-    // { id: 5, name: "TESTIMONIAL", link: "/Testimonials" },
+    { id: 4, name: "TOUCHPOINT", link: "/#Touchpoint" },
     { id: 6, name: "INVESTOR INFORMATION", link: "/Investor" },
-    // { id: 7, name: "NEWS & EVENTS", link: "/news/1" },
+    { id: 7, name: "NEWS & EVENTS", link: "/news/1" },
     { id: 8, name: "CAREERS", link: "https://ifadgroup.com/career" },
     { id: 9, name: "CONTACT", link: "/Contact" },
   ];
@@ -20,7 +25,7 @@ const Footer = () => {
     { id: 10, name: "TERM OF USE", link: "/Terms" },
     { id: 11, name: "DESCLAIMER", link: "Desclaimer" },
     { id: 12, name: "PRIVACY POLICY", link: "/Privacypolicy" },
-    // { id: 13, name: "SITEMAP", link: "/Sitemap" },
+    { id: 13, name: "SITEMAP", link: "/Sitemap" },
   ];
   const Scrollspy = {
     bottom: "20px",
@@ -29,26 +34,26 @@ const Footer = () => {
   const socialIcon = [
     {
       id: "1",
-      icon: 'facebook',
-      link: 'https://facebook.com'
+      icon: "facebook",
+      link: "https://facebook.com",
     },
     {
       id: "1",
-      icon: 'instagram',
-      link: 'https://instagram.com'
+      icon: "instagram",
+      link: "https://instagram.com",
     },
     {
       id: "1",
-      icon: 'linkedin',
-      link: 'https://linkedin.com'
+      icon: "linkedin",
+      link: "https://linkedin.com",
     },
     {
       id: "1",
-      icon: 'youtube',
-      link: 'https://youtube.com'
-    }
-  ]
- 
+      icon: "youtube",
+      link: "https://youtube.com",
+    },
+  ];
+
   //Bootstrap js
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
@@ -76,7 +81,7 @@ const Footer = () => {
                       </button>
                       <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                          {footerNav.map((nav: any) => {
+                          {footerNav.map((nav) => {
                             return (
                               <li key={nav.id} className="nav-item">
                                 <Link
@@ -93,8 +98,6 @@ const Footer = () => {
                       </div>
                     </div>
                   </nav>
-                  <div className="position-absolute" style={Scrollspy}>
-                  </div>
                 </div>
               </div>
               <div className="row py-3">
@@ -104,7 +107,7 @@ const Footer = () => {
                 <div className="col-sm-8 d-flex justify-content-center">
                   <nav className="navbar navbar-expand-lg">
                     <ul className="navbar-nav">
-                      {menu.map((nav: any) => {
+                      {menu.map((nav) => {
                         return (
                           <li key={nav.id} className="nav-item">
                             <Link
@@ -122,10 +125,24 @@ const Footer = () => {
                 </div>
                 <div className="col-sm-2">
                   <div className="d-flex flex-row justify-content-end fs-4 text-white">
-                    {socialIcon.map(item=>{
-                      return(              
-                      <Link key={item.id} style={{color:"#F68422"}} href={item.link}><i className={`ms-2 bi bi-${item.icon}`}></i></Link>                        
-                      )
+                    {social.map((ron) => {
+                      return (
+                        <div key={ron.id}>
+                          {ron.content_item.map((item) => {
+                            return (
+                              <Link
+                                key={item.id}
+                                style={{ color: "#F68422" }}
+                                href={item.item_link}
+                              >
+                                <i
+                                  className={`ms-2 bi bi-${item.item_name}`}
+                                ></i>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
