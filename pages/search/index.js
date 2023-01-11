@@ -4,6 +4,7 @@ import $ from 'jquery';
 import Link from "next/link";
 import { withRouter } from "next/router";
 import slugify from 'react-slugify';
+import BeatLoader from "react-spinners/BeatLoader";
 
 import Top from "../components/Top";
 import Banner from "../components/Banner";
@@ -16,7 +17,8 @@ const index = withRouter((props) => {
 	const [SearchResult, setSearchResult] = useState([]);
 
 	useEffect(() => {
-		fetch(`http://implapi.ifadgroup.com:8001/location-search/${keyword}`)
+		// fetch(`http://implapi.ifadgroup.com:8001/location-search/${keyword}`)
+		fetch(`http://autosapi.ifadgroup.com:8001/products`)
 			.then((res) => res.json())
 			.then((data) => {
 				setSearchResult(data);
@@ -25,10 +27,11 @@ const index = withRouter((props) => {
 			});
   }, [keyword]);
 
-	console.log(typeof SearchResult)
-	console.log(SearchResult)
+	var SerchFilter = SearchResult.filter((prd)=>{
+		return prd.product_name.toLowerCase() === keyword.toLowerCase() || prd.category.name.toLowerCase() === keyword.toLowerCase() || prd.product_short_desc === keyword.toLowerCase()
+	})
 
-	const searchResult = SearchResult.map((product,index)=>{
+	const searchResult = SerchFilter.map((product,index)=>{
 		return (
 		<div className="col" key={product.id}>
 			<div className="card h-100 cardBorder">
@@ -74,7 +77,7 @@ const index = withRouter((props) => {
             </div>
             <div className="col-sm-9">
               <div className="row row-cols-1 row-cols-sm-3 g-4">
-								{searchResult}
+								{searchResult.length > 0 ? searchResult :"Not Found"}
               </div>
             </div>
           </div>

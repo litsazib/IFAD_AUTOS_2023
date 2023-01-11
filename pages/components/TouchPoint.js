@@ -189,7 +189,7 @@ export default function TouchPoint() {
           </div>
 
           {/* Location District */}
-          {/* <div className="row px-2">
+          <div className="row px-2">
             <select
               className="form-select"
               aria-label="Default select example"
@@ -205,7 +205,7 @@ export default function TouchPoint() {
               </option>
               {districtList ? districtList : 'Loading...'}
             </select>
-          </div> */}
+          </div>
           <p className="resultCount">{addressList.length} Address Found</p>
           <div className="scrollableDiv">
             {addressList ? addressList : <BeatLoader color="#FA3" />}
