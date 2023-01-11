@@ -12,6 +12,8 @@ import Top from '../components/Top';
 import Head from 'next/head';
 import BeatLoader from "react-spinners/BeatLoader";
 import slugify from 'react-slugify';
+import swal from 'sweetalert';
+import {isPdfFile} from '../../utils/common.js'
 
 const Vehicle = () => {
   const [vehicles, setVehicles] = useState([]);
@@ -58,6 +60,11 @@ const Vehicle = () => {
     )
   })
 
+  
+  let vrochurUrl = isPdfFile(targetedVehicle?.proudct_brochure)
+
+  
+
   return (
     <>
       <div className="container-fluid">
@@ -101,6 +108,7 @@ const Vehicle = () => {
             <div className="row mb-4">
               <div className="col-sm-4 col-6 me-sm-3">
                 <div className="row">
+                {vrochurUrl === true ?                   
                   <a
                     href={`${targetedVehicle?.proudct_brochure}`}
                     className="btn btn-outline-secondary"
@@ -109,6 +117,27 @@ const Vehicle = () => {
                   >
                     Product Brochure
                   </a>
+                  :
+                  <a
+                  href={vrochurUrl}
+                  className="btn btn-outline-danger"
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() =>  
+                    swal('Oops!', 'invalid file extension')
+                  }
+                >
+                  Product Brochure
+                </a>
+                }
+                  {/* <a
+                    href={`${targetedVehicle?.proudct_brochure}`}
+                    className="btn btn-outline-secondary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Product Brochure
+                  </a> */}
                 </div>
               </div>
               <div className="col-sm-4 col-6">

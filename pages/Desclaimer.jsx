@@ -1,37 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Head from "next/head";
 import Top from "./components/Top";
-import Homeslider from "./components/Homeslider";
 import Footer from "./components/Footer";
 const Desclaimer = () => {
+  const [document, setDocument] = useState([]);
+  useEffect(() => {
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/20")
+      .then((res) => res.json())
+      .then((data) => setDocument(data));
+  }, []);
+  const moduleBanner = document.map((item) => {
+    return (
+      <div className="row" key={item.id}>
+        <div
+          style={{
+            backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${item.module_image})`,
+            width: "100%",
+            height: "400px",
+            backgroundSize: "cover",
+          }}
+          className="coverPhoto d-flex justify-content-center align-items-center position-relative"
+        >
+          <h1 className="fw-bold position-relative text-white">
+            {item.module_name}
+          </h1>
+        </div>
+      </div>
+    );
+  });
   return (
     <>
       <div className="container-fluid">
         <Head>
-          <title>Values</title>
+          <title>Disclaimer</title>
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Top />
-        <Homeslider />
+        {moduleBanner}
       </div>
-      <div className="container">
-        <h1 className="brandColor text-center my-5 fw-bold">Desclaimer</h1>
-        <p className="mb-5">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
-          ipsa ratione laborum ipsum. Aperiam possimus numquam vitae, officiis
-          dicta aliquam aliquid animi commodi consectetur recusandae mollitia
-          earum, natus dolorum nostrum necessitatibus. Est omnis hic veritatis
-          temporibus, quia ab ratione quae laudantium, ullam voluptates
-          repellendus vitae distinctio unde, enim nemo eaque necessitatibus
-          reiciendis dicta aliquam eveniet dolores sed nisi? Illum, enim
-          sapiente qui consequatur reprehenderit facilis voluptates mollitia
-          tempora et sequi tempore fugit, magni quibusdam, earum ea non
-          consequuntur dolore impedit repellat? Quis animi est cumque, id
-          placeat dicta eum eaque vero fugiat voluptatem tenetur molestiae, ut
-          ea temporibus modi similique!
-        </p>
+      <div className="container my-5">
+        {document.map((items) =>
+          items.content_item.map((item) => {
+            return (
+              <div className="row" key={item.id}>
+                <h4>{item.item_name}</h4>
+                <p className="mb-5">{item.item_long_desc}</p>
+              </div>
+            );
+          })
+        )}
       </div>
       <Footer />
     </>
