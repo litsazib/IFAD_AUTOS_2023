@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState  } from "react";
+import { useRouter } from "next/router";
 import Logo from "../../public/logo/logo.png";
 import call from "../../public/social/call.png";
 import BeatLoader from "react-spinners/BeatLoader";
@@ -8,6 +9,15 @@ import slugify from 'react-slugify';
 
 
 const Top = () => {
+
+  const router = useRouter()
+  const [SearchKey, setSearchKey] = useState('');
+  const handleSubmit = event => {
+    event.preventDefault();
+    //setSearchKey('');
+    router.push(`/search?keyword=${SearchKey}`);
+  };
+  
   const menu = {
     About: [
       {
@@ -42,6 +52,7 @@ const Top = () => {
       </li>
     )
   })
+  
 
   return (
     <div id="Top" className="row align-items-center pb-sm-0 pb-5">
@@ -134,17 +145,21 @@ const Top = () => {
       <div className="w-100 d-sm-none d-block"></div>
       <div className="col-sm-3 col-12">
         <div className="position-relative">
-          <div className="searchBoxc">
-            <input
-              className="searchInputc"
-              type="text"
-              name=""
-              placeholder="Search"
-            />
-            <button className="searchButtonc">
-              <i className="bi bi-search"></i>
-            </button>
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="searchBoxc">
+              <input
+                className="searchInputc"
+                type="text"
+                value={SearchKey}
+                onChange={event => setSearchKey(event.target.value)}
+                autoComplete="off"
+                placeholder="Search"
+              />
+              <button className="searchButtonc" type="submit">
+                <i className="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
         </div>
         <div className="position-relative d-sm-block d-none">
           <div className="call">

@@ -7,12 +7,6 @@ import bg from '../../public/backgrounds/location.jpg';
 import map from '../../public/map/map.png';
 import BeatLoader from 'react-spinners/BeatLoader';
 
-/*
-Filter by Search
-Auth :@Showon 
-Date :1/09/23
-*/
-
 export default function TouchPoint() {
   const [addrtype, setAddrType] = useState('Sales');
   const [Location, setLocation] = useState([]);
