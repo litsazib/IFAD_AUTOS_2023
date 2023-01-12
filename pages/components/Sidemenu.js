@@ -1,10 +1,17 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react';
 import slugify from 'react-slugify';
 
 const Sidemenu = () => {
   const [categories, setCategories] = useState([]);
   const [error, setError] = useState('');
+
+  const router = useRouter();
+  const { category } = router.query;
+
+  console.log(category)
+
 
   useEffect(() => {
     fetch('http://autosapi.ifadgroup.com:8001/categories')
@@ -23,21 +30,19 @@ const Sidemenu = () => {
     <div className="cols-sm-3">
       <div className="accordion accordion-flush" id="accordionFlushExample">
         {categories.map((category, index) => {
-          return (
+          return (                    
             <div key={category.id} className="accordion-item">
               <>
                 <h2>
-                  <Link
+                  <Link href={`/vehicles?category=${slugify(category.name)}`} 
                     style={{
                       color: 'black',
                       textDecoration: 'none',
                       fontSize: '1rem',
                       padding: '0.8rem 1.5rem'
                     }}
-                    // as={`/vehicles/category/${slugify(category.name)}`}
-                    href={`/vehicles?category=${slugify(category.name)}`}
-                  >
-                    {category.name}
+                    className={router.query.category === slugify(category.name)? "activeItem": " "}>
+                      {category.name}
                   </Link>
                 </h2>
               </>
