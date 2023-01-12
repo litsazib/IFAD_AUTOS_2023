@@ -9,17 +9,9 @@ a {
   text-decoration: none;
 }
 /* Roktim  */
-
-
-/* footer */
-.font-14{
-  font-size: 16px;
+.activeItem {
+  color:#f6821f !important;
 }
-.font-calibri{
-  font-family: "Calibri";
-}
-
-/* ./footer part */
 .loadMore {    
   display: block;
   text-align: center;
@@ -334,7 +326,15 @@ input:focus {
 .newsDiv:hover .newsButtonDiv {
   opacity: 1;
 }
+/* footer */
+.font-14{
+  font-size: 16px;
+}
+.font-calibri{
+  font-family: "Calibri";
+}
 
+/* ./footer part */
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
