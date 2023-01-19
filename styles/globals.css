@@ -165,14 +165,12 @@ button {
   padding: 40px 40px 40px 20px;
   left: 0 !important;
 }
-.partnerLogo {
-  filter: gray;
-  -webkit-filter: grayscale(100%);
-  cursor: pointer;
+.partner-wrap {
+  justify-content: center;
+  gap:5px;
 }
-.partnerLogo:hover {
-  filter: none;
-  -webkit-filter: grayscale(0%);
+.partner-wrap > div:first-child {
+  border-right:1px solid #ccc;
 }
 .nav-link.active {
   background: none !important;

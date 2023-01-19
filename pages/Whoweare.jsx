@@ -137,54 +137,24 @@ const Whoweare = () => {
         {partnerName}
       {partners.map((doc) => {
         return (
-          <div className="swiper" key={doc.id}>
-            <Swiper
-              modules={[Navigation]}
-              spaceBetween={100}
-              slidesPerView={1}
-              pagination={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              navigation={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 0,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 0,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-                1920: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-              }}
-            >
-              {doc.content_item.map((ron) => {
-                return (
-                  <SwiperSlide key={ron.id}>
-                    <div className="col my-5">
-                      <div className="d-flex justify-content-center align-items-center position-relative">
-                        <Image
-                          className="img-fluid mb-3 partnerLogo"
-                          src={ron.item_image}
-                          alt="car"
-                          width={300}
-                          height={150}
-                        />
-                      </div>
+          <div className="d-flex partner-wrap" key={doc.id}>
+            {doc.content_item.map((ron) => {
+              return (
+                <div key={ron.id}>
+                  <div className="col my-5">
+                    <div className="d-flex justify-content-center align-items-center position-relative">
+                      <Image
+                        className="img-fluid mb-3"
+                        src={ron.item_image}
+                        alt="car"
+                        width={300}
+                        height={150}
+                      />
                     </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         );
       })}
