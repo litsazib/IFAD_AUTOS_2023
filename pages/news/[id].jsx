@@ -8,6 +8,11 @@ import Recentnews from "./Recentnews";
 import Relatednews from "./Reletednews";
 
 export const getStaticPaths = async () => {
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
+  
   const res = await fetch("https://fakestoreapi.com/products/");
   const data = await res.json();
   const paths = data.map((rony) => {
@@ -57,6 +62,7 @@ const Detail = ({ rony }) => {
                   objectFit="contain"
                   src={rony.image}
                   alt=""
+                  loader={loaderProp}
                 />
               </div>
               <p className="my-3">{rony.description}</p>

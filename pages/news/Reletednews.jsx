@@ -6,6 +6,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 const Relatednews = () => {
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
   const [news, setNews] = useState([]);
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/")
@@ -60,6 +64,7 @@ const Relatednews = () => {
                       alt="news"
                       layout="fill"
                       objectFit="cover"
+                      loader={loaderProp}
                     />
                   </div>
                 </div>
