@@ -12,6 +12,12 @@ import Top from "./components/Top";
 import Head from "next/head";
 
 const SingleVehicle = () => {
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
+
+
   const [document, setDocument] = useState([]);
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/products/1")
@@ -69,6 +75,7 @@ const SingleVehicle = () => {
                       alt="car"
                       width={1920}
                       height={0}
+                      loader={loaderProp}
                     />
                   </SwiperSlide>
                 );

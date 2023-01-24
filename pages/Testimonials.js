@@ -8,6 +8,10 @@ import Homeslider from "./components/Homeslider";
 import Top from "./components/Top";
 
 const Testimonials = () => {
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+  
   const testi = [
     {
       id: "1",
@@ -106,6 +110,7 @@ const Testimonials = () => {
               </p>
             </div>
             {testi.map((st) => {
+              
               return (
                 <div key={st.id} className="col-sm-4">
                   <div className="shadow mb-5 bg-body rounded position-relative overflow-hidden pb-5">
@@ -120,6 +125,7 @@ const Testimonials = () => {
                           alt="photo"
                           objectFit="cover"
                           layout="fill"
+                          loader={loaderProp}
                         />
                       </div>
 

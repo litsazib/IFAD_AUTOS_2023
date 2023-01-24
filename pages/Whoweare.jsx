@@ -13,6 +13,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 const Whoweare = () => {
+
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
+
   const [document, setDocument] = useState([]);
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/content-module/22")
@@ -92,6 +98,7 @@ const Whoweare = () => {
                             height={450}
                             src={vision.item_image}
                             alt="image"
+                            loader={loaderProp}
                           />
                         </div>
                         <div className="col-sm-8 order-sm-2 order-1 px-5 my-5">
@@ -110,6 +117,7 @@ const Whoweare = () => {
                             height={400}
                             src={vision.item_image}
                             alt="image"
+                            loader={loaderProp}
                           />
                         </div>
                         <div className="col-sm-6 order-sm-1 order-2 px-5 my-5">
@@ -149,6 +157,7 @@ const Whoweare = () => {
                         alt="car"
                         width={300}
                         height={150}
+                        loader={loaderProp}
                       />
                     </div>
                   </div>

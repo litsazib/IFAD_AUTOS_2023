@@ -10,6 +10,10 @@ const Social = () => {
       .then((data) => setDocument(data));
   }, []);
 
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
   const socialModule = document.map((items) => {
     return (
       <div className="row my-5" key={items.id}>
@@ -28,6 +32,7 @@ const Social = () => {
                       alt="car"
                       width={1920}
                       height={0}
+                      loader={loaderProp}
                     />
                   </Link>
                 </div>

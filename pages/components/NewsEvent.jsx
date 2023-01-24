@@ -14,6 +14,9 @@ export default function NewsEvent() {
   }, []);
 
   const moduleName = document.map((item) => {
+    const loaderProp =({ src }) => {
+      return src;
+    }   
     return (
       <div
         className="row py-5 position-relative"
@@ -66,6 +69,7 @@ export default function NewsEvent() {
                           alt="car"
                           width={1920}
                           height={0}
+                          loader={loaderProp}
                         />
                       </div>
                     </div>

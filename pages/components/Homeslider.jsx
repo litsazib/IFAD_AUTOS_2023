@@ -6,6 +6,11 @@ import { Pagination, Autoplay } from "swiper";
 import Image from "next/image";
 
 const Homeslider = () => {
+
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
   const [document, setDocument] = useState([]);
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/content-module/14")
@@ -26,6 +31,7 @@ const Homeslider = () => {
                 width={1920}
                 height={0}
                 priority
+                loader={loaderProp}
               />
             </SwiperSlide>
           );

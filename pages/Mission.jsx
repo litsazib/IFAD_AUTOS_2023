@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Image from "next/image";
 const Mission = () => {
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
+
+
   const [document, setDocument] = useState([]);
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/content-module/23")
@@ -53,6 +59,7 @@ const Mission = () => {
                             height={400}
                             src={vision.item_image}
                             alt="image"
+                            loader={loaderProp}
                           />
                         </div>
                         <div className="col-sm-6 order-sm-2 order-1 px-5 my-5">
@@ -71,6 +78,7 @@ const Mission = () => {
                             height={400}
                             src={vision.item_image}
                             alt="image"
+                            loader={loaderProp}
                           />
                         </div>
                         <div className="col-sm-6 order-sm-1 order-2 px-5 my-5">
