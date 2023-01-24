@@ -7,8 +7,8 @@ const Footer = () => {
   const loaderProp =({ src }) => {
     return src;
   }   
-
-
+	const d = new Date();
+	let year = d.getFullYear();
 	const [social, setSocial] = useState([]);
 	useEffect(() => {
 		fetch('http://autosapi.ifadgroup.com:8001/content-module/16')
@@ -147,7 +147,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<h3 className="font-noto m-0 bg-dark py-4 font-14 text-center text-light font-calibri">
-				© 2023 IFAD Multi-product. All Rights Reserved | Developed by{' '}
+				© {year} IFAD Multi-product. All Rights Reserved | Developed by{' '}
 				<a target="_blank" href="http://api.net.bd">
 					<img src="API-logo.png" style={{ width: '35px' }} alt="" className="img-fluid" />
 				</a>
