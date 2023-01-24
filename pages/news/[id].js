@@ -25,7 +25,7 @@ const Detail = () => {
   useEffect(() => {
     fetchNews()
     .catch(console.error);
-  }, []);
+  }, [pid]);
 
   return (
     <>
@@ -46,7 +46,7 @@ const Detail = () => {
             <h1 className="brandColor fw-bold text-center">News & Events</h1>
           </div>
           <div className="row my-5">
-            <div className="col-sm-12">
+            <div className="col-sm-8">
               <h1>{newsdata[0]?.item_name}</h1>
               <div className="col-sm-12 position-relative">
                 <Image
@@ -62,14 +62,14 @@ const Detail = () => {
             </div>
             <div className="col-sm-4">
               <div>
-                {/* <Recentnews /> */}
+                <Recentnews />
               </div>
             </div>
           </div>
-          {/* <h4 className="brandColor fw-bold">Related Articles</h4> */}
+          <h4 className="brandColor fw-bold">Related Articles</h4>
         </main>
       </div>
-      {/* <Relatednews /> */}
+      <Relatednews />
       <Footer />
     </>
   );
