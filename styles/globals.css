@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 /* Roktim  */
+.newslink:hover {
+  color: #f6821f !important;
+  transition: 0.3s;
+}
 .activeItem {
   color:#f6821f !important;
 }
