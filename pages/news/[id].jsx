@@ -8,7 +8,7 @@ import Recentnews from "./Recentnews";
 import Relatednews from "./Reletednews";
 
 export const getStaticPaths = async () => {
-  const res = await fetch("https://fakestoreapi.com/products/");
+  const res = await fetch("http://autosapi.ifadgroup.com:8001/content-module/17");
   const data = await res.json();
   const paths = data.map((rony) => {
     return {
