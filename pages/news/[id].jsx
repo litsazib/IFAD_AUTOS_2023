@@ -57,6 +57,7 @@ const Detail = ({ rony }) => {
                   objectFit="contain"
                   src={rony.image}
                   alt=""
+                  loader={loaderProp}
                 />
               </div>
               <p className="my-3">{rony.description}</p>

@@ -4,6 +4,13 @@ import bg from "../../public/backgrounds/location.jpg";
 import map from "../../public/map/map.png";
 
 export default function Location() {
+ 
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
+
+  
   const background = {
     backgroundImage: `url(${bg.src})`,
     backgroundSize: "cover",
@@ -77,7 +84,7 @@ export default function Location() {
         </div>
       </div>
       <div className="col-sm-4">
-        <Image src={map} alt="map" />
+        <Image src={map} alt="map" loader={loaderProp} />
       </div>
     </div>
   );

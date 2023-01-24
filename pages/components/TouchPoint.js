@@ -19,6 +19,10 @@ export default function TouchPoint() {
 
   const [error, setError] = useState('');
 
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
   useEffect(() => {
     fetch(`http://implapi.ifadgroup.com:8001/location/${addrtype}`)
       .then((res) => res.json())
@@ -140,15 +144,15 @@ export default function TouchPoint() {
             style={{ marginTop: '-50px' }}
           >
             <div className="px-4 text-center">
-              <Image width={50} height={50} src={salesIcon} alt="icon" />
+              <Image width={50} height={50} src={salesIcon} alt="icon" loader={loaderProp}/>
               <p>Sales Center</p>
             </div>
             <div className="px-4 text-center">
-              <Image width={50} height={50} src={serviceIcon} alt="icon" />
+              <Image width={50} height={50} src={serviceIcon} alt="icon" loader={loaderProp}/>
               <p>Service Center</p>
             </div>
             <div className="px-4 text-center">
-              <Image width={50} height={50} src={leypartsIcon} alt="icon" />
+              <Image width={50} height={50} src={leypartsIcon} alt="icon" loader={loaderProp}/>
               <p>Leyparts</p>
             </div>
           </div>
@@ -231,7 +235,7 @@ export default function TouchPoint() {
           </div>
         </div>
         <div className="col-sm-4">
-          <Image src={map} alt="map" />
+          <Image src={map} alt="map" loader={loaderProp}/>
         </div>
       </div>
     </>

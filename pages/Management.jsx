@@ -5,6 +5,11 @@ import Top from "./components/Top";
 import Footer from "./components/Footer";
 import Image from "next/image";
 const Management = () => {
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
+
   const [document, setDocument] = useState([]);
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/content-module/27")
@@ -89,6 +94,7 @@ const Management = () => {
                                   alt="photo"
                                   objectFit="cover"
                                   layout="fill"
+                                  loader={loaderProp}
                                 />
                               </div>
                             </div>

@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Image from "next/image";
 const History = () => {
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
   const [document, setDocument] = useState([]);
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/content-module/18")
@@ -97,6 +101,7 @@ const History = () => {
                                     alt="photo"
                                     objectFit="cover"
                                     layout="fill"
+                                    loader={loaderProp}
                                   />
                                 </div>
                               </div>
@@ -166,6 +171,7 @@ const History = () => {
                                     alt="photo"
                                     objectFit="cover"
                                     layout="fill"
+                                    loader={loaderProp}
                                   />
                                 </div>
                               </div>
