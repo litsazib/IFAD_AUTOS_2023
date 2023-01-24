@@ -6,6 +6,11 @@ import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import ReactPlayer from "react-player";
 export default function Client() {
+  
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
   const [document, setDocument] = useState([]);
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/content-module/4")
@@ -14,10 +19,6 @@ export default function Client() {
   }, []);
 
   const moduleName = document.map((item) => {
-    const loaderProp =({ src }) => {
-      return src;
-    }   
-
 
     return (
       <div className="mt-5" key={item.id}>

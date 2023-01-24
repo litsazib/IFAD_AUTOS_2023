@@ -6,6 +6,11 @@ import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 
 export default function Award() {
+
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+  
   const [document, setDocument] = useState([]);
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/content-module/5")
@@ -14,9 +19,6 @@ export default function Award() {
   }, []);
 
   const moduleName = document.map((item) => {
-    const loaderProp =({ src }) => {
-      return src;
-    }   
     return (
       <div
         className="row pt-5 position-relative"

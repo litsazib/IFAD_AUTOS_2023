@@ -6,6 +6,10 @@ import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
 export default function NewsEvent() {
+  const loaderProp =({ src }) => {
+    return src;
+  }  
+  
   const [document, setDocument] = useState([]);
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/content-module/17")
@@ -13,10 +17,7 @@ export default function NewsEvent() {
       .then((data) => setDocument(data));
   }, []);
 
-  const moduleName = document.map((item) => {
-    const loaderProp =({ src }) => {
-      return src;
-    }   
+  const moduleName = document.map((item) => { 
     return (
       <div
         className="row py-5 position-relative"
