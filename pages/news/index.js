@@ -4,13 +4,13 @@ import React from 'react';
 const news = ({ rony }) => {
   const newsData = rony[0]?.content_item;
   return (
-    <>
+    <div className="newsList">
       {newsData.map((news) => (
         <Link key={news.id} href={`news/${news.id}`}>
           <h4>{news.item_name}</h4>
         </Link>
       ))}
-  </>
+    </div>
   );
 };
 
