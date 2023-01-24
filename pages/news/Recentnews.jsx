@@ -8,6 +8,13 @@ const Recentnews = () => {
       .then((res) => res.json())
       .then((data) => setNews(data));
   }, []);
+
+  const loaderProp =({ src }) => {
+    return src;
+  }  
+
+
+
   return (
     <div>
       <h4 className="brandColor fw-bold">Recent Posts</h4>
@@ -20,6 +27,7 @@ const Recentnews = () => {
               objectFit="cover"
               src={ron.image}
               alt="image"
+              loader={loaderProp}
             />
           </div>
           <div className="col-9 fs-3">

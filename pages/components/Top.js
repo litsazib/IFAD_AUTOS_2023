@@ -10,6 +10,10 @@ import slugify from 'react-slugify';
 
 const Top = () => {
 
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
   const router = useRouter()
   const [SearchKey, setSearchKey] = useState('');
   const handleSubmit = event => {
@@ -58,11 +62,11 @@ const Top = () => {
     <div id="Top" className="row align-items-center pb-sm-0 pb-5">
       <div className="col-sm-3 col">
         <Link href="/">
-          <Image className="img-fluid" src={Logo} alt="Logo" />
+          <Image className="img-fluid" src={Logo} alt="Logo" loader={loaderProp}/>
         </Link>
         <div className="position-relative d-sm-none d-block">
           <div className="call">
-            <Image width={100} height={40} src={call} alt="Call" />
+            <Image width={100} height={40} src={call} alt="Call" loader={loaderProp}/>
           </div>
         </div>
       </div>
@@ -163,7 +167,7 @@ const Top = () => {
         </div>
         <div className="position-relative d-sm-block d-none">
           <div className="call">
-            <Image width={110} height={45} src={call} alt="Call" />
+            <Image width={110} height={45} src={call} alt="Call" loader={loaderProp}/>
           </div>
         </div>
       </div>

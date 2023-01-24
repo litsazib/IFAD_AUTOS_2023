@@ -14,6 +14,11 @@ export default function Client() {
   }, []);
 
   const moduleName = document.map((item) => {
+    const loaderProp =({ src }) => {
+      return src;
+    }   
+
+
     return (
       <div className="mt-5" key={item.id}>
         <div
@@ -65,6 +70,7 @@ export default function Client() {
                             alt="car"
                             width={1920}
                             height={0}
+                            loader={loaderProp}
                           />
                         ) : (
                           <ReactPlayer url={ron.item_video_link} />

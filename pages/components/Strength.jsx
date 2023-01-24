@@ -11,7 +11,12 @@ export default function Strength() {
       .then((data) => setDocument(data));
   }, []);
 
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+
   const moduleName = document.map((item) => {
+
     return (
       <div className="row" key={item.id}>
         <h1 className="brandColor text-center fw-bold mb-5">
@@ -30,6 +35,7 @@ export default function Strength() {
                       width={60}
                       height={60}
                       style={{ backgroundColor: "#f6821f" }}
+                      loader={loaderProp}
                     />
                   </div>
                   <div className="col-12 d-flex justify-content-center">
