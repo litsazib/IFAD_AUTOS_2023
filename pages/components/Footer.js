@@ -147,7 +147,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<h3 className="font-noto m-0 bg-dark py-4 font-14 text-center text-light font-calibri">
-				© 2022 IFAD Multi-product. All Rights Reserved | Developed by{' '}
+				© 2023 IFAD Multi-product. All Rights Reserved | Developed by{' '}
 				<a target="_blank" href="http://api.net.bd">
 					<img src="API-logo.png" style={{ width: '35px' }} alt="" className="img-fluid" />
 				</a>
