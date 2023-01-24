@@ -17,7 +17,6 @@ const index = withRouter((props) => {
 	const [SearchResult, setSearchResult] = useState([]);
 
 	useEffect(() => {
-		// fetch(`http://implapi.ifadgroup.com:8001/location-search/${keyword}`)
 		fetch(`http://autosapi.ifadgroup.com:8001/products`)
 			.then((res) => res.json())
 			.then((data) => {

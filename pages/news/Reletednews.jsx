@@ -12,7 +12,7 @@ const Relatednews = () => {
 
   const [news, setNews] = useState([]);
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/")
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/17")
       .then((res) => res.json())
       .then((data) => setNews(data));
   }, []);
@@ -48,7 +48,7 @@ const Relatednews = () => {
             },
           }}
         >
-          {news.slice(0, 6).map((ron) => {
+          {news[0]?.content_item.slice(6, -1).map((ron) => {
             return (
               <SwiperSlide key={ron.id}>
                 <div className="col my-5">
@@ -59,13 +59,15 @@ const Relatednews = () => {
                       overflow: "hidden",
                     }}
                   >
+                    <Link href={`${ron.id}`}>
                     <Image
-                      src={ron.image}
+                      src={ron.item_image}
                       alt="news"
                       layout="fill"
                       objectFit="cover"
                       loader={loaderProp}
                     />
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>

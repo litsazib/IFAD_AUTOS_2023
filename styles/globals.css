@@ -9,6 +9,26 @@ a {
   text-decoration: none;
 }
 /* Roktim  */
+.newslink:hover {
+  color: #f6821f !important;
+  transition: 0.3s;
+}
+.newsList {
+  width: 90%;
+  margin: 0 auto;
+}
+.newsList a {
+  background: #ccc;
+  display: block;
+  padding: 1px 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.newsList a:hover {
+  background: linear-gradient(to bottom, #f1e767 0%,#feb645 100%);
+  cursor: pointer;
+  transition: 0.3s;
+}
 .activeItem {
   color:#f6821f !important;
 }

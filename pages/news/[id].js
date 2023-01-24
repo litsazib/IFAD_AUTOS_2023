@@ -6,34 +6,32 @@ import Homeslider from "../components/Homeslider";
 import Top from "../components/Top";
 import Recentnews from "./Recentnews";
 import Relatednews from "./Reletednews";
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://autosapi.ifadgroup.com:8001/content-module/17");
-  const data = await res.json();
-  const paths = data.map((rony) => {
-    return {
-      params: { id: rony.id.toString() },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-};
-export async function getStaticProps(context) {
-  const id = context.params.id;
-  const res = await fetch(`https://fakestoreapi.com/products/${id}`);
-  const data = await res.json();
-  return {
-    props: { rony: data },
-  };
-}
-const Detail = ({ rony }) => {
+const Detail = () => {
+  const loaderProp =({ src }) => {
+    return src;
+  }   
+  const router = useRouter()
+  const pid = router.query.id
+  const [newsdata, setnewsdata] = useState([]);
+  const fetchNews = async () => {
+    const data = await fetch(`http://implapi.ifadgroup.com:8001/content-item/${pid}`)
+    .then((res) => res.json())
+    .then((data) => setnewsdata(data))
+  }
+
+  useEffect(() => {
+    fetchNews()
+    .catch(console.error);
+  }, []);
+
   return (
     <>
       <div className="container-fluid">
         <Head>
-          <title>{rony.title}</title>
+          <title>{newsdata[0]?.item_name}</title>
           <meta name="description" content="Ifad Autos Tesimonial" />
           <link rel="icon" href="/favicon.ico" />
           <link
@@ -42,25 +40,25 @@ const Detail = ({ rony }) => {
           />
         </Head>
         <Top />
-        <Homeslider />
+        {/* <Homeslider /> */}
         <main className="container">
           <div className="row my-5">
             <h1 className="brandColor fw-bold text-center">News & Events</h1>
           </div>
           <div className="row my-5">
             <div className="col-sm-8">
-              <h1>{rony.title}</h1>
+              <h1>{newsdata[0]?.item_name}</h1>
               <div className="col-sm-12 position-relative">
                 <Image
                   className="position-relative"
                   layout="fill"
                   objectFit="contain"
-                  src={rony.image}
-                  alt=""
+                  src={newsdata[0]?.item_image}
+                  alt={newsdata[0]?.item_name}
                   loader={loaderProp}
                 />
               </div>
-              <p className="my-3">{rony.description}</p>
+              <p className="my-3">{newsdata[0]?.item_long_desc}</p>
             </div>
             <div className="col-sm-4">
               <div>
