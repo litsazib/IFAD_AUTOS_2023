@@ -27,8 +27,8 @@ const Footer = () => {
 		{ id: 9, name: 'CONTACT', link: '/Contact' },
 	];
 	const menu = [
-		{ id: 10, name: 'TERM OF USE', link: '/Terms' },
-		{ id: 11, name: 'DESCLAIMER', link: 'Desclaimer' },
+		{ id: 10, name: 'TERMS OF USE', link: '/Terms' },
+		{ id: 11, name: 'DISCLAIMER', link: 'Desclaimer' },
 		{ id: 12, name: 'PRIVACY POLICY', link: '/Privacypolicy' },
 		// { id: 13, name: "SITEMAP", link: "/Sitemap" },
 	];
