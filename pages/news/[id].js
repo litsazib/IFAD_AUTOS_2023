@@ -25,7 +25,7 @@ const Detail = () => {
   useEffect(() => {
     fetchNews()
     .catch(console.error);
-  }, []);
+  }, [pid]);
 
   return (
     <>
