@@ -62,7 +62,7 @@ const Top = () => {
     <div id="Top" className="row align-items-center pb-sm-0 pb-5">
       <div className="col-sm-3 col">
         <Link href="/">
-          <Image className="img-fluid" src={Logo} alt="Logo" loader={loaderProp}/>
+          <Image className="img-fluid s220" src={Logo} alt="Logo" loader={loaderProp}/>
         </Link>
         <div className="position-relative d-sm-none d-block">
           <div className="call">
