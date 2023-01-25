@@ -23,10 +23,10 @@ const Recentnews = () => {
           <div className="col-3 position-relative">
             <Image
               className="position-relative"
-              layout="fill"
-              objectFit="cover"
+              width={90}
+              height={60}
               src={ron.item_image}
-              alt="image"
+              alt={ron.item_name}
               loader={loaderProp}
             />
           </div>

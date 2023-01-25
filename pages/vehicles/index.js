@@ -12,6 +12,9 @@ import Sidemenu from '../components/Sidemenu';
 import Top from "../components/Top";
 
 const Allvehicle = withRouter((props) => {
+  const loaderProp =({ src }) => {
+    return src;
+  }   
   const productPerLoad = 6;
   const [Product, setProduct] = useState([]);
   const [filteredVehicles, setFilteredVehicles] = useState([]);
@@ -93,11 +96,12 @@ const Allvehicle = withRouter((props) => {
               {filteredVehicles.map((product, index) => {
                   return (
                     <div className="col content" key={product.id}>
-                      <div className="card h-100 cardBorder">
-                        <img
-                          className="card-img-top img-fluid prdStyle"
-                          src={product.Product_image}
-                          alt="vehicle"
+                      <div className="card cardBorder">
+                        <Image className="card-img-top img-fluid prdStyle" src={product.Product_image}
+                          alt={product.product_name}
+                          width={305}
+                          height={170}
+                          loader={loaderProp}
                         />
                         <div className="card-body">
                           <h5 className="text-center">

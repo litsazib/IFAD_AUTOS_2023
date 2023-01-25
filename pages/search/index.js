@@ -5,6 +5,7 @@ import Link from "next/link";
 import { withRouter } from "next/router";
 import slugify from 'react-slugify';
 import BeatLoader from "react-spinners/BeatLoader";
+import Image from "next/image";
 
 import Top from "../components/Top";
 import Banner from "../components/Banner";
@@ -13,6 +14,11 @@ import Footer from "../components/Footer";
 
 
 const index = withRouter((props) => {
+
+	const loaderProp =({ src }) => {
+    return src;
+  }   
+
 	const { keyword } = props.router.query;
 	const [SearchResult, setSearchResult] = useState([]);
 
@@ -33,11 +39,12 @@ const index = withRouter((props) => {
 	const searchResult = SerchFilter.map((product,index)=>{
 		return (
 		<div className="col" key={product.id}>
-			<div className="card h-100 cardBorder">
-				<img
-					className="card-img-top img-fluid prdStyle"
-					src={product.Product_image}
-					alt="vehicle"
+			<div className="card cardBorder">
+					<Image className="card-img-top img-fluid prdStyle" src={product.Product_image}
+					alt={product.product_name}
+					width={305}
+					height={170}
+					loader={loaderProp}
 				/>
 				<div className="card-body">
 					<h5 className="text-center">
