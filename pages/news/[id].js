@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import Image from "next/image";
 import Head from "next/head";
 import Footer from "../components/Footer";
-import Homeslider from "../components/Homeslider";
 import Top from "../components/Top";
 import Recentnews from "./Recentnews";
 import Relatednews from "./Reletednews";
@@ -40,7 +39,6 @@ const Detail = () => {
           />
         </Head>
         <Top />
-        {/* <Homeslider /> */}
         <main className="container">
           <div className="row my-5">
             <h1 className="brandColor fw-bold text-center">News & Events</h1>
@@ -51,8 +49,8 @@ const Detail = () => {
               <div className="col-sm-12 position-relative">
                 <Image
                   className="position-relative"
-                  layout="fill"
-                  objectFit="contain"
+                  width={850}
+                  height={500}
                   src={newsdata[0]?.item_image}
                   alt={newsdata[0]?.item_name}
                   loader={loaderProp}
@@ -66,7 +64,7 @@ const Detail = () => {
               </div>
             </div>
           </div>
-          <h4 className="brandColor fw-bold">Related Articles</h4>
+          <h4 className="brandColor fw-bold text-center display-6 ">Related Articles</h4>
         </main>
       </div>
       <Relatednews />

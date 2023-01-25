@@ -92,7 +92,13 @@ const SingleVehicle = () => {
               <div className="col-sm-6">
                 <Carousel>
                   <div>
-                    <img src={slide.Product_image} alt="Product" />
+                    <Image
+                      src={slide.Product_image}
+                      alt="Product"
+                      width={1920}
+                      height={0}
+                      loader={loaderProp}
+                    />
                   </div>
                 </Carousel>
               </div>

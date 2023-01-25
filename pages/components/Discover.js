@@ -5,12 +5,16 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import "bootstrap/dist/css/bootstrap.css";
 import Link from "next/link";
+import Image from "next/image";
 import BeatLoader from "react-spinners/BeatLoader";
 import background from "../../public/backgrounds/background.png";
 import slugify from 'react-slugify';
 
 
 export default function Discover() {
+  const loaderProp =({ src }) => {
+    return src;
+  }   
 	const perSlide = 10;
   const [PrdCatagory, setPrdCatagory] = useState([]);
   const [Products, setProducts] = useState([]);
@@ -67,8 +71,15 @@ export default function Discover() {
     return (
       <SwiperSlide key={idx}>
       <div className="col mt-2">
-        <div className="h-100">
-          <img className="img-fluid mb-3 h247" src={ctx.Product_image} alt="" />
+        <div className="prd-carosul">
+          <Image
+            className="img-fluid mb-3 h247"
+            src={ctx.Product_image}
+            alt={ctx.name}
+            width={700}
+            height={0}
+            loader={loaderProp}
+            />
           <h5 className="text-center">{ctx.name}</h5>
           <p className="text-center fs-6 py-0">{ctx.detail}</p>
           <div className="d-flex justify-content-center">

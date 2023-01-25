@@ -14,8 +14,14 @@ import BeatLoader from "react-spinners/BeatLoader";
 import slugify from 'react-slugify';
 import swal from 'sweetalert';
 import {isPdfFile} from '../../utils/common.js'
+import Image from "next/image";
 
 const Vehicle = () => {
+
+  const loaderProp =({ src }) => {
+    return src;
+  }  
+
   const [vehicles, setVehicles] = useState([]);
   const [error, setError] = useState(null);
 
@@ -48,7 +54,12 @@ const Vehicle = () => {
       }}
     >
       <SwiperSlide key={idx}>
-        <img className="img-fluid mb-3" src={item} alt="" />
+        <Image className="img-fluid mb-3" src={item}
+          alt="prdouct-banner"
+          width={1920}
+          height={200}
+          loader={loaderProp}
+        />
       </SwiperSlide>
     </Swiper>
     )
@@ -57,6 +68,13 @@ const Vehicle = () => {
   const productSlideImg = targetedVehicle?.product_multi_images.map((item,idx)=>{
     return (
       <img key={idx} src={item} alt="Product" />
+      // <Image src={item}
+      //   alt="Product"
+      //   width={640}
+      //   height={320}
+      //   key={idx}
+      //   loader={loaderProp}
+      // />
     )
   })
 
@@ -100,7 +118,9 @@ const Vehicle = () => {
                 {productSlideImg ? productSlideImg : <div className='text-center'><BeatLoader color="#FA3" /></div> }
               </Carousel>
               )
-              :(<img width={350} src={targetedVehicle?.Product_image} alt="Product" />)
+              :(
+              <Image src={targetedVehicle?.Product_image} alt="Product" width={350} height={320} loader={loaderProp} />
+              )
             }
 
           </div>
