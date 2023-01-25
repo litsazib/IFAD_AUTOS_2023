@@ -12,7 +12,7 @@ const Privacypolicy = () => {
   }, []);
   const moduleBanner = document.map((item) => {
     return (
-      <div className="row" key={item.id}>
+      <div className="row">
         <div
           style={{
             backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${item.module_image})`,
