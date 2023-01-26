@@ -29,11 +29,6 @@ const Top = () => {
         name: "Who we are",
         slug: "/Whoweare",
       },
-      // {
-      //   id: "6",
-      //   name: "Partners",
-      //   slug: "/Partners",
-      // },
       {
         id: "7",
         name: "Management",
@@ -117,7 +112,7 @@ const Top = () => {
                     <li className="nav-item">
                       <Link
                         className="nav-link nav-link-top"
-                        href="#touchpoint"
+                        href="/#touchpoint"
                         scroll={false}
                       >
                         Touch Point
