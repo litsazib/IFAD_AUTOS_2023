@@ -172,7 +172,7 @@ export default function TouchPoint() {
           {/* Location Type */}
           <div className="row py-3 px-2">
             <select className="form-select" onChange={handleAddrTypeChange}>
-              <option value={addrtype} selected={true} disabled={true} >{addrtype}</option>
+              <option value={addrtype} selected={true} disabled={true} hidden={true} >{addrtype}</option>
               <option value="Sales">Sales</option>
               <option value="Service">Service</option>
               <option value="Lyparts">Lyparts</option>

@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 export default function Strength() {
+
   const [document, setDocument] = useState([]);
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/content-module/3")
@@ -30,6 +31,7 @@ export default function Strength() {
                   <div className="col-12 d-flex justify-content-center">
                     <Image
                       className="mx-3"
+                      // onClick={() => optTypeChage(st.item_name == "Sales Center"?"Sales":"" || st.item_name == "Service Center"?"Service":""|| st.item_name == "Leyparts"?"Leyparts":"" )}
                       src={st.item_image}
                       alt="icon"
                       width={60}
