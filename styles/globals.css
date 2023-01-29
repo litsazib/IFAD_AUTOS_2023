@@ -8,6 +8,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.cBlack {
+  color: #000;
+}
+.activeItem {
+  color: #f6821f !important;
+}
 /* Roktim  */
 .s220 {
   max-width: 220px !important;
@@ -161,7 +167,7 @@ button {
   padding-left: 10px;
 }
 .nav-link-top {
-  color: #000 !important;
+  color: #000;
   cursor: pointer;
   -webkit-transition: ease all 0.5s !important;
   transition: ease all 0.5s !important;
@@ -173,7 +179,7 @@ button {
   text-shadow: 0px 0px 1px #000;
 }
 .nav {
-  color: #000 !important;
+  color: #000;
 }
 .swiper-button-next {
   color: white !important;
@@ -201,7 +207,7 @@ button {
   color: #f6821f !important;
 }
 .nav-link {
-  color: #000 !important;
+  /* color: #000; */
 }
 /* input icons */
 .inner-addon {

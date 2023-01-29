@@ -10,9 +10,6 @@ const Sidemenu = () => {
   const router = useRouter();
   const { category } = router.query;
 
-  console.log(category)
-
-
   useEffect(() => {
     fetch('http://autosapi.ifadgroup.com:8001/categories')
       .then((res) => res.json())
