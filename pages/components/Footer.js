@@ -148,7 +148,7 @@ const Footer = () => {
 			<h3 className="font-noto m-0 bg-dark py-4 font-14 text-center text-light font-calibri">
 				© {year} IFAD Autos. All Rights Reserved | Developed by{' '}
 				<a target="_blank" href="http://api.net.bd">
-					<Image className="img-fluid" width={35} height={0} src={'API-logo.png'} alt="company-logo" loader={loaderProp}/>
+					<Image className="img-fluid" width={35} height={0} src={'/API-logo.png'} alt="company-logo" loader={loaderProp}/>
 				</a>
 			</h3>
 		</>
