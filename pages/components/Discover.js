@@ -69,15 +69,16 @@ export default function Discover() {
   const ProductList = FilterProduct.slice(0, perSlide).map((ctx,idx)=>{
     
     return (
-      <SwiperSlide key={idx}>
+      <SwiperSlide key={idx} height="450px">
       <div className="col mt-2">
-        <div className="prd-carosul">
+        <div className="prd-carosul" style={{posation:"relative"}}>
           <Image
-            className="img-fluid mb-3 h247"
+            className="img-fluid mb-3"
             src={ctx.Product_image}
             alt={ctx.name}
-            width={700}
-            height={0}
+            width={450}
+            height={450}
+            style={{objectFit:"contain"}}
             loader={loaderProp}
             />
           <h5 className="text-center">{ctx.name}</h5>

@@ -116,7 +116,7 @@ const Top = () => {
                       <Link
                         className="nav-link nav-link-top"
                         href="/#touchpoint"
-                        scroll={false}
+                        id="TouchPoint"
                       >
                         Touch Point
                       </Link>

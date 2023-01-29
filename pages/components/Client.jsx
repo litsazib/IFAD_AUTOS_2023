@@ -35,6 +35,7 @@ export default function Client() {
               spaceBetween={100}
               slidesPerView={1}
               pagination={true}
+              height={500}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
@@ -69,8 +70,8 @@ export default function Client() {
                             className="img-fluid mb-3"
                             src={ron.item_image}
                             alt="car"
-                            width={1920}
-                            height={0}
+                            width={500}
+                            height={500}
                             loader={loaderProp}
                           />
                         ) : (
