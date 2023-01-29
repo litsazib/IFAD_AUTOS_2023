@@ -47,7 +47,7 @@ const Values = () => {
       >
         {document.map((doc) => {
           return (
-            <div className="row py-5" key={doc.id}>
+            <div className="row py-2" key={doc.id}>
               {doc.content_item.map((item, i) => {
                 return (
                   <div className="col-sm-3 mb-4" key={item.id}>

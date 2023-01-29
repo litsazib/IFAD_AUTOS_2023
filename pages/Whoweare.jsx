@@ -53,11 +53,16 @@ const Whoweare = () => {
           }}
           className="coverPhoto d-flex justify-content-center align-items-center position-relative"
         >
-          <h1 className="fw-bold position-relative text-white">
-            {item.module_name}
-          </h1>
         </div>
       </div>
+    );
+  });
+
+  const settionTitle = document.map((item) => {
+    return (
+    <h1 className="fw-bold mb-5">
+      {item.module_name}
+    </h1> 
     );
   });
 
@@ -74,15 +79,13 @@ const Whoweare = () => {
   return (
     <>
       <div className="container-fluid">
-        <Head>
-          <title>{moduleName}</title>
-          <meta name="description" content="All" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
         <Top />
         {moduleBanner}
       </div>
       <div className="container mt-5">
+        <div className="sectionTitle text-center">
+          {/* {settionTitle} */}
+        </div>
         {document.map((item) => {
           return (
             <div className="mb-5" key={item.id}>
@@ -93,7 +96,7 @@ const Whoweare = () => {
                       <>
                         <div className={"col-sm-4 p-0"}>
                           <Image
-                            className="img-fluid"
+                            className="img-fluid rounded" 
                             width={300}
                             height={450}
                             src={vision.item_image}

@@ -84,6 +84,7 @@ const Allvehicle = withRouter((props) => {
       <div className="container-fluid nomp">
         <Top />
         <Banner title="Our Products"/>
+        {/* <h1 className="sectionTitle text-center mt-5 mb-5">Our vehicles</h1> */}
       </div>
       <div className="container">
         <main>

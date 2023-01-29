@@ -8,7 +8,7 @@ const Banner = ({title}) => {
   return (
     <div className="bannerWrap">
       <Image className="pageBanner" src={'banner/banner.jpg'} width={1920} height={250} loader={loaderProp} />
-      <span className="bannerText">{title}</span>
+      {/* <span className="bannerText">{title}</span> */}
     </div>
   );
 };

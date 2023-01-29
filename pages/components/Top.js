@@ -15,6 +15,7 @@ const Top = () => {
   }   
 
   const router = useRouter()
+  const { category } = router.query;
   const [SearchKey, setSearchKey] = useState('');
   const handleSubmit = event => {
     event.preventDefault();
@@ -38,6 +39,7 @@ const Top = () => {
   };
 
   const [PrdCatagory, setPrdCatagory] = useState([]);
+
   
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/categories")
@@ -47,7 +49,7 @@ const Top = () => {
   const CatagoryList = PrdCatagory[0]?.product_category_list.map((ctx,idx)=>{
     return (
       <li className="nav-item" key={idx}>
-        <Link className="nav-link nav-link-top" href={`/vehicles?category=${slugify(ctx.name)}`}>{ctx.name}</Link>
+        <Link  className={router.query.category === slugify(ctx.name)?"nav-link nav-link-top activeItem": "nav-link nav-link-top"} href={`/vehicles?category=${slugify(ctx.name)}`}>{ctx.name}</Link>
       </li>
     )
   })
@@ -85,11 +87,12 @@ const Top = () => {
                 <div className="col-sm-12">
                   <ul className="navbar-nav d-flex justify-content-center">
                   <li className="nav-item">
-                    <Link className="nav-link nav-link-top" href="/">Home</Link>
+                    <Link className={router.pathname == "/" ? "nav-link nav-link-top activeItem" : " nav-link nav-link-top"}  href="/">Home</Link>
                   </li>
                     <li className="nav-item dropdown">
                       <a
-                        className="nav-link dropdown-toggle"
+                        // className="nav-link dropdown-toggle"
+                        className={router.pathname == "/Whoweare" || router.pathname == "/Management" ? "nav-link dropdown-toggle activeItem" : " nav-link dropdown-toggle"}
                         href="#"
                         role="button"
                         data-bs-toggle="dropdown"
@@ -113,18 +116,18 @@ const Top = () => {
                       <Link
                         className="nav-link nav-link-top"
                         href="/#touchpoint"
-                        scroll={false}
+                        id="TouchPoint"
                       >
                         Touch Point
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link nav-link-top" href="/Investor">
+                      <Link className={router.pathname == "/Investor" ? "nav-link nav-link-top activeItem" : " nav-link nav-link-top"} href="/Investor">
                         Investor Information
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link nav-link-top" href="/Contact">
+                      <Link className={router.pathname == "/Contact" ? "nav-link nav-link-top activeItem" : " nav-link nav-link-top"} href="/Contact">
                         Contact Us
                       </Link>
                     </li>

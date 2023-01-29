@@ -67,11 +67,11 @@ const Vehicle = () => {
 
   const productSlideImg = targetedVehicle?.product_multi_images.map((item,idx)=>{
     return (
-      // <img key={idx} src={item} alt="Product" />
       <Image src={item}
         alt="Product"
         width={640}
-        height={320}
+        height={640}
+        style={{objectFit:"contain"}}
         key={idx}
         loader={loaderProp}
       />
@@ -111,7 +111,7 @@ const Vehicle = () => {
 
       <div className="container">
         <div className="row my-5">
-          <div className="col-sm-6">
+          <div className="col-sm-6" style={{posation:"relative"}}>
             {
               productSlideImg?.length > 0 ? (
               <Carousel>

@@ -52,7 +52,7 @@ const Mission = () => {
                   <div key={i} className="row d-flex align-items-center">
                     {i % 2 == 0 ? (
                       <>
-                        <div className={"col-sm-6 p-0"}>
+                        <div className={"col-sm-4 p-0"}>
                           <Image
                             className="img-fluid"
                             width={600}
@@ -62,7 +62,7 @@ const Mission = () => {
                             loader={loaderProp}
                           />
                         </div>
-                        <div className="col-sm-6 order-sm-2 order-1 px-5 my-5">
+                        <div className="col-sm-8 order-sm-2 order-1 px-5 my-5">
                           <h4 className="brandColor fw-bold text-center">
                             {vision.item_name}
                           </h4>

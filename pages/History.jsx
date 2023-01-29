@@ -60,7 +60,7 @@ const History = () => {
                       <>
                         <div className="col-sm-6 p-0"></div>
                         <div
-                          className="col-sm-6 px-5 position-relative"
+                          className="col-sm-6 px-2 position-relative"
                           style={{
                             borderLeftWidth: "1px",
                             borderLeftStyle: "dashed",
@@ -89,7 +89,7 @@ const History = () => {
                               left: "-5px",
                             }}
                           ></div>
-                          <div className="row py-5 d-flex">
+                          <div className="row py-2 d-flex">
                             <div className="col-4">
                               <div className="d-flex justify-content-center">
                                 <div
@@ -123,7 +123,7 @@ const History = () => {
                     ) : (
                       <>
                         <div
-                          className="col-sm-6 px-5 position-relative"
+                          className="col-sm-6 px-2 position-relative"
                           style={{
                             borderRightWidth: "1px",
                             borderRightStyle: "dashed",
@@ -151,7 +151,7 @@ const History = () => {
                               right: "-5px",
                             }}
                           ></div>
-                          <div className="row py-5">
+                          <div className="row py-2">
                             <div className="col-8">
                               <h4 className="brandColor fw-bold border-bottom border-secondary">
                                 {history.item_name}

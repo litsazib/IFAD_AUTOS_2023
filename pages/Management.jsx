@@ -37,17 +37,25 @@ const Management = () => {
           }}
           className="coverPhoto d-flex justify-content-center align-items-center position-relative"
         >
-          <h1 className="fw-bold position-relative text-white">
-            {item.module_name}
-          </h1>
         </div>
       </div>
     );
   });
+  const settionTitle = document.map((item) => {
+    return (
+      <h1 className="fw-bold mb-5">
+        {item.module_name}
+      </h1>
+    );
+  });
+
+
+
   const avatar = {
     overflow: "hidden",
-    width: "100px",
-    height: "100px",
+    width: "200px",
+    height: "240px",
+    paddingLeft:"10px",
     zIndex: "333",
   };
   const ReadMore = ({ children }) => {
@@ -68,15 +76,13 @@ const Management = () => {
   return (
     <>
       <div className="container-fluid">
-        <Head>
-          <title>{moduleName}</title>
-          <meta name="description" content="All" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
         <Top />
         {moduleBanner}
       </div>
       <div className="container position-relative my-5">
+      <div className="sectionTitle text-center">
+        {settionTitle}
+      </div>
         {document.map((doc) => {
           return (
             <div className="row row-cols-1 row-cols-md-2 g-4" key={doc.id}>
@@ -87,10 +93,11 @@ const Management = () => {
                       <div className="row g-0">
                         <div className="col-md-12">
                           <div className="row">
-                            <div className="col-sm-3 col-4">
+                            <div className="col-sm-4 col-4">
                               <div className="position-relative" style={avatar}>
                                 <Image
                                   src={item.item_image}
+                                  className="rounded"
                                   alt="photo"
                                   objectFit="cover"
                                   layout="fill"
@@ -98,7 +105,7 @@ const Management = () => {
                                 />
                               </div>
                             </div>
-                            <div className="col-sm-9 col-8">
+                            <div className="col-sm-8 col-8 px-3">
                               <h3 className="card-title">{item.item_name}</h3>
                               <p className="card-text">
                                 <small className="text-muted">
