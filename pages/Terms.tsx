@@ -22,13 +22,21 @@ const Terms = () => {
           }}
           className="coverPhoto d-flex justify-content-center align-items-center position-relative"
         >
-          <h1 className="fw-bold position-relative text-white">
-            {item.module_name}
-          </h1>
         </div>
       </div>
     );
   });
+  const sectionTitle = document.map((item) => {
+    return (
+      <h1 className="fw-bold">
+        {item.module_name}
+      </h1>
+    );
+  });
+
+
+
+
   return (
     <>
       <div className="container-fluid">
@@ -41,6 +49,7 @@ const Terms = () => {
         {moduleBanner}
       </div>
       <div className="container my-5">
+        <div className="sectionTitle text-center">{sectionTitle}</div>
         {document.map((items) =>
           items.content_item.map((item) => {
             return (
