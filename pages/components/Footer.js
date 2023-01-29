@@ -20,7 +20,6 @@ const Footer = () => {
 		{ id: 1, name: 'HOME', link: '/' },
 		{ id: 2, name: 'WHO WE ARE', link: '/Whoweare' },
 		{ id: 3, name: 'PRODUCTS', link: '/vehicles' },
-		// { id: 4, name: "TOUCHPOINT", link: "/#Touchpoint" },
 		{ id: 6, name: 'INVESTOR INFORMATION', link: '/Investor' },
 		{ id: 7, name: 'NEWS & EVENTS', link: '/news' },
 		{ id: 8, name: 'CAREERS', link: 'https://ifadgroup.com/career', target: '_blank' },
@@ -93,7 +92,7 @@ const Footer = () => {
 													{footerNav.map((nav) => {
 														return (
 															<li key={nav.id} className="nav-item">
-																<a className="nav-link-ifad" aria-current="page" target={nav.target} href={nav.link}>
+																<a className="nav-link-ifad" activeClassName="active" aria-current="page" target={nav.target} href={nav.link}>
 																	{nav.name}
 																</a>
 															</li>
