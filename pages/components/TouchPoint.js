@@ -87,6 +87,11 @@ export default function TouchPoint() {
     );
   });
 
+  function optTypeChage(type) {
+    setAddrType(type);
+    setDivision([]); // For resetting default division value
+    setDistrict([]); // For resetting default district value
+  }
   function handleAddrTypeChange(e) {
     setAddrType(e.target.value);
     setDivision([]); // For resetting default division value
@@ -144,16 +149,16 @@ export default function TouchPoint() {
             style={{ marginTop: '-50px' }}
           >
             <div className="px-4 text-center">
-              <Image width={50} height={50} src={salesIcon} alt="icon" loader={loaderProp}/>
-              <p>Sales Center</p>
+              <Image onClick={() => optTypeChage('Sales')} className="optType"  width={50} height={50} src={salesIcon} alt="icon" loader={loaderProp}/>
+              <p className={`${addrtype == "Sales" ? "activeColor" : ""}`}>Sales Center</p>
             </div>
             <div className="px-4 text-center">
-              <Image width={50} height={50} src={serviceIcon} alt="icon" loader={loaderProp}/>
-              <p>Service Center</p>
+              <Image onClick={() => optTypeChage('Service')} className="optType" width={50} height={50} src={serviceIcon} alt="icon" loader={loaderProp}/>
+              <p className={`${addrtype == "Service" ? "activeColor" : ""}`}>Service Center</p>
             </div>
             <div className="px-4 text-center">
-              <Image width={50} height={50} src={leypartsIcon} alt="icon" loader={loaderProp}/>
-              <p>Leyparts</p>
+              <Image onClick={() => optTypeChage('Leyparts')} className="optType" width={50} height={50} src={leypartsIcon} alt="icon" loader={loaderProp}/>
+              <p className={`${addrtype == "Leyparts" ? "activeColor" : ""}`}>Leyparts</p>
             </div>
           </div>
         </div>
@@ -167,6 +172,7 @@ export default function TouchPoint() {
           {/* Location Type */}
           <div className="row py-3 px-2">
             <select className="form-select" onChange={handleAddrTypeChange}>
+              <option value={addrtype} selected={true} disabled={true} >{addrtype}</option>
               <option value="Sales">Sales</option>
               <option value="Service">Service</option>
               <option value="Lyparts">Lyparts</option>
