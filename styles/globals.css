@@ -98,7 +98,6 @@ a {
   margin-left: calc(-50vw + 50% + 10px);
   height:247px !important;
   object-fit: cover;
-  filter: brightness(0.5);
 }
 .bannerText {
   text-transform: uppercase;
