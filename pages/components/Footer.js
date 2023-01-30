@@ -21,7 +21,7 @@ const Footer = () => {
 		{ id: 2, name: 'WHO WE ARE', link: '/Whoweare' },
 		{ id: 3, name: 'PRODUCTS', link: '/vehicles' },
 		{ id: 6, name: 'INVESTOR INFORMATION', link: '/Investor' },
-		{ id: 7, name: 'NEWS & EVENTS', link: '/news' },
+		// { id: 7, name: 'NEWS & EVENTS', link: '/news' },
 		{ id: 8, name: 'CAREERS', link: 'https://ifadgroup.com/career', target: '_blank' },
 		{ id: 9, name: 'CONTACT', link: '/Contact' },
 	];
