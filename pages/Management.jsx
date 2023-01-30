@@ -53,8 +53,8 @@ const Management = () => {
 
   const avatar = {
     overflow: "hidden",
-    width: "200px",
-    height: "240px",
+    width: "100%",
+    height: "180px",
     paddingLeft:"10px",
     zIndex: "333",
   };
