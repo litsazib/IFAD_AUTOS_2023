@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import {SSRProvider} from '@react-aria/ssr'; 
+import {SSRProvider} from 'react-aria'
+
 
 export default function Document() {
   return (
