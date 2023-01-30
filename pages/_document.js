@@ -1,7 +1,9 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import {SSRProvider} from '@react-aria/ssr'; 
 
 export default function Document() {
   return (
+    <SSRProvider>
     <Html className="scroll-smooth">
       <Head>
         <link
@@ -14,5 +16,6 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
+    </SSRProvider>
   );
 }
