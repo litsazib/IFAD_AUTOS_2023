@@ -15,7 +15,7 @@ export default function Discover() {
   const loaderProp =({ src }) => {
     return src;
   }   
-	const perSlide = 10;
+	const perSlide = 30;
   const [PrdCatagory, setPrdCatagory] = useState([]);
   const [Products, setProducts] = useState([]);
   const [FilterProduct,setFilterProduct] = useState([])
@@ -81,7 +81,7 @@ export default function Discover() {
             style={{objectFit:"contain"}}
             loader={loaderProp}
             />
-          <h5 className="text-center">{ctx.name}</h5>
+          <h5 className="text-center">{ctx.product_name}</h5>
           <p className="text-center fs-6 py-0">{ctx.detail}</p>
           <div className="d-flex justify-content-center">
           <Link

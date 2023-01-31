@@ -1,14 +1,19 @@
-#base.image
-FROM node:16-alpine
+# Dockerfile
 
-RUN mkdir -p /use/app
-WORKDIR /usr/app
+# base image
+FROM node:alpine
 
-#copy from to 
-COPY ./ ./
+# create & set working directory
+RUN mkdir -p /usr/src
+WORKDIR /usr/src
 
+# copy source files
+COPY . /usr/src
+
+# install dependencies
 RUN npm install
-RUN npm run build  
 
+# start app
+RUN npm run build
 EXPOSE 3000
-CMD ["npm","start"]
+CMD npm run start

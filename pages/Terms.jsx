@@ -51,11 +51,11 @@ const Terms = () => {
       <div className="container my-5">
         <div className="sectionTitle text-center">{sectionTitle}</div>
         {document.map((items) =>
-          items.content_item.map((item) => {
+          items.content_item.map((items,idx) => {
             return (
-              <div className="row" key={item.id}>
-                <h4>{item.item_name}</h4>
-                <p className="mb-5">{item.item_long_desc}</p>
+              <div className="row" key={idx}>
+                <h4>{items.item_name}</h4>
+                <p className="mb-5">{items.item_long_desc}</p>
               </div>
             );
           })
