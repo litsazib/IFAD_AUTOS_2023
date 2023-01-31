@@ -57,7 +57,7 @@ const Top = () => {
 
   return (
     <div id="Top" className="row align-items-center pb-sm-0 pb-5">
-      <div className="col-md-2 col-sm-12">
+      <div className="col-md-3 col-sm-12">
         <Link href="/">
           <Image className="img-fluid s220" src={Logo} alt="Logo" loader={loaderProp}/>
         </Link>
@@ -68,7 +68,7 @@ const Top = () => {
         </div>
       </div>
       <div className="w-100 d-sm-none d-block"></div>
-      <div className="col-md-8 col-sm-12">
+      <div className="col-md-7 col-sm-12">
         <nav className="navbar navbar-expand-lg">
           <button
             className="navbar-toggler"
@@ -134,7 +134,7 @@ const Top = () => {
                   </ul>
                 </div>
                 <div className="col-sm-12">
-                  <ul className="navbar-nav d-flex justify-content-center fs-4">
+                  <ul className="navbar-nav d-flex justify-content-center fs-5">
                     {CatagoryList ? CatagoryList : <div className='text-center'><BeatLoader color="#FA3" /></div>}
                   </ul>
                 </div>
@@ -164,9 +164,10 @@ const Top = () => {
           </form>
         </div>
         <div className="position-relative d-sm-block d-none">
-          <div className="call">
+          
+          {/* <div className="call">
             <Image width={110} height={45} src={call} alt="Call" loader={loaderProp}/>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

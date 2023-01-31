@@ -139,7 +139,7 @@ export default function TouchPoint() {
   return (
     <>
       <div className="row" id="touchpoint">
-        <h1 className="brandColor text-center fw-bold my-5">Touch Point</h1>
+        <h1 className="brandColor text-center fw-bold mt-2 mb-5">Touch Point</h1>
         <div
           className="col-sm-12 pt-3 position-relative"
           style={{ backgroundColor: '#f6821f' }}

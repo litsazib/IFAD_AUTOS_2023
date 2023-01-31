@@ -108,9 +108,10 @@ const Allvehicle = withRouter((props) => {
                           <h5 className="text-center">
                             {product.product_name}
                           </h5>
-                          <p className="text-center fs-6 py-2">
-                            {product.product_short_desc}
-                          </p>
+                          {!product.product_short_desc == ""?
+                          <p className="text-center fs-6 py-2">{product.product_short_desc}</p>
+                          :(<p className="text-center fs-6 py-2">&nbsp;</p>)
+                          }
                           <div className="d-flex justify-content-center align-items-end">
                             <Link
                               type="button"

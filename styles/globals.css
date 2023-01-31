@@ -33,6 +33,9 @@ a {
 .fs-4 {
   font-size: 1.4rem !important;
 }
+.bgcover {
+  background-size: cover;
+}
 /* Roktim  */
 .s220 {
   max-width: 200px !important;
@@ -290,7 +293,7 @@ input:focus {
 .searchBoxc {
   position: absolute;
   top: -26px;
-  right: -100px;
+  right: -188px;
   transform: translate(-200px, 0%);
   background: #f68422;
   border-radius: 40px;
