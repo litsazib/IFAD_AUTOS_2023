@@ -26,7 +26,7 @@ export default function Client() {
           className="row"
           style={{ backgroundImage: `url(${item.module_image})` }}
         >
-          <h1 className="text-white text-center mt-5 fw-bold">
+          <h1 className="text-white text-center mt-3 fw-bold">
             {item.module_name}
           </h1>
           <div className="swiper">
@@ -63,7 +63,7 @@ export default function Client() {
               {item.content_item.map((ron) => {
                 return (
                   <SwiperSlide key={ron.id}>
-                    <div className="col mt-5">
+                    <div className="col mt-2">
                       <div className="d-flex justify-content-center align-items-center position-relative mb-5">
                         {ron.item_video_link == null ? (
                           <Image

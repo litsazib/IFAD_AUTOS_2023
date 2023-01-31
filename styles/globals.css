@@ -27,9 +27,15 @@ a {
 .activeColor {
   color: #333 !important;
 }
+.prd-carosul {
+  text-align: center;
+}
+.fs-4 {
+  font-size: 1.4rem !important;
+}
 /* Roktim  */
 .s220 {
-  max-width: 220px !important;
+  max-width: 200px !important;
   width: 100%;
 }
 .newslink:hover {

@@ -78,7 +78,7 @@ export default function Strength() {
   }, [control, inView]);
   // Animation end
   return (
-    <div className="row my-5 position-relative overflow-hidden pb-5">
+    <div className="row my-2 position-relative overflow-hidden pb-5">
       <div className="position-absolute" style={bg}></div>
       <motion.div
         className="box"

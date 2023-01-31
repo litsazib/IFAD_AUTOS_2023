@@ -21,7 +21,7 @@ export default function Award() {
   const moduleName = document.map((item) => {
     return (
       <div
-        className="row pt-5 position-relative"
+        className="row pt-3 position-relative"
         key={item.id}
         style={{ backgroundImage: `url(${item.module_image})` }}
       >
@@ -59,7 +59,7 @@ export default function Award() {
             {item.content_item.map((ron) => {
               return (
                 <SwiperSlide key={ron.id}>
-                  <div className="col mt-5">
+                  <div className="col mt-2">
                     <div className="d-flex justify-content-center align-items-center position-relative">
                       <Image
                         className="img-fluid mb-3"
