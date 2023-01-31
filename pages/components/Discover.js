@@ -69,15 +69,15 @@ export default function Discover() {
   const ProductList = FilterProduct.slice(0, perSlide).map((ctx,idx)=>{
     
     return (
-      <SwiperSlide key={idx} height="450px">
+      <SwiperSlide key={idx} height="250px">
       <div className="col mt-2">
         <div className="prd-carosul" style={{posation:"relative"}}>
           <Image
             className="img-fluid mb-3"
             src={ctx.Product_image}
             alt={ctx.name}
-            width={450}
-            height={450}
+            width={250}
+            height={250}
             style={{objectFit:"contain"}}
             loader={loaderProp}
             />
@@ -103,7 +103,7 @@ export default function Discover() {
 
   return (
     <>    
-    <div className="row py-5"
+    <div className="row py-3"
       style={{
         backgroundImage: `url(${background.src})`,
         backgroundRepeat: "no-repeat",
@@ -111,7 +111,7 @@ export default function Discover() {
     >
     <h1 className="brandColor text-center fw-bold">Discover The Range</h1>
       <div className="d-flex justify-content-center mt-3">
-        <ul className="nav nav-pills mb-3 text-center" id="pills-tab" role="tablist">
+        <ul className="nav nav-pills text-center" id="pills-tab" role="tablist">
         {CatagoryList}
         </ul>
       </div>

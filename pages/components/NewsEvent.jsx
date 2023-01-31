@@ -20,7 +20,7 @@ export default function NewsEvent() {
   const moduleName = document.map((item) => { 
     return (
       <div
-        className="row py-5 position-relative"
+        className="row py-3 position-relative"
         style={{
           backgroundImage: `url(${item.module_image})`,
           backgroundSize: "cover",
@@ -62,7 +62,7 @@ export default function NewsEvent() {
               return (
                 <SwiperSlide key={ron.id}>
                   <div className="newsDiv">
-                    <div className="col mt-5">
+                    <div className="col mt-2">
                       <div className="d-flex justify-content-center align-items-center position-relative">
                         <Image
                           className="img-fluid mb-3 newsImage"

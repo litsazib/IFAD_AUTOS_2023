@@ -57,7 +57,7 @@ const Top = () => {
 
   return (
     <div id="Top" className="row align-items-center pb-sm-0 pb-5">
-      <div className="col-sm-3 col">
+      <div className="col-md-2 col-sm-12">
         <Link href="/">
           <Image className="img-fluid s220" src={Logo} alt="Logo" loader={loaderProp}/>
         </Link>
@@ -68,7 +68,7 @@ const Top = () => {
         </div>
       </div>
       <div className="w-100 d-sm-none d-block"></div>
-      <div className="col">
+      <div className="col-md-8 col-sm-12">
         <nav className="navbar navbar-expand-lg">
           <button
             className="navbar-toggler"
@@ -145,7 +145,7 @@ const Top = () => {
       </div>
 
       <div className="w-100 d-sm-none d-block"></div>
-      <div className="col-sm-3 col-12">
+      <div className="col-md-2 col-sm-12">
         <div className="position-relative">
           <form onSubmit={handleSubmit}>
             <div className="searchBoxc">
