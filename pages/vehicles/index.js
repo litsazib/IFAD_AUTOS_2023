@@ -15,7 +15,7 @@ const Allvehicle = withRouter((props) => {
   const loaderProp =({ src }) => {
     return src;
   }   
-  const productPerLoad = 6;
+  const productPerLoad = 100;
   const [Product, setProduct] = useState([]);
   const [filteredVehicles, setFilteredVehicles] = useState([]);
   const [error, setError] = useState(null);
