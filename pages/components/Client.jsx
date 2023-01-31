@@ -23,7 +23,7 @@ export default function Client() {
     return (
       <div className="mt-5" key={item.id}>
         <div
-          className="row"
+          className="row bgcover"
           style={{ backgroundImage: `url(${item.module_image})` }}
         >
           <h1 className="text-white text-center mt-3 fw-bold">

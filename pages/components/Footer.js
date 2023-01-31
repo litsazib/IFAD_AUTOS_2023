@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import footerLogo from '../../public/logo/footerLogo.png';
+import call from "../../public/social/call.png";
 
 const Footer = () => {
   const loaderProp =({ src }) => {
@@ -108,7 +109,7 @@ const Footer = () => {
 								<div className="col-sm-2">
 									<Image className="img-fluid" src={footerLogo} alt="logo" loader={loaderProp}/>
 								</div>
-								<div className="col-sm-8 d-flex justify-content-center">
+								<div className="col-sm-7 d-flex justify-content-center">
 									<nav className="navbar navbar-expand-lg">
 										<ul className="navbar-nav">
 											{menu.map((nav) => {
@@ -123,7 +124,7 @@ const Footer = () => {
 										</ul>
 									</nav>
 								</div>
-								<div className="col-sm-2">
+								<div className="col-sm-3">
 									<div className="d-flex flex-row justify-content-end fs-4 text-white">
 										{social.map((ron) => {
 											return (
@@ -138,6 +139,9 @@ const Footer = () => {
 												</div>
 											);
 										})}
+										<div className="call-to-action">
+											<Image width={110} height={45} src={call} alt="Call" loader={loaderProp}/>
+										</div>
 									</div>
 								</div>
 							</div>
