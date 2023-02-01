@@ -284,11 +284,8 @@ input:focus {
   color: rgb(192, 192, 192);
   cursor: pointer;
 }
-.call {
-  position: absolute;
-  width: 100px;
-  top: -29px;
-  right: 0;
+.call-to-action {
+  margin-left: 10px;
 }
 .searchBoxc {
   position: absolute;
