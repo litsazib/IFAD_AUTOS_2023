@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Link from "next/link";
 import Image from "next/image";
 import BeatLoader from "react-spinners/BeatLoader";
-import background from "../../public/backgrounds/background.png";
+import background from "../../public/backgrounds/bg@2x.jpg";
 import slugify from 'react-slugify';
 
 
@@ -107,6 +107,8 @@ export default function Discover() {
       style={{
         backgroundImage: `url(${background.src})`,
         backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
       }}
     >
     <h1 className="brandColor text-center fw-bold">Discover The Range</h1>
