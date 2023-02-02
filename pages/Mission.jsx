@@ -17,9 +17,9 @@ const Mission = () => {
 
   const moduleName = document.map((item) => {
     return (
-      <h1 className="brandColor text-center my-5 fw-bold" key={item.id}>
+      <h4 className="brandColor text-center my-5 mb-0 fw-bold" key={item.id}>
         {item.module_name}
-      </h1>
+      </h4>
     );
   });
 
@@ -42,7 +42,7 @@ const Mission = () => {
   return (
     <>
       <div className="container mt-5">
-        {moduleName}
+        {/* {moduleName} */}
 
         {document.map((item) => {
           return (
@@ -54,7 +54,7 @@ const Mission = () => {
                       <>
                         <div className={"col-sm-4 p-0"}>
                           <Image
-                            className="img-fluid"
+                            className="img-fluid trscla"
                             width={600}
                             height={400}
                             src={vision.item_image}
@@ -66,12 +66,14 @@ const Mission = () => {
                           <h4 className="brandColor fw-bold text-center">
                             {vision.item_name}
                           </h4>
+                          <div className="sectionDesc">
                           {vision.item_long_desc}
+                          </div>
                         </div>
                       </>
                     ) : (
                       <>
-                        <div className="col-sm-6 order-2 p-0">
+                        <div className="col-sm-6 order-2 p-0 text-center">
                           <Image
                             className="img-fluid"
                             width={600}
