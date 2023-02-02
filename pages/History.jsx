@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Image from "next/image";
 const History = () => {
-  const loaderProp =({ src }) => {
+  const loaderProp = ({ src }) => {
     return src;
-  }   
+  };
 
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -40,8 +40,8 @@ const History = () => {
   const avatar = {
     borderRadius: "50%",
     overflow: "hidden",
-    width: "100px",
-    height: "100px",
+    width: "60px",
+    height: "60px",
     zIndex: "333",
   };
   const circle = {};
@@ -55,136 +55,140 @@ const History = () => {
             <div className="row mb-5" key={item.id}>
               {item.content_item.map((history, i) => {
                 return (
-                  <div key={i} className="row d-flex align-items-center">
-                    {i % 2 == 0 ? (
-                      <>
-                        <div className="col-sm-6 p-0"></div>
+                <div
+                  key={i}
+                  className="row d-flex align-items-center storyLine"
+                >
+                  {i % 2 == 0 ? (
+                    <>
+                      <div className="col-sm-6 p-0"></div>
+                      <div
+                        className="col-sm-6 px-2 position-relative"
+                        style={{
+                          borderLeftWidth: "1px",
+                          borderLeftStyle: "dashed",
+                          boxSizing: "border-box",
+                        }}
+                      >
                         <div
-                          className="col-sm-6 px-2 position-relative"
                           style={{
-                            borderLeftWidth: "1px",
-                            borderLeftStyle: "dashed",
-                            boxSizing: "border-box",
+                            width: "20px",
+                            height: "20px",
+                            borderRadius: "50%",
+                            backgroundColor: "#f6821f",
+                            position: "absolute",
+                            top: "85px",
+                            left: "-15px",
+                            zIndex: "333",
                           }}
-                        >
-                          <div
-                            style={{
-                              width: "30px",
-                              height: "30px",
-                              borderRadius: "50%",
-                              backgroundColor: "#f6821f",
-                              position: "absolute",
-                              top: "85px",
-                              left: "-15px",
-                              zIndex: "333",
-                            }}
-                          ></div>
-                          <div
-                            style={{
-                              borderBottomWidth: "1px",
-                              borderBottomStyle: "dashed",
-                              width: "70px",
-                              position: "absolute",
-                              top: "100px",
-                              left: "-5px",
-                            }}
-                          ></div>
-                          <div className="row py-2 d-flex">
-                            <div className="col-4">
-                              <div className="d-flex justify-content-center">
-                                <div
-                                  className="position-relative"
-                                  style={avatar}
-                                >
-                                  <Image
-                                    src={history.item_image}
-                                    alt="photo"
-                                    objectFit="cover"
-                                    layout="fill"
-                                    loader={loaderProp}
-                                  />
-                                </div>
+                        ></div>
+                        <div
+                          style={{
+                            borderBottomWidth: "1px",
+                            borderBottomStyle: "dashed",
+                            width: "70px",
+                            position: "absolute",
+                            top: "100px",
+                            left: "-5px",
+                          }}
+                        ></div>
+                        <div className="row py-2 d-flex">
+                          <div className="col-4">
+                            <div className="d-flex justify-content-center">
+                              <div
+                                className="position-relative"
+                                style={avatar}
+                              >
+                                <Image
+                                  src={history.item_image}
+                                  className="bigCircle"
+                                  alt="photo"
+                                  objectFit="cover"
+                                  layout="fill"
+                                  loader={loaderProp}
+                                />
                               </div>
-                              <h4 className="fw-bold brandColor text-center mt-2">
-                                {history.item_short_desc}
-                              </h4>
                             </div>
-                            <div className="col-8">
-                              <h4 className="brandColor fw-bold border-bottom border-secondary">
-                                {history.item_name}
-                              </h4>
-                              <p style={{ textAlign: "justify" }}>
-                                {history.item_long_desc}
-                              </p>
-                            </div>
+                            <h6 className="fw-bold brandColor text-center mt-2">
+                              {history.item_short_desc}
+                            </h6>
+                          </div>
+                          <div className="col-8">
+                            <h6 className="brandColor fw-bold border-bottom border-secondary">
+                              {history.item_name}
+                            </h6>
+                            <p style={{ textAlign: "justify" }}>
+                              {history.item_long_desc}
+                            </p>
                           </div>
                         </div>
-                      </>
-                    ) : (
-                      <>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div
+                        className="col-sm-6 px-2 position-relative"
+                        style={{
+                          borderRightWidth: "1px",
+                          borderRightStyle: "dashed",
+                        }}
+                      >
                         <div
-                          className="col-sm-6 px-2 position-relative"
                           style={{
-                            borderRightWidth: "1px",
-                            borderRightStyle: "dashed",
+                            width: "20px",
+                            height: "20px",
+                            borderRadius: "50%",
+                            backgroundColor: "#f6821f",
+                            position: "absolute",
+                            top: "85px",
+                            right: "-15px",
+                            zIndex: "333",
                           }}
-                        >
-                          <div
-                            style={{
-                              width: "30px",
-                              height: "30px",
-                              borderRadius: "50%",
-                              backgroundColor: "#f6821f",
-                              position: "absolute",
-                              top: "85px",
-                              right: "-15px",
-                              zIndex: "333",
-                            }}
-                          ></div>
-                          <div
-                            style={{
-                              borderBottomWidth: "1px",
-                              borderBottomStyle: "dashed",
-                              width: "70px",
-                              position: "absolute",
-                              top: "100px",
-                              right: "-5px",
-                            }}
-                          ></div>
-                          <div className="row py-2">
-                            <div className="col-8">
-                              <h4 className="brandColor fw-bold border-bottom border-secondary">
-                                {history.item_name}
-                              </h4>
-                              <p style={{ textAlign: "justify" }}>
-                                {history.item_long_desc}
-                              </p>
-                            </div>
-                            <div className="col-4">
-                              <div className="d-flex justify-content-center">
-                                <div
-                                  className="position-relative"
-                                  style={avatar}
-                                >
-                                  <Image
-                                    src={history.item_image}
-                                    alt="photo"
-                                    objectFit="cover"
-                                    layout="fill"
-                                    loader={loaderProp}
-                                  />
-                                </div>
+                        ></div>
+                        <div
+                          style={{
+                            borderBottomWidth: "1px",
+                            borderBottomStyle: "dashed",
+                            width: "70px",
+                            position: "absolute",
+                            top: "100px",
+                            right: "-5px",
+                          }}
+                        ></div>
+                        <div className="row py-2">
+                          <div className="col-8">
+                            <h6 className="brandColor fw-bold border-bottom border-secondary">
+                              {history.item_name}
+                            </h6>
+                            <p style={{ textAlign: "justify" }}>
+                              {history.item_long_desc}
+                            </p>
+                          </div>
+                          <div className="col-4">
+                            <div className="d-flex justify-content-center">
+                              <div
+                                className="position-relative"
+                                style={avatar}
+                              >
+                                <Image
+                                  src={history.item_image}
+                                  alt="photo"
+                                  objectFit="cover"
+                                  layout="fill"
+                                  loader={loaderProp}
+                                />
                               </div>
-                              <h4 className="fw-bold brandColor text-center mt-2">
-                                {history.item_short_desc}
-                              </h4>
                             </div>
+                            <h6 className="fw-bold brandColor text-center mt-2">
+                              {history.item_short_desc}
+                            </h6>
                           </div>
                         </div>
-                        <div className={"col-sm-6 p-0"}></div>
-                      </>
-                    )}
-                  </div>
+                      </div>
+                      <div className={"col-sm-6 p-0"}></div>
+                    </>
+                  )}
+                </div>
                 );
               })}
             </div>

@@ -37,8 +37,8 @@ a {
   background-size: cover;
 }
 /* Roktim  */ 
-.sectionDesc {
-  margin-left: 22%;
+.trscla {
+  transform: scale(0.6);
 }
 .navbar-nav .nav-item:last-child.nav-link-ifad:after {
   content: none;
