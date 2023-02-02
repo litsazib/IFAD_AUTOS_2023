@@ -17,7 +17,7 @@ const Mission = () => {
 
   const moduleName = document.map((item) => {
     return (
-      <h1 className="brandColor text-center my-5 fw-bold" key={item.id}>
+      <h1 className="brandColor text-center my-5 mb-0 fw-bold" key={item.id}>
         {item.module_name}
       </h1>
     );
@@ -52,7 +52,7 @@ const Mission = () => {
                   <div key={i} className="row d-flex align-items-center">
                     {i % 2 == 0 ? (
                       <>
-                        <div className={"col-sm-4 p-0"}>
+                        <div className={"col-sm-2 p-0"}>
                           <Image
                             className="img-fluid"
                             width={600}
@@ -62,11 +62,13 @@ const Mission = () => {
                             loader={loaderProp}
                           />
                         </div>
-                        <div className="col-sm-8 order-sm-2 order-1 px-5 my-5">
+                        <div className="col-sm-10 order-sm-2 order-1 px-5 my-5">
                           <h4 className="brandColor fw-bold text-center">
-                            {vision.item_name}
+                            {/* {vision.item_name} */}
                           </h4>
+                          <div className="sectionDesc">
                           {vision.item_long_desc}
+                          </div>
                         </div>
                       </>
                     ) : (

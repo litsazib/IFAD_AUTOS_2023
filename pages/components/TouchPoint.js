@@ -175,7 +175,7 @@ export default function TouchPoint() {
               <option value={addrtype} selected={true} disabled={true} hidden={true} >{addrtype}</option>
               <option value="Sales">Sales</option>
               <option value="Service">Service</option>
-              <option value="Lyparts">Lyparts</option>
+              <option value="Leyparts">Leyparts</option>
             </select>
           </div>
 
