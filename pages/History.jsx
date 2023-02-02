@@ -52,7 +52,7 @@ const History = () => {
 
         {document.map((item) => {
           return (
-            <div className="row mb-5" key={item.id}>
+            <div className="row mb-5 pb-5" key={item.id}>
               {item.content_item.map((history, i) => {
                 return (
                 <div
@@ -92,7 +92,7 @@ const History = () => {
                             left: "-5px",
                           }}
                         ></div>
-                        <div className="row pt-5 d-flex">
+                        <div className="row mt-5 d-flex">
                           <div className="col-4">
                             <div className="d-flex justify-content-center">
                               <div
@@ -127,7 +127,7 @@ const History = () => {
                   ) : (
                     <>
                       <div
-                        className="col-sm-6 px-2 position-relative"
+                        className="col-sm-6 px-0 position-relative"
                         style={{
                           borderRightWidth: "1px",
                           borderRightStyle: "dashed",
