@@ -40,8 +40,8 @@ const History = () => {
   const avatar = {
     borderRadius: "50%",
     overflow: "hidden",
-    width: "60px",
-    height: "60px",
+    width: "40px",
+    height: "40px",
     zIndex: "333",
   };
   const circle = {};
@@ -77,8 +77,8 @@ const History = () => {
                             borderRadius: "50%",
                             backgroundColor: "#f6821f",
                             position: "absolute",
-                            top: "85px",
-                            left: "-15px",
+                            top: "90px",
+                            left: "-11px",
                             zIndex: "333",
                           }}
                         ></div>
@@ -92,7 +92,7 @@ const History = () => {
                             left: "-5px",
                           }}
                         ></div>
-                        <div className="row py-2 d-flex">
+                        <div className="row pt-5 d-flex">
                           <div className="col-4">
                             <div className="d-flex justify-content-center">
                               <div
@@ -140,8 +140,8 @@ const History = () => {
                             borderRadius: "50%",
                             backgroundColor: "#f6821f",
                             position: "absolute",
-                            top: "85px",
-                            right: "-15px",
+                            top: "90px",
+                            right: "-11px",
                             zIndex: "333",
                           }}
                         ></div>
@@ -155,7 +155,7 @@ const History = () => {
                             right: "-5px",
                           }}
                         ></div>
-                        <div className="row py-2">
+                        <div className="row">
                           <div className="col-8">
                             <h6 className="brandColor fw-bold border-bottom border-secondary">
                               {history.item_name}
