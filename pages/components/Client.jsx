@@ -26,7 +26,7 @@ export default function Client() {
           className="row bgcover"
           style={{ backgroundImage: `url(${item.module_image})` }}
         >
-          <h1 className="text-white text-center mt-3 fw-bold">
+          <h1 className="titleOrange text-center mt-3 fw-bold">
             {item.module_name}
           </h1>
           <div className="swiper">

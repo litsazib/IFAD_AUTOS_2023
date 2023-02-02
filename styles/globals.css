@@ -178,7 +178,10 @@ button {
   margin-top: 0;
 }
 .brandColor {
-  color: #f6821f;
+  color: #f6821f ;
+}
+.titleOrange {
+  color: #f6821f !important;
 }
 .newslink {
   color: #000 !important;
