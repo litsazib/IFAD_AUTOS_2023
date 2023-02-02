@@ -134,6 +134,7 @@ export default function TouchPoint() {
   const background = {
     backgroundImage: `url(${bg.src})`,
     backgroundSize: 'cover',
+    backgroundPosition:'center',
     boxShadow: 'inset 0 0 0 2000px rgba(0, 0, 0, 0.7)'
   };
   return (
@@ -167,7 +168,9 @@ export default function TouchPoint() {
       <div className="row position-relative text-white" style={background}>
         <div
           className="col-sm-4 px-6 py-3"
-          style={{ background: 'rgba(0, 0, 0, 0.7)' }}
+          style={{ 
+            background: 'rgba(0, 0, 0, 0.7)' 
+          }}
         >
           {/* Location Type */}
           <div className="row py-3 px-2">
@@ -241,7 +244,7 @@ export default function TouchPoint() {
           </div>
         </div>
         <div className="col-sm-4">
-          <Image src={map} alt="map" loader={loaderProp}/>
+          {/* <Image src={map} alt="map" loader={loaderProp}/> */}
         </div>
       </div>
     </>

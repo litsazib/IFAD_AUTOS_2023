@@ -37,6 +37,9 @@ a {
   background-size: cover;
 }
 /* Roktim  */ 
+.storyLine {
+  height: 6vh;
+}
 .trscla {
   transform: scale(0.6);
 }
@@ -236,10 +239,7 @@ button {
   background: none !important;
   color: #f6821f !important;
 }
-.nav-link {
-  /* color: #000; */
-}
-/* input icons */
+
 .inner-addon {
   position: relative;
 }
