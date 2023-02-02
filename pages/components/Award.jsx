@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
+import background from "../../public/backgrounds/bg@2x.jpg";
 
 export default function Award() {
 
@@ -23,7 +24,13 @@ export default function Award() {
       <div
         className="row pt-3 position-relative"
         key={item.id}
-        style={{ backgroundImage: `url(${item.module_image})` }}
+        style={{
+          backgroundImage: `url(${background.src})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+        // style={{ backgroundImage: `url(${item.module_image})` }}
       >
         <h1 className="brandColor text-center fw-bold">{item.module_name}</h1>
         <div className="swiper">

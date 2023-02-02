@@ -106,10 +106,10 @@ const Footer = () => {
 								</div>
 							</div>
 							<div className="row py-3">
-								<div className="col-sm-2">
+								<div className="col-sm-3">
 									<Image className="img-fluid" src={footerLogo} alt="logo" loader={loaderProp}/>
 								</div>
-								<div className="col-sm-7 d-flex justify-content-center">
+								<div className="col-sm-6 d-flex justify-content-center">
 									<nav className="navbar navbar-expand-lg">
 										<ul className="navbar-nav">
 											{menu.map((nav) => {

@@ -32,7 +32,7 @@ const Top = () => {
       },
       {
         id: "7",
-        name: "Management",
+        name: "BOD",
         slug: "/Management",
       },
     ],
