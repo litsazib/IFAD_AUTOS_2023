@@ -68,7 +68,7 @@ const Whoweare = () => {
 
   const partnerName = partners.map((item) => {
     return (
-      <div className="row my-5" key={item.id}>       
+      <div className="row my-2" key={item.id}>       
           <h1 className="fw-bold text-center brandColor">
             {item.module_name}
           </h1>
@@ -152,10 +152,10 @@ const Whoweare = () => {
             {doc.content_item.map((ron) => {
               return (
                 <div key={ron.id}>
-                  <div className="col my-5">
+                  <div className="col my-0">
                     <div className="d-flex justify-content-center align-items-center position-relative">
                       <Image
-                        className="img-fluid mb-3"
+                        className="img-fluid"
                         src={ron.item_image}
                         alt="car"
                         width={300}
