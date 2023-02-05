@@ -38,7 +38,7 @@ a {
 }
 /* Roktim  */ 
 .storyLine {
-  height: 6vh;
+  /* height: 6vh; */
 }
 .trscla {
   transform: scale(0.6);
