@@ -135,8 +135,7 @@ export default function TouchPoint() {
     backgroundImage: `url(${bg.src})`,
     backgroundSize: '100% 123%',
     backgroundPosition:'center',
-    backgroundRepeat:"no-repeat",
-    boxShadow: 'inset 0 0 0 2000px rgba(0, 0, 0, 0.7)'
+    backgroundRepeat:"no-repeat"
     
   };
   return (
@@ -170,9 +169,6 @@ export default function TouchPoint() {
       <div className="row position-relative text-white" style={background}>
         <div
           className="col-sm-4 px-6 py-3"
-          style={{ 
-            background: 'rgba(0, 0, 0, 0.7)' 
-          }}
         >
           {/* Location Type */}
           <div className="row py-3 px-2">
