@@ -48,7 +48,7 @@ const Detail = () => {
               <h1>{newsdata[0]?.item_name}</h1>
               <div className="col-sm-12 position-relative">
                 <Image
-                  className="position-relative"
+                  className="position-relative newsDetailsImage"
                   width={850}
                   height={500}
                   src={newsdata[0]?.item_image}
