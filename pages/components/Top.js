@@ -61,11 +61,11 @@ const Top = () => {
         <Link href="/">
           <Image className="img-fluid s220" src={Logo} alt="Logo" loader={loaderProp}/>
         </Link>
-        <div className="position-relative d-sm-none d-block">
+        {/* <div className="position-relative d-sm-none d-block">
           <div className="call">
             <Image width={100} height={40} src={call} alt="Call" loader={loaderProp}/>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="w-100 d-sm-none d-block"></div>
       <div className="col-md-7 col-sm-12">

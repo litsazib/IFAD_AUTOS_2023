@@ -49,7 +49,7 @@ const Homeslider = () => {
           slidesPerView={1}
           pagination={true}
           loop={true}
-          speed={1000}
+          speed={800}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
