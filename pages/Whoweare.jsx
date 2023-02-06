@@ -174,7 +174,7 @@ const Whoweare = () => {
       })}
       </div>
       <Footer />
-      <Timeline/>
+      {/* <Timeline/> */}
     </>
   );
 };
