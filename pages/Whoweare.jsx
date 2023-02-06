@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
+import Timeline from './components/timeline/Timeline';
 const Whoweare = () => {
 
   const loaderProp =({ src }) => {
@@ -141,6 +142,7 @@ const Whoweare = () => {
       <Mission />
       <Values />
       <History />
+      
       <Statistics />
       {/* Partners */}
       
@@ -172,6 +174,7 @@ const Whoweare = () => {
       })}
       </div>
       <Footer />
+      <Timeline/>
     </>
   );
 };
