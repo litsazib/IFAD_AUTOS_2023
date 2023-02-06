@@ -133,7 +133,7 @@ export default function TouchPoint() {
 
   const background = {
     backgroundImage: `url(${bg.src})`,
-    backgroundSize: '100% 123%',
+    backgroundSize: 'cover',
     backgroundPosition:'center',
     backgroundRepeat:"no-repeat"
     

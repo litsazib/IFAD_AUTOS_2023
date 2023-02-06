@@ -9,6 +9,7 @@ import bg from "../public/backgrounds/news-bg.webp";
 import swal from 'sweetalert';
 import { isEmpty } from '../utils/common';
 import { sendContact } from './api/';
+import Link from 'next/link'
 
 const Contact = withRouter((props) => {
   const { inquery } = props.router.query;
@@ -193,6 +194,7 @@ const addredd = ContactAddress[0]?.contact_list.map((ctx,idx)=>{
           </form>
           <div className="row mt-5">
           {addredd?addredd:"Address not found"}
+          <Link target="_blank" href="https://www.google.com/maps/place/IFAD+Tower/@23.7652035,90.4014344,17.52z/data=!4m5!3m4!1s0x3755c7527f79a431:0x59c9934aad0e3e5e!8m2!3d23.7643446!4d90.4035065?coh=164777&entry=tt&shorturl=1">Find us in Google map</Link>
           </div>
         </div>
       </div>

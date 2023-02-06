@@ -294,7 +294,7 @@ input:focus {
   cursor: pointer;
 }
 .call-to-action {
-  margin-left: 5px;
+  margin-left: 15px;
 }
 .call-to-action img {
   width: 100%;
@@ -410,12 +410,12 @@ input:focus {
   }
   .searchBoxc {
     position: absolute;
-    top: -30px;
+    /* top: -30px;
     right: 200px;
-    transform: translate(200px, 0%);
+    transform: translate(200px, 0%); */
     background: #f68422;
-    border-radius: 40px;
-    padding: 10px;
+    border-radius: 30px;
+    padding: 0;
   }
   .searchBoxc:hover > .searchInputc {
     width: 100px;

@@ -22,7 +22,7 @@ const Footer = () => {
 		{ id: 2, name: 'WHO WE ARE', link: '/Whoweare' },
 		{ id: 3, name: 'PRODUCTS', link: '/vehicles' },
 		{ id: 6, name: 'INVESTOR INFORMATION', link: '/Investor' },
-		{ id: 7, name: 'NEWS & EVENTS', link: '/news' },
+		{ id: 7, name: 'NEWS & EVENTS', link: '/news/51' },
 		{ id: 8, name: 'CAREERS', link: 'https://ifadgroup.com/career', target: '_blank' },
 		{ id: 9, name: 'CONTACT', link: '/Contact' },
 	];
@@ -107,7 +107,9 @@ const Footer = () => {
 							</div>
 							<div className="row py-3">
 								<div className="col-sm-3">
+									<a href="https://ifadgroup.com/" target="_blank">
 									<Image className="img-fluid" src={footerLogo} alt="logo" loader={loaderProp}/>
+									</a>
 								</div>
 								<div className="col-sm-6 d-flex justify-content-center">
 									<nav className="navbar navbar-expand-lg">
@@ -150,7 +152,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<h3 className="font-noto m-0 bg-dark py-4 font-14 text-center text-light font-calibri">
-				© {year} IFAD Autos. All Rights Reserved | Developed by{' '}
+				© {year} IFAD Autos Ltd.  All Rights Reserved | Developed by{' '}
 				<a target="_blank" href="http://api.net.bd">
 					<Image className="img-fluid" width={35} height={0} src={'/API-logo.png'} alt="company-logo" loader={loaderProp}/>
 				</a>
