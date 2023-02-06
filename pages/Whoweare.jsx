@@ -142,7 +142,7 @@ const Whoweare = () => {
       <Mission />
       <Values />
       <History />
-      
+      <Timeline/>
       <Statistics />
       {/* Partners */}
       
@@ -174,7 +174,6 @@ const Whoweare = () => {
       })}
       </div>
       <Footer />
-      <Timeline/>
     </>
   );
 };
