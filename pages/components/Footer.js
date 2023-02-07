@@ -89,7 +89,7 @@ const Footer = () => {
 												<span className="navbar-toggler-icon"></span>
 											</button>
 											<div className="collapse navbar-collapse" id="navbarNav">
-												<ul className="navbar-nav">
+												<ul className="navbar-nav text-sm-center">
 													{footerNav.map((nav) => {
 														return (
 															<li key={nav.id} className="nav-item">
@@ -108,15 +108,15 @@ const Footer = () => {
 							<div className="row py-3">
 								<div className="col-sm-3">
 									<a href="https://ifadgroup.com/" target="_blank">
-									<Image className="img-fluid" src={footerLogo} alt="logo" loader={loaderProp}/>
+									<Image className="img-fluid footer-logo-res" src={footerLogo} alt="logo" loader={loaderProp}/>
 									</a>
 								</div>
 								<div className="col-sm-6 d-flex justify-content-center">
-									<nav className="navbar navbar-expand-lg">
+									<nav className="navbar navbar-expand-lg text-center">
 										<ul className="navbar-nav">
 											{menu.map((nav) => {
 												return (
-													<li key={nav.id} className="nav-item">
+													<li key={nav.id} className="nav-item  footer-manu-item">
 														<Link className="nav-link-ifad" aria-current="page" href={nav.link}>
 															{nav.name}
 														</Link>
@@ -127,7 +127,7 @@ const Footer = () => {
 									</nav>
 								</div>
 								<div className="col-sm-3">
-									<div className="d-flex flex-row justify-content-end fs-4 text-white">
+									<div className="d-flex flex-row justify-content-end fs-4 text-white footer-social-icon">
 										{social.map((ron) => {
 											return (
 												<div key={ron.id}>
