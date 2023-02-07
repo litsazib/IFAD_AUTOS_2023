@@ -1,96 +1,54 @@
+import React, { useEffect, useState } from "react";
 
 
 const Timeline = () => {
+
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
+  const [document, setDocument] = useState([]);
+  useEffect(() => {
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/18")
+      .then((res) => res.json())
+      .then((data) => setDocument(data));
+  }, []);
+
+  const timelineData = document[0]?.content_item.map((history,idx)=>{
+    return (
+      <li className="li mt-sm-4" key={idx}>
+        <h3 className="title text-dark">{history.item_name}</h3>
+        <span className="circle" />
+        <span className="date">{history.item_short_desc}</span>
+      </li>
+    )
+  })
+
+  const moduleName = document.map((item) => {
+    return (
+      <h1 className="brandColor text-center my-5 fw-bold" key={item.id}>
+        {item.module_name}
+      </h1>
+    );
+  });
+
+
 	return (
 		<>
-
-{/* new one */}
-<section id="">
-  <h1 className="brandColor text-center mt-4 mb-5 fw-bold">History</h1>
-  <div className="container">
-    <div className="col-lg-8 col-sm-12 history-width">
-    <div className="main">
-  {/* <h3 className="heading">Responsive Timeline</h3> */}
-  <div className="history-timeline">
-    <ul className="ul">
-      <li className="li mt-sm-4">
-        <h3 className="title text-dark">Incorporation</h3>
-        <span className="circle" />
-        <span className="date">1988</span>
-      </li>
-      <li className="li">
-        <h3 className="title text-dark">Introduced double decker bus & tyre business</h3>
-        
-        <span className="circle" />
-        <span className="date">1989</span>
-      </li>
-
-      <li className="li">
-        <h3 className="title text-dark">Ashok leyland sole distributor</h3>
-        <span className="circle" />
-        <span className="date">1994</span>
-      </li>
-
-      <li className="li">
-        <h3 className="title text-dark">Started body building</h3>
-        <span className="circle" />
-        <span className="date">1995</span>
-      </li>
-
-      <li className="li mt-4">
-        <h3 className="title text-dark">Crossed 4 digit</h3>
-        <span className="circle" />
-        <span className="date">2004</span>
-      </li>
-
-      <li className="li">
-        <h3 className="title text-dark">Listed as public ltd company</h3>
-        <span className="circle" />
-        <span className="date">2011</span>
-      </li>
-      
-      <li className="li">
-        <h3 className="title text-dark">Ashok leyland highest importer from 30 countries</h3>
-        <span className="circle" />
-
-        <span className="date">2014</span>
-      </li>
-
-      <li className="li">
-        <h3 className="title text-dark">IPO</h3>
-        <span className="circle" />
-        <span className="date">2015</span>
-      </li>
-
-      <li className="li">
-        <h3 className="title text-dark">Assembling plant</h3>
-        <span className="circle" />
-        <span className="date">2017</span>
-      </li>
-      
-      <li className="li">
-        <h3 className="title text-dark">Gulf joint venture agreement</h3>
-        <span className="circle" />
-        <span className="date">2018</span>
-      </li>
-
-      <li className="li">
-        <h3 className="title text-dark">Inked an agreement with BEZA</h3>
-        <span className="circle" />
-        <span className="date">2021</span>
-      </li>
-
-      <li className="li">
-        <h3 className="title text-dark">Invest to IFAD Multiproducts LTD.</h3>
-        <span className="circle" />
-        <span className="date">2021</span>
-      </li>
-    </ul>
-  </div>
-</div>
-    </div>
-  </div>
-</section>
+      <section>
+        <h1 className="brandColor text-center mt-4 mb-5 fw-bold">{moduleName}</h1>
+        <div className="container">
+          <div className="col-lg-8 col-sm-12 history-width">
+          <div className="main">
+        <div className="history-timeline">
+          <ul className="ul">
+            {timelineData}
+          </ul>
+        </div>
+      </div>
+          </div>
+        </div>
+      </section>
 		</>
 	);
 };
