@@ -6,6 +6,7 @@ const Timeline = () => {
 			 <section className="mt-5 history-timeline">
   <div className="container">
     <div className="timelinePosition">
+    <h2 className="brandColor text-center my-5 fw-bold">History</h2>
       <div className="entries ">
         <div className="entry">
           <div className="title big m-0 fs-4 text-dark left-border-line">1988</div>
