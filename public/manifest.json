@@ -1,29 +1,31 @@
 {
-  "name": "Next PWA demo",
-  "short_name": "Next PWA",
-  "icons": [
-    {
-      "src": "/icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-        "src": "/icon-1024.png",
-        "type": "image/png",
-        "sizes": "1024x1024"
-    }
-  ],
-  
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
-  "start_url": "/",
-  "scope": "." ,
-  "display": "standalone",
-  "orientation": "portrait"
+    "theme_color": "#f69435",
+    "background_color": "#739ded",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "IFAD AUTOS PWA",
+    "short_name": "IFAD AUTOS",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }
