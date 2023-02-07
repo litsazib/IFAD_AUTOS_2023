@@ -24,7 +24,7 @@ const Footer = () => {
 		{ id: 6, name: 'INVESTOR INFORMATION', link: '/Investor' },
 		{ id: 7, name: 'NEWS & EVENTS', link: '/news/51' },
 		{ id: 8, name: 'CAREERS', link: 'https://ifadgroup.com/career', target: '_blank' },
-		{ id: 9, name: 'CONTACT', link: '/Contact' },
+		{ id: 9, name: 'CONTACT', link: '/Contact' }
 	];
 	const menu = [
 		{ id: 10, name: 'TERMS OF USE', link: '/Terms' },
@@ -93,7 +93,7 @@ const Footer = () => {
 													{footerNav.map((nav) => {
 														return (
 															<li key={nav.id} className="nav-item">
-																<a className="nav-link-ifad" activeClassName="active" aria-current="page" target={nav.target} href={nav.link}>
+																<a className="nav-link-ifad" activeClassName="active" aria-current="page" target={nav.target} href={nav.link} rel="noreferrer">
 																	{nav.name}
 																</a>
 															</li>
@@ -107,7 +107,7 @@ const Footer = () => {
 							</div>
 							<div className="row py-3">
 								<div className="col-sm-3">
-									<a href="https://ifadgroup.com/" target="_blank">
+									<a href="https://ifadgroup.com/" rel="noreferrer" target="_blank">
 									<Image className="img-fluid" src={footerLogo} alt="logo" loader={loaderProp}/>
 									</a>
 								</div>
@@ -133,7 +133,7 @@ const Footer = () => {
 												<div key={ron.id}>
 													{ron.content_item.map((item) => {
 														return (
-															<a key={item.id} style={{ color: '#F68422' }} href={item.item_link} target="_blank">
+															<a rel="noreferrer" key={item.id} style={{ color: '#F68422' }} href={item.item_link} target="_blank">
 																<i className={`ms-2 bi bi-${item.item_name}`}></i>
 															</a>
 														);
@@ -153,7 +153,7 @@ const Footer = () => {
 			</div>
 			<h3 className="font-noto m-0 bg-dark py-4 font-14 text-center text-light font-calibri">
 				© {year} IFAD Autos Ltd.  All Rights Reserved | Developed by{' '}
-				<a target="_blank" href="http://api.net.bd">
+				<a target="_blank" rel="noreferrer" href="http://api.net.bd">
 					<Image className="img-fluid" width={35} height={0} src={'/API-logo.png'} alt="company-logo" loader={loaderProp}/>
 				</a>
 			</h3>

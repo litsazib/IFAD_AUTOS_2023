@@ -41,9 +41,9 @@ const Management = () => {
       </div>
     );
   });
-  const settionTitle = document.map((item) => {
+  const settionTitle = document.map((item,idx) => {
     return (
-      <h1 className="fw-bold mb-5">
+      <h1 className="fw-bold mb-5" key={idx}>
         {item.module_name}
       </h1>
     );

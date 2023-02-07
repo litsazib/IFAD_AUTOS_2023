@@ -9,14 +9,19 @@
     },
 
     {
-      "src": "/icon-512x512.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+        "src": "/icon-1024.png",
+        "type": "image/png",
+        "sizes": "1024x1024"
     }
   ],
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "orientation": "portrait"
 }

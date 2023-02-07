@@ -10,9 +10,9 @@ const Privacypolicy = () => {
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);
-  const moduleBanner = document.map((item) => {
+  const moduleBanner = document.map((item,idx) => {
     return (
-      <div className="row">
+      <div className="row" key={idx}>
         <div
           style={{
             backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${item.module_image})`,
@@ -26,9 +26,9 @@ const Privacypolicy = () => {
       </div>
     );
   });
-  const sectionTitle = document.map((item) => {
+  const sectionTitle = document.map((item,idx) => {
     return (
-      <h1 className="fw-bold">
+      <h1 className="fw-bold" key={idx}>
         {item.module_name}
       </h1>
     );
