@@ -6,14 +6,14 @@ const Timeline = () => {
 
 {/* new one */}
 <section id="">
-  <div className="container mt-5">
-    <div className="col-lg-12 col-sm-12 history-width">
+  <h1 className="brandColor text-center mt-4 mb-5 fw-bold">History</h1>
+  <div className="container">
+    <div className="col-lg-8 col-sm-12 history-width">
     <div className="main">
   {/* <h3 className="heading">Responsive Timeline</h3> */}
-  <h1 className="brandColor text-center my-5 fw-bold">History</h1>
   <div className="history-timeline">
     <ul className="ul">
-      <li className="li">
+      <li className="li mt-sm-4">
         <h3 className="title text-dark">Incorporation</h3>
         <span className="circle" />
         <span className="date">1988</span>
@@ -51,7 +51,7 @@ const Timeline = () => {
       
       <li className="li">
         <h3 className="title text-dark">Ashok leyland highest importer from 30 countries</h3>
-        <span className="circle" />import History from './../../History';
+        <span className="circle" />
 
         <span className="date">2014</span>
       </li>

@@ -714,8 +714,12 @@ ul.navbar-nav.text-sm-center{
   .history-timeline .ul .li:nth-child(even) .date {
     left: 0px!important;
   }
-  .history-mrgn-bottom{
-    margin-bottom: 50px!important;
+  
+  .history-timeline .ul .li .title {
+    font-size: 16px!important;
+  }
+  .ul .li .date {
+    width: 111px;
   }
 }
 
