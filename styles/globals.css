@@ -37,8 +37,8 @@ a {
   background-size: cover;
 }
 /* Roktim  */ 
-.storyLine {
-  /* height: 6vh; */
+.txtCaptilize {
+  text-transform: capitalize;
 }
 .trscla {
   transform: scale(0.6);
