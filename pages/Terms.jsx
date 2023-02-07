@@ -26,9 +26,9 @@ const Terms = () => {
       </div>
     );
   });
-  const sectionTitle = document.map((item) => {
+  const sectionTitle = document.map((item,idx) => {
     return (
-      <h1 className="fw-bold">
+      <h1 className="fw-bold" key={idx}>
         {item.module_name}
       </h1>
     );

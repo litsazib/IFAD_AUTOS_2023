@@ -121,7 +121,7 @@ export default function Discover() {
         {
           PrdCatagory[0]?.product_category_list.map((ctx,idx)=>{
             return (
-              <div className={`tab-pane fade ${idx+1 === parseInt(1)?" show active":""}`} id={`tabSwitch${idx+1}`} role="tabpanel" aria-labelledby={`tab${idx+1}`}>
+              <div key={idx} className={`tab-pane fade ${idx+1 === parseInt(1)?" show active":""}`} id={`tabSwitch${idx+1}`} role="tabpanel" aria-labelledby={`tab${idx+1}`}>
                 <div className="swiper">
                   <Swiper
                     modules={[Navigation]}
