@@ -141,7 +141,7 @@ const Whoweare = () => {
       </div>
       <Mission />
       <Values />
-      <History />
+      {/* <History /> */}
       <Timeline/>
       
       <Statistics />

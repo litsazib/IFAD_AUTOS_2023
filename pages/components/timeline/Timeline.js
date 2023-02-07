@@ -10,6 +10,7 @@ const Timeline = () => {
     <div className="col-lg-12 col-sm-12 history-width">
     <div className="main">
   {/* <h3 className="heading">Responsive Timeline</h3> */}
+  <h1 className="brandColor text-center my-5 fw-bold">History</h1>
   <div className="history-timeline">
     <ul className="ul">
       <li className="li">
@@ -50,7 +51,8 @@ const Timeline = () => {
       
       <li className="li">
         <h3 className="title text-dark">Ashok leyland highest importer from 30 countries</h3>
-        <span className="circle" />
+        <span className="circle" />import History from './../../History';
+
         <span className="date">2014</span>
       </li>
 
@@ -83,57 +85,6 @@ const Timeline = () => {
         <span className="circle" />
         <span className="date">2021</span>
       </li>
-      
-      {/* <li className="li">
-        <h3 className="title">Back End Developer</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eaque
-          quidem esse? Incidunt, odit beatae?
-        </p>
-        <a href="#">Read More</a>
-        <span className="circle" />
-        <span className="date">February 2022</span>
-      </li>
-      <li className="li">
-        <h3 className="title">Full Stack Developer</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eaque
-          quidem esse? Incidunt, odit beatae?
-        </p>
-        <a href="#">Read More &gt;</a>
-        <span className="circle" />
-        <span className="date">March 2022</span>
-      </li>
-      <li className="li">
-        <h3 className="title">App Developer</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eaque
-          quidem esse? Incidunt, odit beatae?
-        </p>
-        <a href="#">Read More &gt;</a>
-        <span className="circle" />
-        <span className="date">April 2022</span>
-      </li>
-      <li className="li">
-        <h3 className="title">App Developer</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eaque
-          quidem esse? Incidunt, odit beatae?
-        </p>
-        <a href="#">Read More &gt;</a>
-        <span className="circle" />
-        <span className="date">April 2022</span>
-      </li>
-      <li className="li">
-        <h3 className="title">App Developer</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eaque
-          quidem esse? Incidunt, odit beatae?
-        </p>
-        <a href="#">Read More &gt;</a>
-        <span className="circle" />
-        <span className="date">April 2022</span>
-      </li> */}
     </ul>
   </div>
 </div>

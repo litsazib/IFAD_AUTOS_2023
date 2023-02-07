@@ -8,6 +8,7 @@
 #Package
 package-lock.json
 package.json
+.next.zip
 
 
 # testing
