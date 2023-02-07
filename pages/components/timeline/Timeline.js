@@ -3,105 +3,94 @@
 const Timeline = () => {
 	return (
 		<>
-			 <section className="mt-5 history-timeline">
+
+{/* new one */}
+<section id="">
+  <h1 className="brandColor text-center mt-4 mb-5 fw-bold">History</h1>
   <div className="container">
-    <div className="timelinePosition">
-    <h2 className="brandColor text-center my-5 fw-bold">History</h2>
-      <div className="entries ">
-        <div className="entry">
-          <div className="title big m-0 fs-4 text-dark left-border-line">1988</div>
-          <div className="body">
-            <p className=" history-des-size description-margin">
-            Incorporation.
-            </p>
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0  fs-4 text-dark right-border-line">1989</div>
-          <div className="body">
-            <p className=" history-des-size description-right-margin">
-            Introduced double decker bus & tyre business.
+    <div className="col-lg-8 col-sm-12 history-width">
+    <div className="main">
+  {/* <h3 className="heading">Responsive Timeline</h3> */}
+  <div className="history-timeline">
+    <ul className="ul">
+      <li className="li mt-sm-4">
+        <h3 className="title text-dark">Incorporation</h3>
+        <span className="circle" />
+        <span className="date">1988</span>
+      </li>
+      <li className="li">
+        <h3 className="title text-dark">Introduced double decker bus & tyre business</h3>
+        
+        <span className="circle" />
+        <span className="date">1989</span>
+      </li>
 
-            </p>
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0 fs-4 text-dark left-border-line">1994</div>
-          <div className="body">
-            <p className=" history-des-size description-margin">
-            Ashok leyland sole distributor.
+      <li className="li">
+        <h3 className="title text-dark">Ashok leyland sole distributor</h3>
+        <span className="circle" />
+        <span className="date">1994</span>
+      </li>
 
-            </p>
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0 fs-4 text-dark right-border-line">1995</div>
-          <div className="body">
-            <p className=" history-des-size description-right-margin ">
-            Started body building.
+      <li className="li">
+        <h3 className="title text-dark">Started body building</h3>
+        <span className="circle" />
+        <span className="date">1995</span>
+      </li>
 
-            </p>
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0 fs-4 text-dark left-border-line">2004</div>
-          <div className="body">
-            <p className=" history-des-size description-margin">
-            Crossed 4 digit
+      <li className="li mt-4">
+        <h3 className="title text-dark">Crossed 4 digit</h3>
+        <span className="circle" />
+        <span className="date">2004</span>
+      </li>
 
-            </p>
-           
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0 fs-4 text-dark right-border-line">2011</div>
-          <div className="body">
-            <p className=" history-des-size description-right-margin">
-            Listed as public ltd company
-            </p>
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0 fs-4 fs-4 text-dark left-border-line">2014</div>
-          <div className="body">
-            <p className=" history-des-size description-margin">Ashok leyland highest importer from 30 countries.</p>
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0 fs-4 fs-4 text-dark right-border-line">2015</div>
-          <div className="body">
-            <p className=" history-des-size description-right-margin">IPO.</p>
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0 fs-4 fs-4 text-dark left-border-line">2017</div>
-          <div className="body">
-            <p className=" history-des-size description-margin">Assembling plant.</p>
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0 fs-4 text-dark right-border-line">2018</div>
-          <div className="body">
-            <p className=" history-des-size description-right-margin">Gulf joint venture agreement.</p>
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0 fs-4 text-dark left-border-line">2021</div>
-          <div className="body">
-            <p className=" history-des-size description-margin">Inked an agreement with BEZA.</p>
-          </div>
-        </div>
-        <div className="entry">
-          <div className="title big m-0 fs-4 text-dark right-border-line">2021</div>
-          <div className="body">
-            <p className=" history-des-size description-right-margin">Invest to IFAD Multiproducts LTD.</p>
-          </div>
-        </div>
-      </div>
+      <li className="li">
+        <h3 className="title text-dark">Listed as public ltd company</h3>
+        <span className="circle" />
+        <span className="date">2011</span>
+      </li>
+      
+      <li className="li">
+        <h3 className="title text-dark">Ashok leyland highest importer from 30 countries</h3>
+        <span className="circle" />
+
+        <span className="date">2014</span>
+      </li>
+
+      <li className="li">
+        <h3 className="title text-dark">IPO</h3>
+        <span className="circle" />
+        <span className="date">2015</span>
+      </li>
+
+      <li className="li">
+        <h3 className="title text-dark">Assembling plant</h3>
+        <span className="circle" />
+        <span className="date">2017</span>
+      </li>
+      
+      <li className="li">
+        <h3 className="title text-dark">Gulf joint venture agreement</h3>
+        <span className="circle" />
+        <span className="date">2018</span>
+      </li>
+
+      <li className="li">
+        <h3 className="title text-dark">Inked an agreement with BEZA</h3>
+        <span className="circle" />
+        <span className="date">2021</span>
+      </li>
+
+      <li className="li">
+        <h3 className="title text-dark">Invest to IFAD Multiproducts LTD.</h3>
+        <span className="circle" />
+        <span className="date">2021</span>
+      </li>
+    </ul>
+  </div>
+</div>
     </div>
   </div>
 </section>
-
 		</>
 	);
 };
