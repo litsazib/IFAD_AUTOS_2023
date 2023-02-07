@@ -29,7 +29,7 @@ const Contact = withRouter((props) => {
       .catch((error) => {
         setError(error);
       });
-  }, [inquery]);
+  }, [inquery,urlPath]);
   
   useEffect(() => {
   fetch('http://implapi.ifadgroup.com:8001/contacts')
@@ -89,7 +89,7 @@ const Contact = withRouter((props) => {
 
 const addredd = ContactAddress[0]?.contact_list.map((ctx,idx)=>{
   return (
-    <div className="col">
+    <div className="col" key={idx}>
     {ctx.name}<br></br>
     {ctx.contact_address}<br></br>
     <i className="bi bi-telephone-outbound"></i> {ctx.contact_phone}

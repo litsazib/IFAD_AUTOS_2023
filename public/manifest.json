@@ -1,6 +1,6 @@
 {
-  "name": "IFAD AUTOS",
-  "short_name": "IFAD AUTOS PWA",
+  "name": "Next PWA demo",
+  "short_name": "Next PWA",
   "icons": [
     {
       "src": "/icon.png",
@@ -9,14 +9,21 @@
     },
 
     {
-      "src": "/icon-512x512.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+        "src": "/icon-1024.png",
+        "type": "image/png",
+        "sizes": "1024x1024"
     }
   ],
+  
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
   "start_url": "/",
+  "scope": "." ,
   "display": "standalone",
   "orientation": "portrait"
 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const news = () => {
+const News = () => {
 
   const [News, setNews] = useState([]);
 
@@ -29,4 +29,4 @@ const news = () => {
   );
 };
 
-export default news;
+export default News;

@@ -118,11 +118,11 @@ export default function TouchPoint() {
         <div className="col-1">
           <i className="bi bi-geo-alt"></i>
         </div>
-        <div className="col">
+        <div className="col txtCaptilize">
           {ctx.name}
           <br></br>
-          Division:{ctx.division}
-          &nbsp; | District:{ctx.district} <br></br>
+          Division: {ctx.division}
+          &nbsp; | District: {ctx.district} <br></br>
           {ctx.address}
           <br></br>
           <i className="bi bi-telephone-outbound"></i> {ctx.phone}
