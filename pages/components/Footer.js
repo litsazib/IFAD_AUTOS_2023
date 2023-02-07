@@ -86,7 +86,7 @@ const Footer = () => {
 												aria-expanded="false"
 												aria-label="Toggle navigation"
 											>
-												<span className="navbar-toggler-icon"></span>
+												<span className="navbar-toggler-icon col-icon"></span>
 											</button>
 											<div className="collapse navbar-collapse" id="navbarNav">
 												<ul className="navbar-nav text-sm-center">
@@ -108,7 +108,7 @@ const Footer = () => {
 							<div className="row py-3">
 								<div className="col-sm-3">
 									<a href="https://ifadgroup.com/" rel="noreferrer" target="_blank">
-									<Image className="img-fluid" src={footerLogo} alt="logo" loader={loaderProp}/>
+									<Image className="img-fluid footer-logo" src={footerLogo} alt="logo" loader={loaderProp}/>
 									</a>
 								</div>
 								<div className="col-sm-6 d-flex justify-content-center">
