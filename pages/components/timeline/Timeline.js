@@ -40,12 +40,12 @@ const Timeline = () => {
         <div className="container">
           <div className="col-lg-8 col-sm-12 history-width">
           <div className="main">
-        <div className="history-timeline">
-          <ul className="ul">
-            {timelineData}
-          </ul>
-        </div>
-      </div>
+            <div className="history-timeline">
+              <ul className="ul">
+                {timelineData}
+              </ul>
+            </div>
+          </div>
           </div>
         </div>
       </section>
