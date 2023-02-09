@@ -37,6 +37,46 @@ a {
   background-size: cover;
 }
 /* Roktim  */ 
+.modalBox {
+  background-color: #f1e767;
+  padding: 20px 0;
+}
+.modalBox {
+  display: none;
+  transition: 0.3s;
+}
+.modalBox.active {
+  display: block !important;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #524e4eed;
+  z-index: 99999;
+  top: 0;
+  transition: 0.3s;
+  overflow-y: hidden;
+}
+.modalWrap {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+.modalWrap button {
+  margin-bottom: 10px;
+}
+.closeBnt {
+  position: absolute;
+  right: 14px;
+}
+
+
+
+
+
+
+
 .scrollableDiv > Div {
   padding: 10px 0;
 }
