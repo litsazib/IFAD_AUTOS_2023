@@ -20,14 +20,14 @@ export default function NewsEvent() {
   const moduleName = document.map((item) => { 
     return (
       <div
-        className="row py-3 position-relative"
+        className="row position-relative"
         style={{
           backgroundImage: `url(${item.module_image})`,
           backgroundSize: "cover",
         }}
         key={item.id}
       >
-        <h1 className="brandColor text-center fw-bold">{item.module_name}</h1>
+        <h1 className="brandColor text-center fw-bold mt-5 mb-5">{item.module_name}</h1>
         <div className="swiper">
           <Swiper
             modules={[Navigation]}

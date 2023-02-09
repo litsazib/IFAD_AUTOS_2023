@@ -37,6 +37,9 @@ a {
   background-size: cover;
 }
 /* Roktim  */ 
+.scrollableDiv > Div {
+  padding: 10px 0;
+}
 .txtCaptilize {
   text-transform: capitalize;
 }
@@ -403,19 +406,43 @@ input:focus {
     background: black;
   }
 }
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .searchBox:hover > .searchInput {
     width: 150px;
     padding: 0 6px;
   }
-  .searchBoxc {
+   img.img-fluid.s220{
+    width: 150px;
+    margin-left: 50%;
+    transform: translate(-60%);
     position: absolute;
-    /* top: -30px;
-    right: 200px;
-    transform: translate(200px, 0%); */
-    background: #f68422;
-    border-radius: 30px;
-    padding: 0;
+    top: 20px;
+  }
+  .phn-margin{
+    margin-top: 100px;
+  }
+  .footer-bg-opacity{
+    z-index:999;
+  }
+  .bg-phn{
+    background: #FFF;
+  }
+  #Top{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 999;
+    width: 102%;
+    background-color: #fff;
+  }
+  span.navbar-toggler-icon {
+    margin-top : 20px
+  }
+  nav.navbar.navbar-expand-lg {
+    height: 90px;
+  }
+  .searchBoxc {
+    margin-top: -46px;
   }
   .searchBoxc:hover > .searchInputc {
     width: 100px;
@@ -667,9 +694,9 @@ ul.navbar-nav.text-sm-center{
 /*  Media Query Started  */
 
 @media screen and (max-width:1224px){
-  /* .history-timeline{
+  .history-timeline{
       width: 85%;
-  } */
+  }
 }
 
 @media screen and (max-width:567px){
