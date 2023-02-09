@@ -4,12 +4,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
+import Link from 'next/link'
 import ReactPlayer from "react-player";
+
+
 export default function Client() {
   
   const loaderProp =({ src }) => {
     return src;
   }   
+
+  const [ModalContent,setModalContent] = useState() || [];
+  const [ModalToggle,setModalToggle] = useState(false)
 
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -17,6 +23,59 @@ export default function Client() {
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);
+
+  console.log(ModalContent)
+  console.log(ModalToggle)
+
+  // const modalView = ModalContent?.map((element,idx)=>{
+  //   if(element.item_video_link == "") {
+  //     return (
+  //       <Image className="img-fluid mb-3" 
+  //       src={ModalContent?.item_image} alt="car" 
+  //       width={800} height={800}
+  //       loader={loaderProp}
+  //     />
+  //     )
+  //   }else {
+  //     return (
+  //       <iframe width="800" height="550"
+  //       src="https://www.youtube.com/embed/tgbNymZ7vqY">
+  //       </iframe>
+  //     )
+  //   }
+  // })
+
+  
+
+
+
+const viewMdl = ()=>{
+  if(ModalContent?.item_video_link == "") {
+    return (
+      <Image className="img-fluid mb-3" 
+        src={ModalContent?.item_image} alt="car" 
+        width={800} height={800}
+        loader={loaderProp}
+      />
+    )
+  }else {
+    return (
+    <iframe width="800" height="550"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY">
+      </iframe>
+    )
+  }
+}
+
+
+
+
+
+
+  const hendelModal = (modalData)=>{
+    setModalContent(modalData)
+    setModalToggle(!ModalToggle)
+  }
 
   const moduleName = document.map((item) => {
 
@@ -66,14 +125,7 @@ export default function Client() {
                     <div className="col mt-2">
                       <div className="d-flex justify-content-center align-items-center position-relative mb-5">
                         {ron.item_video_link == null ? (
-                          <Image
-                            className="img-fluid mb-3"
-                            src={ron.item_image}
-                            alt="car"
-                            width={500}
-                            height={500}
-                            loader={loaderProp}
-                          />
+                        <Image onClick={()=>hendelModal(ron)} className="img-fluid mb-3" src={ron.item_image} alt="car" width={500} height={500}loader={loaderProp}/>
                         ) : (
                           <ReactPlayer url={ron.item_video_link} />
                         )}
@@ -83,6 +135,16 @@ export default function Client() {
                 );
               })}
             </Swiper>
+          </div>
+          <div className={ModalToggle === true ? "modalBox active" : "modalBox"}>
+            <div className="modalWrap">
+              <button onClick={()=>(setModalToggle(false))} className="closeBnt">Close</button>
+              <Image className="img-fluid mb-3" 
+                src={ModalContent?.item_image} alt="car" 
+                width={800} height={800}
+                loader={loaderProp}
+              />
+            </div>
           </div>
         </div>
       </div>
