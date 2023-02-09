@@ -37,6 +37,9 @@ a {
   background-size: cover;
 }
 /* Roktim  */ 
+.scrollableDiv > Div {
+  padding: 10px 0;
+}
 .txtCaptilize {
   text-transform: capitalize;
 }
