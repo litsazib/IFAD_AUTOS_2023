@@ -25,7 +25,7 @@ const Homeslider = () => {
           return (
             <SwiperSlide key={rony.id}>
               <Image
-                className="img-fluid"
+                className="img-fluid phn-margin"
                 src={rony.item_image}
                 alt="car"
                 width={1920}

@@ -20,7 +20,7 @@ export default function Strength() {
 
     return (
       <div className="row" key={item.id}>
-        <h1 className="brandColor text-center fw-bold mb-5">
+        <h1 className="brandColor text-center fw-bold mb-5 mt-5">
           {item.module_name}
         </h1>
         <div className="row row-cols-1 row-cols-sm-3 pe-0">
@@ -78,7 +78,7 @@ export default function Strength() {
   }, [control, inView]);
   // Animation end
   return (
-    <div className="row my-2 position-relative overflow-hidden pb-5">
+    <div className="row position-relative overflow-hidden pb-5">
       <div className="position-absolute" style={bg}></div>
       <motion.div
         className="box"

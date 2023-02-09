@@ -64,7 +64,7 @@ const Detail = () => {
               </div>
             </div>
           </div>
-          <h4 className="brandColor fw-bold text-center display-6 ">Related Articles</h4>
+          <h4 className="brandColor fw-bold text-center display-6 ">All News & Events</h4>
         </main>
       </div>
       <Relatednews />
