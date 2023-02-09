@@ -51,7 +51,7 @@ const Relatednews = () => {
           {news[0]?.content_item.slice(6, -1).map((ron) => {
             return (
               <SwiperSlide key={ron.id}>
-                <div className="col">
+                <div className="col" style={{overflow: 'hidden'}}>
                   <Link href={`${ron.id}`}>
                   <Image
                     src={ron.item_image}

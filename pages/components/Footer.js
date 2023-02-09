@@ -88,8 +88,8 @@ const Footer = () => {
 											>
 												<span className="navbar-toggler-icon col-icon"></span>
 											</button>
-											<div className="collapse navbar-collapse" id="navbarNav">
-												<ul className="navbar-nav text-sm-center">
+											<div className="collapse navbar-collapse footer-bg-opacity " id="navbarNav">
+												<ul className="navbar-nav text-sm-center bg-phn">
 													{footerNav.map((nav) => {
 														return (
 															<li key={nav.id} className="nav-item">

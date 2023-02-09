@@ -21,12 +21,12 @@ export default function Client() {
   const moduleName = document.map((item) => {
 
     return (
-      <div className="mt-5" key={item.id}>
+      <div className="m-0" key={item.id}>
         <div
           className="row bgcover"
           style={{ backgroundImage: `url(${item.module_image})` }}
         >
-          <h1 className="titleOrange text-center mt-3 fw-bold">
+          <h1 className="titleOrange text-center mt-5 mb-5 fw-bold">
             {item.module_name}
           </h1>
           <div className="swiper">

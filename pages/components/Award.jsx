@@ -22,7 +22,7 @@ export default function Award() {
   const moduleName = document.map((item) => {
     return (
       <div
-        className="row pt-3 position-relative"
+        className="row position-relative"
         key={item.id}
         style={{
           backgroundImage: `url(${background.src})`,
@@ -32,7 +32,7 @@ export default function Award() {
         }}
         // style={{ backgroundImage: `url(${item.module_image})` }}
       >
-        <h1 className="brandColor text-center fw-bold">{item.module_name}</h1>
+        <h1 className="brandColor text-center mt-5 mb-5 fw-bold">{item.module_name}</h1>
         <div className="swiper">
           <Swiper
             modules={[Navigation]}

@@ -114,7 +114,7 @@ export default function TouchPoint() {
 
   const addressList = Address.map((ctx, idx) => {
     return (
-      <div className="row align-items-center border-bottom py-5" key={idx}>
+      <div className="row align-items-center border-bottom" key={idx}>
         <div className="col-1">
           <i className="bi bi-geo-alt"></i>
         </div>
@@ -141,7 +141,7 @@ export default function TouchPoint() {
   return (
     <>
       <div className="row" id="touchpoint">
-        <h1 className="brandColor text-center fw-bold mt-2 mb-5">Touch Point</h1>
+        <h1 className="brandColor text-center fw-bold mt-5 mb-5">Touch Point</h1>
         <div
           className="col-sm-12 pt-3 position-relative"
           style={{ backgroundColor: '#f6821f' }}

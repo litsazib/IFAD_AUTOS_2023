@@ -103,7 +103,7 @@ export default function Discover() {
 
   return (
     <>    
-    <div className="row py-3"
+    <div className="row pb-4"
       style={{
         backgroundImage: `url(${background.src})`,
         backgroundRepeat: "no-repeat",
@@ -111,7 +111,7 @@ export default function Discover() {
         backgroundPosition: "center"
       }}
     >
-    <h1 className="brandColor text-center fw-bold">Discover The Range</h1>
+    <h1 className="brandColor text-center fw-bold mt-5">Discover The Range</h1>
       <div className="d-flex justify-content-center mt-3">
         <ul className="nav nav-pills text-center" id="pills-tab" role="tablist">
         {CatagoryList}
