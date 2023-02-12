@@ -74,6 +74,9 @@ a {
 .closeBnt {
   position: absolute;
   right: 14px;
+  background: transparent;
+  color: #333;
+  border-color: #333;
 }
 
 
