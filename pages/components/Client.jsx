@@ -138,7 +138,7 @@ const viewMdl = ()=>{
               })}
             </Swiper>
           </div>
-          <div className={ModalToggle === true ? "modalBox active" : "modalBox"}>
+          <div className={ModalToggle === true ? "modalBox active" : "modalBox"} onClick={()=>(setModalToggle(false))}>
             <div className="modalWrap">
               <button onClick={()=>(setModalToggle(false))} className="closeBnt">&#10006;</button>
               <Image className="modalImg" 
