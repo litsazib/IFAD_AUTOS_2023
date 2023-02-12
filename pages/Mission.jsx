@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Image from "next/image";
+import {linkBreak} from '../utils/common'
+
+
 const Mission = () => {
   const loaderProp =({ src }) => {
     return src;
@@ -67,7 +70,7 @@ const Mission = () => {
                             {vision.item_name}
                           </h4>
                           <div className="sectionDesc">
-                          {vision.item_long_desc}
+                          {linkBreak(vision.item_long_desc)}
                           </div>
                         </div>
                       </>

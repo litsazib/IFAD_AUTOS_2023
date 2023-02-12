@@ -4,6 +4,8 @@ import Head from "next/head";
 import Top from "./components/Top";
 import Footer from "./components/Footer";
 import Image from "next/image";
+import {linkBreak} from '../utils/common'
+
 const Management = () => {
   const loaderProp =({ src }) => {
     return src;
@@ -66,7 +68,7 @@ const Management = () => {
     };
     return (
       <p className="text">
-        {isReadMore ? text.slice(0, 150) : text}
+        {isReadMore ? text.slice(0, 150) : linkBreak(text)}
         <span onClick={toggleReadMore} className="read-or-hide">
           {isReadMore ? "...read more" : " show less"}
         </span>
