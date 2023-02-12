@@ -37,6 +37,11 @@ a {
   background-size: cover;
 }
 /* Roktim  */ 
+.modalCard:hover > img {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: 0.3s;
+}
 .modalBox {
   background-color: #f1e767;
   padding: 20px 0;
