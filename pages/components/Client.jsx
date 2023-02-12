@@ -125,7 +125,9 @@ const viewMdl = ()=>{
                     <div className="col mt-2">
                       <div className="d-flex justify-content-center align-items-center position-relative mb-5">
                         {ron.item_video_link == null ? (
-                        <Image onClick={()=>hendelModal(ron)} className="img-fluid mb-3" src={ron.item_image} alt="car" width={500} height={500}loader={loaderProp}/>
+                          <div className="modalCard">
+                            <Image onClick={()=>hendelModal(ron)} className="img-fluid mb-3" src={ron.item_image} alt="car" width={500} height={500}loader={loaderProp}/>
+                          </div>
                         ) : (
                           <ReactPlayer url={ron.item_video_link} />
                         )}
