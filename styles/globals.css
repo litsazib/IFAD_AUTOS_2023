@@ -45,10 +45,11 @@ a {
 .modalBox {
   background-color: #f1e767;
   padding: 20px 0;
+  transition: 0.3s ease-in;
 }
 .modalBox {
   display: none;
-  transition: 0.3s;
+  transition: 0.3s ease-in;
 }
 .modalBox.active {
   display: block !important;
@@ -58,26 +59,25 @@ a {
   background: #524e4eed;
   z-index: 99999;
   top: 0;
-  transition: 0.3s;
   overflow-y: hidden;
   margin: 0;
   padding: 0;
+  transition: 0.3s ease-in;
 }
 .modalWrap {
   text-align: center;
   width: 80%;
   margin: 0 auto;
   position: relative;
+  transition: 0.3s ease-in;
 }
 .modalWrap button {
   margin-bottom: 10px;
 }
 .closeBnt {
   position: absolute;
-  right: 14px;
   background: transparent;
-  color: #333;
-  border-color: #333;
+  right: 19%;
 }
 img.modalImg {
   width: 56%;
