@@ -75,6 +75,9 @@ const Management = () => {
   };
   return (
     <>
+    <Head>
+      <title>BOD | IFAD Autos Ltd</title>
+    </Head>
       <div className="container-fluid">
         <Top />
         {moduleBanner}

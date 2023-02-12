@@ -141,9 +141,9 @@ const viewMdl = ()=>{
           <div className={ModalToggle === true ? "modalBox active" : "modalBox"}>
             <div className="modalWrap">
               <button onClick={()=>(setModalToggle(false))} className="closeBnt">&#10006;</button>
-              <Image className="img-fluid mb-3" 
+              <Image className="modalImg" 
                 src={ModalContent?.item_image} alt="car" 
-                width={800} height={800}
+                width={800} height={750}
                 loader={loaderProp}
               />
             </div>

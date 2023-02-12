@@ -87,9 +87,8 @@ const Investor = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>Investor Information</title>
+          <title>Investor Information | IFAD Autos Ltd</title>
           <meta name="description" content="All" />
-          <link rel="icon" href="/favicon.ico" />
         </Head>
         <Top />
         <Homeslider />

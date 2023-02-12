@@ -103,9 +103,11 @@ const addredd = ContactAddress[0]?.contact_list.map((ctx,idx)=>{
   };
   return (
     <>
+      <Head>
+        <title>Contact | IFAD Autos Ltd </title>
+      </Head>
       <div className="container-fluid">
         <Top />
-        {/* <Banner title="Contact"/> */}
       </div>
       <div className="container-fluid py-5" style={background}>
         <div className="container">

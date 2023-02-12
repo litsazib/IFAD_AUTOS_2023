@@ -30,7 +30,7 @@ const Detail = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>{newsdata[0]?.item_name}</title>
+          <title>{newsdata[0]?.item_name.slice(0,20)}... | IFAD Autos Ltd.</title>
           <meta name="description" content="Ifad Autos Tesimonial" />
           <link rel="icon" href="/favicon.ico" />
           <link

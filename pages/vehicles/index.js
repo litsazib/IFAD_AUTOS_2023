@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import Homeslider from "../components/Homeslider";
 import Sidemenu from '../components/Sidemenu';
 import Top from "../components/Top";
+import Head from "next/head";
 
 const Allvehicle = withRouter((props) => {
   const loaderProp =({ src }) => {
@@ -81,6 +82,9 @@ const Allvehicle = withRouter((props) => {
 
   return (
     <>
+      <Head>
+        <title>Product | IFAD Autos Ltd</title>
+      </Head>
       <div className="container-fluid nomp">
         <Top />
         <Banner title="Our Products"/>

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -19,6 +20,10 @@ const News = () => {
 
   const newsData = News[0]?.content_item;
   return (
+    <>    
+    <Head>
+      <title>News | IFAD Autos Ltd</title>
+    </Head>
     <div className="newsList">
       {newsData?.map((news) => (
         <Link key={news.id} href={`news/${news.id}`}>
@@ -26,6 +31,7 @@ const News = () => {
         </Link>
       ))}
     </div>
+    </>
   );
 };
 

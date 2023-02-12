@@ -87,7 +87,7 @@ const Vehicle = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>{targetedVehicle?.product_name}</title>
+          <title>{targetedVehicle?.product_name} | IFAD Autos Ltd</title>
           <meta name={targetedVehicle?.product_name} content={targetedVehicle?.product_short_desc} />
         </Head>
         <Top />

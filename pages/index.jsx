@@ -10,11 +10,15 @@ import Footer from "./components/Footer";
 import Top from "./components/Top";
 import React from "react";
 import TouchPoint from "./components/TouchPoint";
+import Head from 'next/head'
 
 
 const index = () => {
   return (
     <>
+    <Head>
+      <title>Home | IFAD Autos Ltd</title>
+    </Head>
       <div className="container-fluid">
         <Top />
         <Homeslider />

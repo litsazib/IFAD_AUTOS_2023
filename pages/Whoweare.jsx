@@ -79,6 +79,9 @@ const Whoweare = () => {
 
   return (
     <>
+    <Head>
+      <title>Who we are | IFAD Autos Ltd</title>
+    </Head>
       <div className="container-fluid">
         <Top />
         {moduleBanner}
@@ -91,6 +94,7 @@ const Whoweare = () => {
           return (
             <div className="mb-5" key={item.id}>
               {item.content_item.map((vision, i) => {
+                const {item_long_desc} = vision
                 return (
                   <div key={i} className="row d-flex align-items-center">
                     {i % 2 == 0 ? (
@@ -109,7 +113,7 @@ const Whoweare = () => {
                           <h4 className="brandColor fw-bold text-center">
                             {vision.item_name}
                           </h4>
-                          {vision.item_long_desc}
+                          {item_long_desc}
                         </div>
                       </>
                     ) : (

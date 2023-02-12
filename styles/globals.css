@@ -60,12 +60,13 @@ a {
   top: 0;
   transition: 0.3s;
   overflow-y: hidden;
+  margin: 0;
+  padding: 0;
 }
 .modalWrap {
   text-align: center;
   width: 80%;
   margin: 0 auto;
-  padding: 20px;
   position: relative;
 }
 .modalWrap button {
@@ -77,6 +78,10 @@ a {
   background: transparent;
   color: #333;
   border-color: #333;
+}
+img.modalImg {
+  width: 56%;
+  height: 100%;
 }
 
 
