@@ -13,6 +13,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Timeline from './components/timeline/Timeline';
+import {linkBreak} from '../utils/common'
+
 const Whoweare = () => {
 
   const loaderProp =({ src }) => {
@@ -95,6 +97,10 @@ const Whoweare = () => {
             <div className="mb-5" key={item.id}>
               {item.content_item.map((vision, i) => {
                 const {item_long_desc} = vision
+                // var lineBrackItem_long_desc = item_long_desc.split('[BR]').map(function (address, index) {
+                //     return <p key={index}>{ address }</p>; 
+                // });
+
                 return (
                   <div key={i} className="row d-flex align-items-center">
                     {i % 2 == 0 ? (
@@ -113,7 +119,7 @@ const Whoweare = () => {
                           <h4 className="brandColor fw-bold text-center">
                             {vision.item_name}
                           </h4>
-                          {item_long_desc}
+                          {linkBreak(item_long_desc)}
                         </div>
                       </>
                     ) : (
