@@ -39,7 +39,7 @@ const Desclaimer = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>Disclaimer</title>
+          <title>Disclaimer | IFAD Autos Ltd</title>
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

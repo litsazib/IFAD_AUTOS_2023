@@ -37,7 +37,7 @@ const Privacypolicy = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>Privacy policy</title>
+          <title>Privacy policy | IFAD Autos Ltd</title>
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

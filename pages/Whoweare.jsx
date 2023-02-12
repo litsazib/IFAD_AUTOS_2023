@@ -79,6 +79,9 @@ const Whoweare = () => {
 
   return (
     <>
+    <Head>
+      <title>Who we are | IFAD Autos Ltd</title>
+    </Head>
       <div className="container-fluid">
         <Top />
         {moduleBanner}

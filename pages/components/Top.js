@@ -8,6 +8,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 import slugify from 'react-slugify';
 
 
+
 const Top = () => {
 
   const loaderProp =({ src }) => {

@@ -11,6 +11,7 @@ import Top from "../components/Top";
 import Banner from "../components/Banner";
 import Sidemenu from '../components/Sidemenu';
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 
 const index = withRouter((props) => {
@@ -71,6 +72,9 @@ const index = withRouter((props) => {
 
 	return (
 		<>
+		<Head>
+			<title>Search | IFAD Autos Ltd</title>
+		</Head>
 		<div className="container-fluid nomp">
         <Top />
         <Banner title=""/>
