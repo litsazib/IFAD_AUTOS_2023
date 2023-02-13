@@ -7,6 +7,7 @@ import Recentnews from "./Recentnews";
 import Relatednews from "./Reletednews";
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { linkBreak } from '../../utils/common'
 
 const Detail = () => {
   const loaderProp =({ src }) => {
@@ -56,7 +57,9 @@ const Detail = () => {
                   loader={loaderProp}
                 />
               </div>
-              <p className="my-3">{newsdata[0]?.item_long_desc}</p>
+              <p className="my-3">
+              {linkBreak(newsdata[0]?.item_long_desc,'<BR>')}
+              </p>
             </div>
             <div className="col-sm-4">
               <div>
