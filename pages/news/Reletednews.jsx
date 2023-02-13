@@ -51,13 +51,14 @@ const Relatednews = () => {
           {news[0]?.content_item.map((ron) => {
             return (
               <SwiperSlide key={ron.id}>
-                <div className="col">
+                <div className="col" style={{overflow:"hidden"}}>
                   <Link href={`${ron.id}`}>
                   <Image
                     src={ron.item_image}
                     alt="related-news-thum"
-                    width={400}
+                    width={300}
                     height={250}
+                    className="related-news"
                     loader={loaderProp}
                   />
                   </Link>
