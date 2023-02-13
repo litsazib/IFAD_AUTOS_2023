@@ -832,3 +832,7 @@ ul.navbar-nav.text-sm-center{
       transform: translateX(0);
   }
 }
+
+.related-news{
+  object-fit: contain;
+}
