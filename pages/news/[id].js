@@ -58,7 +58,7 @@ const Detail = () => {
                 />
               </div>
               <p className="my-3">
-              {linkBreak(newsdata[0]?.item_long_desc,'<BR>')}
+              {linkBreak(newsdata[0]?.item_long_desc)}
               </p>
             </div>
             <div className="col-sm-4">
