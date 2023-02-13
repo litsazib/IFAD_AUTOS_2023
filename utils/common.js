@@ -19,7 +19,7 @@ export const isPdfFile = (fileUrl) => {
 }
 
 export const linkBreak = (txt,splitChar="[BR]")=>{
-    return txt.split(splitChar).map(function (text, index) {
+    return txt?.split(splitChar).map(function (text, index) {
         return <p key={index}>{ text }</p>; 
     });
 }

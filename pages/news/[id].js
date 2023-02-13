@@ -7,7 +7,7 @@ import Recentnews from "./Recentnews";
 import Relatednews from "./Reletednews";
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { linkBreak } from '../../utils/common'
+import { linkBreak } from '../../utils/common';
 
 const Detail = () => {
   const loaderProp =({ src }) => {
