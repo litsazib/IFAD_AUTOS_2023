@@ -83,13 +83,6 @@ img.modalImg {
   width: 56%;
   height: 100%;
 }
-
-
-
-
-
-
-
 .scrollableDiv > Div {
   padding: 10px 0;
 }
@@ -209,9 +202,6 @@ img.modalImg {
   font-size: 4rem;
   color: #fff;
 }
-
-
-
 button {
   border: 1px solid #f6821f;
   border-radius: 10px;
@@ -441,6 +431,43 @@ input:focus {
 .newsDiv:hover .newsButtonDiv {
   opacity: 1;
 }
+
+/* Documents Style  */
+.doc-catagory-title {
+  text-transform: capitalize;
+  color: #f68422;
+}
+li.sub-document-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.warning {
+  color: #ff0000;
+  font-size: 2rem;
+  padding: 0;
+  text-align: center !important;
+  display: block;
+  margin-top: -60px;
+}
+.noDataImg {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* footer */
 .font-14{
   font-size: 16px;
