@@ -156,7 +156,7 @@ const Investor = () => {
                                 <th scope="row">{idx+1}</th>
                                 <td><h6>{subDoc.document_name}</h6></td>
                                 <td>
-                                  <Link target="_blank" href={`http://implcms.ifadgroup.com:8081/storage/document-image/${subDoc.document_file}`}>
+                                  <Link target="_blank"  href={`http://implcms.ifadgroup.com:8081/storage/document-image/${subDoc.document_file}`}>
                                     <i className="bi bi-cloud-download"></i>
                                   </Link>
                                 </td>
