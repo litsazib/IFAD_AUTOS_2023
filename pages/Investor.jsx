@@ -28,7 +28,10 @@ const Investor = () => {
     }
   }
 
-  console.log(docList)
+  useEffect(()=>{
+    hendleClick(docsCatagory[0]?.id)
+  },[docsCatagory[0]?.id])
+
 
 
   const documentCategoryLink = docsCatagory.map((item, index) => {
@@ -118,7 +121,6 @@ const Investor = () => {
                 })
               :(
                 <>
-                <img className="noDataImg" src="/noData.jpg" alt="no-data" />
                 <span className="text-center warning">Data Not Found!</span>
                 </>
               )
