@@ -121,7 +121,7 @@ const Investor = () => {
                 })
               :(
                 <>
-                <span className="text-center warning">Data Not Found!</span>
+                <span className="text-center warning">⛔Data Not Found!</span>
                 </>
               )
               }

@@ -445,9 +445,6 @@ li.sub-document-list {
   color: #ff0000;
   font-size: 2rem;
   padding: 0;
-  text-align: center !important;
-  display: block;
-  margin-top: -60px;
 }
 .noDataImg {
   width: 50%;
