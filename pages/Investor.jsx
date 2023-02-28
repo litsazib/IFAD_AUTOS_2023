@@ -99,7 +99,7 @@ const Investor = () => {
                         <h4 className="doc-catagory-title">{doc.name}</h4>
                         <div className="table-responsive">
                           <table
-                            className="table table-striped table-responsive"
+                            className="table table-striped table-responsive border"
                             style={{ width: "100%" }}
                           >
                             <thead>
@@ -138,7 +138,7 @@ const Investor = () => {
                     <h4 className="doc-catagory-title">{doc.name}</h4>
                     <div className="table-responsive">
                       <table
-                        className="table table-striped table-responsive"
+                        className="table table-striped table-responsive border"
                         style={{ width: "100%" }}
                       >
                         <thead>
