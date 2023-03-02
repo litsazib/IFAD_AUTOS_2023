@@ -24,3 +24,13 @@ export const linkBreak = (txt,splitChar="[BR]")=>{
     });
 }
 
+export const youtube_parser = (url)=>{
+    try {        
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+        var match = url.match(regExp);
+        return (match&&match[7].length==11)? match[7] : "qqBW78xdjyo";
+    } catch (error) {
+        console.log(error)
+    }
+}
+
