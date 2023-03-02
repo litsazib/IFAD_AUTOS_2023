@@ -13,7 +13,7 @@ import Head from 'next/head';
 import BeatLoader from "react-spinners/BeatLoader";
 import slugify from 'react-slugify';
 import swal from 'sweetalert';
-import {isPdfFile} from '../../utils/common.js'
+import {youtube_parser,isPdfFile} from '../../utils/common.js'
 import Image from "next/image";
 
 const Vehicle = () => {
@@ -24,7 +24,7 @@ const Vehicle = () => {
 
   const [vehicles, setVehicles] = useState([]);
   const [error, setError] = useState(null);
-
+  
   const router = useRouter();
   const { vehicle } = router.query;
 
@@ -40,6 +40,10 @@ const Vehicle = () => {
   const targetedVehicle = vehicles?.find(
     (item) => slugify(item.product_name) === vehicle
   );
+
+  // const {Product_image,proudct_video,video_link} = targetedVehicle
+  const video_link = targetedVehicle?.video_link
+  const youtube_vid = `https://www.youtube.com/embed/${youtube_parser(video_link)}`;
 
   const lifeStyleSlider = targetedVehicle?.product_lifesytle_images.map((item,idx)=>{
     return (
@@ -150,14 +154,6 @@ const Vehicle = () => {
                   Product Brochure
                 </a>
                 }
-                  {/* <a
-                    href={`${targetedVehicle?.proudct_brochure}`}
-                    className="btn btn-outline-secondary"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Product Brochure
-                  </a> */}
                 </div>
               </div>
               <div className="col-sm-4 col-6">
@@ -204,6 +200,26 @@ const Vehicle = () => {
                   <p className="fw-normal" dangerouslySetInnerHTML={{ __html: targetedVehicle?.product_long_desc }}></p>
                 </div>
               </div>
+            </div>
+            <div className='mt-5 video_section'>
+              {
+                video_link == null?
+                <video poster={targetedVehicle?.Product_image} className='videoPlay' width="100%" height="350px" controls >
+                  <source src={targetedVehicle?.proudct_video ? targetedVehicle?.proudct_video:"#"} type="video/mp4"/>
+                </video>
+                :
+                <div className="embed-responsive embed-responsive-16by9 w-100">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src={youtube_vid}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                }
             </div>
           </div>
         </div>
