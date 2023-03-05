@@ -161,7 +161,7 @@ const Management = () => {
 
         {md.map((mdData) => {
             return (
-              <div className="row row-cols-1 row-cols-md-2 g-4" key={mdData.id}>
+              <div className="d-flex justify-content-center mb-5 row row-cols-1 row-cols-md-2 g-4" key={mdData.id}>
                 {mdData.content_item.map((item, i) => {
                   return (
                     <div className="col" key={i}>
@@ -195,7 +195,7 @@ const Management = () => {
                                 className="card-text"
                                 style={{ textAlign: "justify" }}
                               >
-                                {/* <ReadMore>{item.item_long_desc}</ReadMore> */}
+                                <ReadMore>{item.item_long_desc}</ReadMore>
                               </p>
                             </div>
                           </div>
@@ -244,7 +244,7 @@ const Management = () => {
                                 className="card-text"
                                 style={{ textAlign: "justify" }}
                               >
-                                {/* <ReadMore>{item.item_long_desc}</ReadMore> */}
+                                <ReadMore>{item.item_long_desc}</ReadMore>
                               </p>
                             </div>
                           </div>
