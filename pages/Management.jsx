@@ -11,12 +11,26 @@ const Management = () => {
     return src;
   }   
 
-
   const [document, setDocument] = useState([]);
+  const [team, setteam] = useState([]);
+  const [md, setMD] = useState([]);
+
   useEffect(() => {
     fetch("http://autosapi.ifadgroup.com:8001/content-module/27")
       .then((res) => res.json())
       .then((data) => setDocument(data));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/28")
+      .then((res) => res.json())
+      .then((data) => setteam(data));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/29")
+      .then((res) => res.json())
+      .then((data) => setMD(data));
   }, []);
 
   const moduleName = document.map((item) => {
@@ -43,6 +57,7 @@ const Management = () => {
       </div>
     );
   });
+
   const settionTitle = document.map((item,idx) => {
     return (
       <h1 className="fw-bold mb-5" key={idx}>
@@ -85,57 +100,163 @@ const Management = () => {
         {moduleBanner}
       </div>
       <div className="container position-relative my-5">
-      <div className="sectionTitle text-center">
-        {settionTitle}
-      </div>
-        {document.map((doc) => {
-          return (
-            <div className="row row-cols-1 row-cols-md-2 g-4" key={doc.id}>
-              {doc.content_item.map((item, i) => {
-                return (
-                  <div className="col" key={i}>
-                    <div className="card mb-3 border p-4 h-100">
-                      <div className="row g-0">
-                        <div className="col-md-12">
-                          <div className="row">
-                            <div className="col-sm-4 col-4">
-                              <div className="position-relative" style={avatar}>
-                                <Image
-                                  src={item.item_image}
-                                  className="rounded"
-                                  alt="photo"
-                                  objectFit="cover"
-                                  layout="fill"
-                                  loader={loaderProp}
-                                />
+        <div className="sectionTitle text-center">
+          {settionTitle}
+        </div>
+
+          {document.map((doc) => {
+            return (
+              <div className="row row-cols-1 row-cols-md-2 g-4" key={doc.id}>
+                {doc.content_item.map((item, i) => {
+                  return (
+                    <div className="col" key={i}>
+                      <div className="card mb-3 border p-4 h-100">
+                        <div className="row g-0">
+                          <div className="col-md-12">
+                            <div className="row">
+                              <div className="col-sm-4 col-4">
+                                <div className="position-relative" style={avatar}>
+                                  <Image
+                                    src={item.item_image}
+                                    className="rounded"
+                                    alt="photo"
+                                    objectFit="cover"
+                                    layout="fill"
+                                    loader={loaderProp}
+                                  />
+                                </div>
+                              </div>
+                              <div className="col-sm-8 col-8 px-3">
+                                <h3 className="card-title">{item.item_name}</h3>
+                                <p className="card-text">
+                                  <small className="text-muted">
+                                    {item.item_short_desc}
+                                  </small>
+                                </p>
                               </div>
                             </div>
-                            <div className="col-sm-8 col-8 px-3">
-                              <h3 className="card-title">{item.item_name}</h3>
-                              <p className="card-text">
-                                <small className="text-muted">
-                                  {item.item_short_desc}
-                                </small>
+                            <div className="card-body px-0">
+                              <p
+                                className="card-text"
+                                style={{ textAlign: "justify" }}
+                              >
+                                <ReadMore>{item.item_long_desc}</ReadMore>
                               </p>
                             </div>
-                          </div>
-                          <div className="card-body px-0">
-                            <p
-                              className="card-text"
-                              style={{ textAlign: "justify" }}
-                            >
-                              <ReadMore>{item.item_long_desc}</ReadMore>
-                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          );
+                  );
+                })}
+              </div>
+            );
+          })}
+
+        <div className="sectionTitle text-center">
+          <h1 className="fw-bold mb-5 mt-5">
+            Leadership Team
+          </h1>
+        </div>
+
+        {md.map((mdData) => {
+            return (
+              <div className="row row-cols-1 row-cols-md-2 g-4" key={mdData.id}>
+                {mdData.content_item.map((item, i) => {
+                  return (
+                    <div className="col" key={i}>
+                      <div className="card mb-3 border p-4 h-100">
+                        <div className="row g-0">
+                          <div className="col-md-12">
+                            <div className="row">
+                              <div className="col-sm-4 col-4">
+                                <div className="position-relative" style={avatar}>
+                                  <Image
+                                    src={item.item_image}
+                                    className="rounded"
+                                    alt="photo"
+                                    objectFit="cover"
+                                    layout="fill"
+                                    loader={loaderProp}
+                                  />
+                                </div>
+                              </div>
+                              <div className="col-sm-8 col-8 px-3">
+                                <h3 className="card-title">{item.item_name}</h3>
+                                <p className="card-text">
+                                  <small className="text-muted">
+                                    {item.item_short_desc}
+                                  </small>
+                                </p>
+                              </div>
+                            </div>
+                            <div className="card-body px-0">
+                              <p
+                                className="card-text"
+                                style={{ textAlign: "justify" }}
+                              >
+                                {/* <ReadMore>{item.item_long_desc}</ReadMore> */}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
         })}
+
+        {team.map((doc) => {
+            return (
+              <div className="row row-cols-1 row-cols-md-2 g-4" key={doc.id}>
+                {doc.content_item.map((item, i) => {
+                  return (
+                    <div className="col" key={i}>
+                      <div className="card mb-3 border p-4 h-100">
+                        <div className="row g-0">
+                          <div className="col-md-12">
+                            <div className="row">
+                              <div className="col-sm-4 col-4">
+                                <div className="position-relative" style={avatar}>
+                                  <Image
+                                    src={item.item_image}
+                                    className="rounded"
+                                    alt="photo"
+                                    objectFit="cover"
+                                    layout="fill"
+                                    loader={loaderProp}
+                                  />
+                                </div>
+                              </div>
+                              <div className="col-sm-8 col-8 px-3">
+                                <h3 className="card-title">{item.item_name}</h3>
+                                <p className="card-text">
+                                  <small className="text-muted">
+                                    {item.item_short_desc}
+                                  </small>
+                                </p>
+                              </div>
+                            </div>
+                            <div className="card-body px-0">
+                              <p
+                                className="card-text"
+                                style={{ textAlign: "justify" }}
+                              >
+                                {/* <ReadMore>{item.item_long_desc}</ReadMore> */}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+        })}
+
       </div>
       <Footer />
     </>
