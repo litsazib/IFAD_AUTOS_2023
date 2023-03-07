@@ -106,7 +106,7 @@ import Image from "next/image";
             </div>
 
           </div>
-        ) : (<p style={{color:'red'}}>Request Failed...</p>)
+        ) : (<BeatLoader color="#FA3"/>)
 			}
       <Footer />
     </>
