@@ -452,7 +452,15 @@ li.sub-document-list {
   text-align: center;
   display: block;
 }
-
+.customBtn {
+	background: #f5821f;
+	color: #fff;
+	text-transform: capitalize;
+}
+.customBtn:hover {
+	background-color: #e8d001;
+	color: #fff;
+}
 
 
 
