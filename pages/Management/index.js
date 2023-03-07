@@ -50,7 +50,7 @@ const Index = () => {
                   src={item.item_image}
                   width={300}
                   height={300}
-                  className="rounded img-fluid"
+                  className="rounded img-fluid _hoverImg"
                   alt={item.item_name.toString()}
                   loader={loaderProp}
                 />
@@ -75,7 +75,7 @@ const Index = () => {
                   src={item.item_image}
                   width={300}
                   height={300}
-                  className="rounded img-fluid"
+                  className="rounded img-fluid _hoverImg"
                   alt={item.item_name.toString()}
                   loader={loaderProp}
                 />
@@ -99,7 +99,7 @@ const Index = () => {
               src={item_image}
               width={300}
               height={300}
-              className="rounded img-fluid new-leadership-team"
+              className="rounded img-fluid new-leadership-team _hoverImg"
               alt={item_name.toString()}
               loader={loaderProp}
             />
@@ -122,7 +122,7 @@ const Index = () => {
               src={item_image}
               width={300}
               height={300}
-              className="rounded img-fluid new-team-member"
+              className="rounded img-fluid new-team-member _hoverImg"
               alt={item_name.toString()}
               loader={loaderProp}
             />
@@ -208,32 +208,34 @@ const Index = () => {
         <Top />
         {moduleBanner}
       </div>
-      <div className="container position-relative my-5">
-        <div className="sectionTitle text-center">
-          {settionTitle}
+      <div className="bg-wraper">
+        <div className="container position-relative py-5">
+          <div className="sectionTitle text-center">
+            {settionTitle}
+          </div>
+
+          <div className="row g-4 justify-content-md-center">
+            {topLeader}
+          </div>
+
+          <div className="row g-4 mt-5">
+            {ViceChairman}
+          </div>
+
+
+          <div className="sectionTitle text-center">
+            <h1 className="fw-bold mb-5 mt-5">
+              Leadership Team
+            </h1>
+          </div>
+
+          {mdLoop ? mdLoop : <BeatLoader color="#FA3"/>}
+
+          <div className="row row-cols-1 row-cols-md-2 g-4">
+            {leader_team_Loop}
+          </div>
+
         </div>
-
-        <div className="row g-4 justify-content-md-center">
-          {topLeader}
-        </div>
-
-        <div className="row g-4 mt-5">
-          {ViceChairman}
-        </div>
-
-
-        <div className="sectionTitle text-center">
-          <h1 className="fw-bold mb-5 mt-5">
-            Leadership Team
-          </h1>
-        </div>
-
-        {mdLoop ? mdLoop : <BeatLoader color="#FA3"/>}
-
-        <div className="row row-cols-1 row-cols-md-2 g-4">
-          {leader_team_Loop}
-        </div>
-
       </div>
       <Footer />
     </>

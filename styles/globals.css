@@ -461,7 +461,13 @@ li.sub-document-list {
 	background-color: #e8d001;
 	color: #fff;
 }
+.bg-wraper {
 
+}
+._hoverImg:hover {
+  filter: sepia(1);
+  transition: 0.3s;
+}
 
 
 
