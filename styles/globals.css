@@ -452,8 +452,22 @@ li.sub-document-list {
   text-align: center;
   display: block;
 }
+.customBtn {
+	background: #f5821f;
+	color: #fff;
+	text-transform: capitalize;
+}
+.customBtn:hover {
+	background-color: #e8d001;
+	color: #fff;
+}
+.bg-wraper {
 
-
+}
+._hoverImg:hover {
+  filter: sepia(1);
+  transition: 0.3s;
+}
 
 
 
