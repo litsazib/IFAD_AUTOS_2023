@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Footer from "./components/Footer";
+import { RiFocus3Line } from 'react-icons/ri';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import {
+//   solid,
+//   regular,
+//   brands,
+//   icon
+// } from '@fortawesome/fontawesome-svg-core/import.macro'
+
+
 const Values = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -29,6 +39,8 @@ const Values = () => {
           }}
           className="coverPhoto d-flex justify-content-center align-items-center position-relative"
         >
+          {/* VALUES TITLE*/}
+
           <h1 className="fw-bold position-relative text-white">
             {item.module_name}
           </h1>
@@ -52,9 +64,13 @@ const Values = () => {
                 return (
                   <div className="col-sm-3 mb-4" key={item.id}>
                     <div className="valueBox p-4">
-                      <div className="valueNumberBox d-flex justify-content-center align-items-center fs-1 fw-bold">
-                        0{i + 1}
+                      <div className="">
+                        <RiFocus3Line size={'50px'} className="text-light"/>
                       </div>
+                      {/* <FontAwesomeIcon icon={brands('twitter')} /> */}
+                      {/* <div className="valueNumberBox d-flex justify-content-center align-items-center fs-1 fw-bold">
+                        0{i + 1}
+                      </div> */}
                       <h4 className="mt-4 fw-bold text-white">
                         {item.item_name}
                       </h4>
