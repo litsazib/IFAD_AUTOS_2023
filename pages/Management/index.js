@@ -48,8 +48,8 @@ const Index = () => {
               <Link href={`/Management/${item.id}`}>
                 <Image
                   src={item.item_image}
-                  width={300}
-                  height={300}
+                  width={200}
+                  height={200}
                   className="rounded img-fluid _hoverImg"
                   alt={item.item_name.toString()}
                   loader={loaderProp}
@@ -73,8 +73,8 @@ const Index = () => {
               <Link href={`/Management/${item.id}`}>
                 <Image
                   src={item.item_image}
-                  width={300}
-                  height={300}
+                  width={200}
+                  height={200}
                   className="rounded img-fluid _hoverImg"
                   alt={item.item_name.toString()}
                   loader={loaderProp}
@@ -120,8 +120,8 @@ const Index = () => {
           <Link href={`/Management/${id}`}>
             <Image
               src={item_image}
-              width={300}
-              height={300}
+              width={200}
+              height={200}
               className="rounded img-fluid new-team-member _hoverImg"
               alt={item_name.toString()}
               loader={loaderProp}
