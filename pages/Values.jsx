@@ -63,8 +63,8 @@ const Values = () => {
               {doc.content_item.map((item, i) => {
                 return (
                   <div className="col-sm-3 mb-4" key={item.id}>
-                    <div className="valueBox p-4">
-                      <div className="">
+                    <div className="valueBox p-4 text-center">
+                      <div className="text-center mt-4">
                         <RiFocus3Line size={'50px'} className="text-light"/>
                       </div>
                       {/* <FontAwesomeIcon icon={brands('twitter')} /> */}
