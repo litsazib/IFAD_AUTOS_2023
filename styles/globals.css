@@ -468,6 +468,10 @@ li.sub-document-list {
   filter: sepia(1);
   transition: 0.3s;
 }
+.img-icon-height{
+	height: 35px;
+	width: 40px;
+}
 
 
 
