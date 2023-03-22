@@ -24,7 +24,7 @@ const Values = () => {
       <div className="row" key={item.id}>
         <div
           style={{
-            backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${item.module_image})`,
+            backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),url(${item.module_image})`,
             width: "100%",
             height: "400px",
             backgroundSize: "cover",
@@ -34,7 +34,7 @@ const Values = () => {
           {/* VALUES TITLE*/}
 
           <h1 className="fw-bold position-relative text-white">
-            {item.module_name}
+            {/* {item.module_name} */}
           </h1>
         </div>
       </div>
