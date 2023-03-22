@@ -26,7 +26,7 @@ const Values = () => {
           style={{
             backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),url(${item.module_image})`,
             width: "100%",
-            height: "400px",
+            height: "900px",
             backgroundSize: "cover",
           }}
           className="coverPhoto d-flex justify-content-center align-items-center position-relative"
