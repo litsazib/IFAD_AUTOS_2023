@@ -472,7 +472,11 @@ li.sub-document-list {
 	height: 80px;
 	width: 80px;
 }
-
+.temaImg {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
 
 
 
