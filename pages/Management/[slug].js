@@ -98,7 +98,7 @@ import Image from "next/image";
                   src={ResultData[0].item_image?ResultData[0].item_image:"#"}
                   width={500}
                   height={650}
-                  className="rounded new-team-member"
+                  className="rounded new-team-member temaImg"
                   alt={ResultData[0].item_name.toString()}
                   loader={loaderProp}
                 />
