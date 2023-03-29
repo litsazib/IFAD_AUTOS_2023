@@ -17,9 +17,8 @@ const Investor = () => {
   }, []);
 
   const hendleClick = (id) =>{
-    console.log(id)
     try {
-      fetch(`http://implapi.ifadgroup.com:8001/csd/${id}`)
+      fetch(`http://autosapi.ifadgroup.com:8001/csd/${id}`)
       .then((res)=> res.json())
       .then((data)=>setDocList(data))
       .catch((err)=>console.log(err))
