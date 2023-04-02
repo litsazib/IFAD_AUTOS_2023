@@ -4,7 +4,7 @@ import Image from "next/image";
 const Recentnews = () => {
   const [news, setNews] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/content-module/17")
+    fetch("https://autosapi.ifadgroup.com/content-module/17")
       .then((res) => res.json())
       .then((data) => setNews(data));
   }, []);

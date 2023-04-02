@@ -14,7 +14,7 @@ export default function Award() {
   
   const [document, setDocument] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/content-module/5")
+    fetch("https://autosapi.ifadgroup.com/content-module/5")
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);

@@ -43,7 +43,7 @@ const Top = () => {
 
   
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/categories")
+    fetch("https://autosapi.ifadgroup.com/categories")
     .then((res) => res.json())
     .then((data) => setPrdCatagory(data));
   }, []);

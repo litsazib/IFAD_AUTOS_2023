@@ -16,7 +16,7 @@ const Contact = withRouter((props) => {
   const [InqueryData, setInqueryData] = useState([]);
   const [ContactAddress, setContactAddress] = useState([]);
    // Fetching vehicles data
-   let urlPath ='http://autosapi.ifadgroup.com:8001/products/'+inquery;
+   let urlPath ='https://autosapi.ifadgroup.com/products/'+inquery;
    useEffect(() => {
     if(!inquery) {
       return;
@@ -32,7 +32,7 @@ const Contact = withRouter((props) => {
   }, [inquery,urlPath]);
   
   useEffect(() => {
-  fetch('http://implapi.ifadgroup.com:8001/contacts')
+  fetch('https://autosapi.ifadgroup.com/contacts')
     .then((res) => res.json())
     .then((data) => {
       if (data.length) setContactAddress(data);

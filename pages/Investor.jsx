@@ -11,14 +11,14 @@ const Investor = () => {
   const [docList,setDocList] = useState([]);
 
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/document-category")
+    fetch("https://autosapi.ifadgroup.com/document-category")
       .then((res) => res.json())
       .then((data) => setDocsCatagory(data));
   }, []);
 
   const hendleClick = (id) =>{
     try {
-      fetch(`http://autosapi.ifadgroup.com:8001/csd/${id}`)
+      fetch(`https://autosapi.ifadgroup.com/csd/${id}`)
       .then((res)=> res.json())
       .then((data)=>setDocList(data))
       .catch((err)=>console.log(err))

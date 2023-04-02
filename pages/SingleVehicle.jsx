@@ -20,7 +20,7 @@ const SingleVehicle = () => {
 
   const [document, setDocument] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/products/1")
+    fetch("https://autosapi.ifadgroup.com/products/1")
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);

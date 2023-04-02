@@ -21,13 +21,13 @@ export default function Discover() {
   const [FilterProduct,setFilterProduct] = useState([])
 
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/categories")
+    fetch("https://autosapi.ifadgroup.com/categories")
       .then((res) => res.json())
       .then((data) => setPrdCatagory(data));
   }, []);
   
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/products")
+    fetch("https://autosapi.ifadgroup.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -97,9 +97,6 @@ export default function Discover() {
       </SwiperSlide>
     )
   })
-
-
-
 
   return (
     <>    

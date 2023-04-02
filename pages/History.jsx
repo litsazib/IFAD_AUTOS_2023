@@ -8,7 +8,7 @@ const History = () => {
 
   const [document, setDocument] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/content-module/18")
+    fetch("https://autosapi.ifadgroup.com/content-module/18")
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);

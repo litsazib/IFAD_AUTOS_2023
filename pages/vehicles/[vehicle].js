@@ -29,7 +29,7 @@ const Vehicle = () => {
   const { vehicle } = router.query;
 
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/products")
+    fetch("https://autosapi.ifadgroup.com/products")
     .then((res) => res.json())
     .then((data) => setVehicles(data))
     .catch((error)=>{
