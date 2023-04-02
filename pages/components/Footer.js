@@ -12,7 +12,7 @@ const Footer = () => {
 	let year = d.getFullYear();
 	const [social, setSocial] = useState([]);
 	useEffect(() => {
-		fetch('http://autosapi.ifadgroup.com:8001/content-module/16')
+		fetch('https://autosapi.ifadgroup.com/content-module/16')
 			.then((res) => res.json())
 			.then((data) => setSocial(data));
 	}, []);

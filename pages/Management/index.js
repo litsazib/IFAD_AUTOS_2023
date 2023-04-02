@@ -21,15 +21,15 @@ const Index = () => {
   useEffect(() => {
     try {
       //Chairman 
-      fetch("http://autosapi.ifadgroup.com:8001/content-module/27")
+      fetch("https://autosapi.ifadgroup.com/content-module/27")
       .then((res) => res.json())
       .then((data) => setbod(data));      
       //MD List
-      fetch("http://autosapi.ifadgroup.com:8001/content-module/29")
+      fetch("https://autosapi.ifadgroup.com/content-module/29")
       .then((res) => res.json())
       .then((data) => setMD(data));
       //Director List
-      fetch("http://autosapi.ifadgroup.com:8001/content-module/28")
+      fetch("https://autosapi.ifadgroup.com/content-module/28")
       .then((res) => res.json())
       .then((data) => setteam(data));
     } catch (error) {

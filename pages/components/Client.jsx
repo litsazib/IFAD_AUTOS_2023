@@ -19,13 +19,10 @@ export default function Client() {
 
   const [document, setDocument] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/content-module/4")
+    fetch("https://autosapi.ifadgroup.com/content-module/4")
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);
-
-  console.log(ModalContent)
-  console.log(ModalToggle)
 
   // const modalView = ModalContent?.map((element,idx)=>{
   //   if(element.item_video_link == "") {
@@ -44,11 +41,6 @@ export default function Client() {
   //     )
   //   }
   // })
-
-  
-
-
-
 const viewMdl = ()=>{
   if(ModalContent?.item_video_link == "") {
     return (
@@ -66,11 +58,6 @@ const viewMdl = ()=>{
     )
   }
 }
-
-
-
-
-
 
   const hendelModal = (modalData)=>{
     setModalContent(modalData)

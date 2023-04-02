@@ -21,9 +21,9 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
+        protocol: 'https',
         hostname: 'autoscms.ifadgroup.com',
-        port: '8081',
+        //port: '8081',
         pathname: '/storage/content-item/**'
       },
       ],

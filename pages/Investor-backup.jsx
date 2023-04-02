@@ -8,7 +8,7 @@ import Link from "next/link";
 const Investor = () => {
   const [docs, setDocs] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/documents")
+    fetch("https://autosapi.ifadgroup.com/documents")
       .then((res) => res.json())
       .then((data) => setDocs(data));
   }, []);

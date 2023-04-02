@@ -17,7 +17,7 @@ const Detail = () => {
   const pid = router.query.id
   const [newsdata, setnewsdata] = useState([]);
   const fetchNews = async () => {
-    const data = await fetch(`http://implapi.ifadgroup.com:8001/content-item/${pid}`)
+    const data = await fetch(`https://autosapi.ifadgroup.com/content-item/${pid}`)
     .then((res) => res.json())
     .then((data) => setnewsdata(data))
   }

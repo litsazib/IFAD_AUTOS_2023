@@ -11,7 +11,7 @@ const Sidemenu = () => {
   const { category } = router.query;
 
   useEffect(() => {
-    fetch('http://autosapi.ifadgroup.com:8001/categories')
+    fetch('https://autosapi.ifadgroup.com/categories')
       .then((res) => res.json())
       .then((data) => setCategories(data[0].product_category_list))
       .catch((error) => {

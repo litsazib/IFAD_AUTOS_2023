@@ -24,7 +24,7 @@ export default function TouchPoint() {
   }   
 
   useEffect(() => {
-    fetch(`http://implapi.ifadgroup.com:8001/location/${addrtype}`)
+    fetch(`https://autosapi.ifadgroup.com/location/${addrtype}`)
       .then((res) => res.json())
       .then((data) => setLocation(data))
       .catch((error) => {
@@ -33,7 +33,7 @@ export default function TouchPoint() {
   }, [addrtype]);
 
   useEffect(() => {
-    fetch(`http://implapi.ifadgroup.com:8001/location-search/${SearchKeyword}`)
+    fetch(`https://autosapi.ifadgroup.com/location-search/${SearchKeyword}`)
       .then((res) => res.json())
       .then((data) => {
         setLocation(data);

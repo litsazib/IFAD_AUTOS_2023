@@ -1,7 +1,7 @@
 import axios from "axios";
 /*============== Contact form ================*/ 
 export const sendContact = async(postData)=>{
-  let EndPoint="http://implapi.ifadgroup.com:8001/send-email"
+  let EndPoint="https://autosapi.ifadgroup.com/send-email"
   const{FullName,Subject,Email,ContactNum,Massage} = postData
   let PostBody = {FullName,Subject,Email,ContactNum,Massage}
   const headers = {

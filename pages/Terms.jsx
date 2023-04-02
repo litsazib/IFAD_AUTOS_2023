@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 const Terms = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/content-module/19")
+    fetch("https://autosapi.ifadgroup.com/content-module/19")
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);

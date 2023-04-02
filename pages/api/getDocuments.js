@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 export const getDocuments = async () => {
-  let EndPoint = `http://cms.demo.api.net.bd/documents`;
+  let EndPoint = `https://autosapi.ifadgroup.com/documents`;
   return axios
     .get(EndPoint)
     .then((res) => {
@@ -18,7 +18,7 @@ export const getDocuments = async () => {
 };
 
 export const Mission = async () => {
-  let EndPoint = `http://autosapi.ifadgroup.com:8001/content-module/7`;
+  let EndPoint = `https://autosapi.ifadgroup.com/content-module/7`;
   return axios
     .get(EndPoint)
     .then((res) => {

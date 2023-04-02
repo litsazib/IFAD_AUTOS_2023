@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 const Social = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/content-module/6")
+    fetch("https://autosapi.ifadgroup.com/content-module/6")
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);
