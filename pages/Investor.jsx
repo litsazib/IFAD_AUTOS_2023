@@ -82,11 +82,11 @@ const Investor = () => {
                     // category_type exits
                     if(doc.category_type ==="TEXT") {
                       return (
-                        <div className="text_view_wrap">
+                        <div className="text_view_wrap" key={idx}>
                           {
                             doc.documents.map((subDoc,idx)=>{
                               return (
-                                <p className="text_view_node" dangerouslySetInnerHTML={{ __html: subDoc.document_desc }}></p>
+                                <p key={idx} className="text_view_node" dangerouslySetInnerHTML={{ __html: subDoc.document_desc }}></p>
                               )
                             })
                           }
@@ -112,7 +112,7 @@ const Investor = () => {
                               {
                               doc.documents.map((subDoc,idx)=>{
                                 return (
-                                  <tr>
+                                  <tr key={idx}>
                                     <th scope="row">{idx+1}</th>
                                     <td><h6>{subDoc.document_name}</h6></td>
                                     <td>
@@ -151,7 +151,7 @@ const Investor = () => {
                           {
                           doc.documents.map((subDoc,idx)=>{
                             return (
-                              <tr>
+                              <tr key={idx}>
                                 <th scope="row">{idx+1}</th>
                                 <td><h6>{subDoc.document_name}</h6></td>
                                 <td>
