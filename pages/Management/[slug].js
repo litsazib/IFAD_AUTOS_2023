@@ -10,18 +10,15 @@ import slugify from 'react-slugify';
 import Image from "next/image";
 
 
- const detailsPage = ()=> {
-
-  const router = useRouter();
-  const { slug } = router.query;
-
+ const DetailsPage = ()=> {
   const loaderProp =({ src }) => {
     return src;
   } 
-
-  const [bod, setbod] = useState([]);
+  const router = useRouter();
+  const { slug } = router.query;
+  const [bod, setBod] = useState([]);
   const [md, setMD] = useState([]);
-  const [team, setteam] = useState([]);
+  const [team, setTeam] = useState([]);
 
   let listOfData = bod[0]?.content_item
 	let listOfMdData =  md[0]?.content_item
@@ -41,7 +38,7 @@ import Image from "next/image";
       //Chairman 
       fetch("https://autosapi.ifadgroup.com/content-module/27")
       .then((res) => res.json())
-      .then((data) => setbod(data));      
+      .then((data) => setBod(data));      
       //MD List
       fetch("https://autosapi.ifadgroup.com/content-module/29")
       .then((res) => res.json())
@@ -49,7 +46,7 @@ import Image from "next/image";
       //Director List
       fetch("https://autosapi.ifadgroup.com/content-module/28")
       .then((res) => res.json())
-      .then((data) => setteam(data));
+      .then((data) => setTeam(data));
     } catch (error) {
       console.log('something want wrong')
     }
@@ -113,4 +110,4 @@ import Image from "next/image";
   )
 }
 
-export default detailsPage;
+export default DetailsPage;
